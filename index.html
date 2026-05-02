@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3VIP | Veni, Vidi, Vici – Propiedad Intelectual & Recursos Genéticos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8CC85;
+    --gold-pale: #F5E9C8;
+    --deep: #0D0D0D;
+    --dark: #131313;
+    --dark2: #1C1A16;
+    --mid: #2A2720;
+    --stone: #7A7060;
+    --cream: #F2EDE4;
+    --white: #FAF8F4;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--deep);
+    color: var(--cream);
+    overflow-x: hidden;
+  }
+
+  /* ─── LANGUAGE SWITCHER ─── */
+  .lang-switcher {
+    position: fixed;
+    top: 1.2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .lang-btn {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 0.25rem 0.65rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .lang-btn.active, .lang-btn:hover {
+    background: var(--gold);
+    color: var(--deep);
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 999;
+    padding: 1.2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(13,13,13,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--cream); font-weight: 400; }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--stone);
+    font-size: 0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ─── HERO ─── */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 30%, rgba(201,168,76,0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 80% 80%, rgba(201,168,76,0.04) 0%, transparent 60%),
+      var(--deep);
+  }
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(201,168,76,0.04) 60px);
+  }
+
+  .roman-ornament {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    animation: fadeUp 1s ease both;
+  }
+
+  .hero-tagline-latin {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    animation: fadeUp 1s 0.1s ease both;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-tagline-latin em {
+    display: block;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.55em;
+    font-weight: 300;
+    color: var(--gold-light);
+    letter-spacing: 0.2em;
+    margin-top: 0.3em;
+  }
+
+  .hero-domain {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.3em;
+    color: var(--stone);
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    animation: fadeUp 1s 0.2s ease both;
+  }
+
+  .hero-desc {
+    max-width: 640px;
+    margin: 2.5rem auto 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--cream);
+    opacity: 0.85;
+    animation: fadeUp 1s 0.3s ease both;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeUp 1s 0.4s ease both;
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--deep);
+    padding: 0.85rem 2.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+  }
+  .btn-gold:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(201,168,76,0.3);
+  }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    padding: 0.85rem 2.2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid rgba(201,168,76,0.5);
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .btn-outline:hover {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.06);
+    transform: translateY(-2px);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--stone);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    animation: fadeUp 1s 0.8s ease both;
+  }
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease infinite;
+  }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 7rem 2rem;
+    position: relative;
+  }
+
+  .section-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title span { color: var(--gold); }
+
+  .section-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--stone);
+    max-width: 680px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 1.5rem 0;
+  }
+
+  /* ─── SERVICES ─── */
+  #services { background: var(--dark2); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5px;
+    margin-top: 4rem;
+    background: rgba(201,168,76,0.12);
+  }
+
+  .service-card {
+    background: var(--dark2);
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .service-card:hover { background: var(--mid); }
+  .service-card:hover::before { transform: scaleX(1); }
+
+  .service-num {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.1);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    transition: color 0.4s;
+  }
+  .service-card:hover .service-num { color: rgba(201,168,76,0.25); }
+
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .service-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+  }
+
+  .service-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--stone);
+  }
+
+  /* ─── EDUCATION ─── */
+  #education { background: var(--deep); }
+
+  .edu-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  .edu-tab {
+    padding: 0.8rem 1.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.3s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .edu-tab.active, .edu-tab:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  .edu-panel { display: none; }
+  .edu-panel.active { display: block; animation: fadeUp 0.4s ease; }
+
+  .edu-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--cream);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+  }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .info-card {
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 1.8rem;
+    background: var(--dark2);
+    position: relative;
+  }
+  .info-card h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+  }
+  .info-card p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--stone);
+    line-height: 1.65;
+  }
+
+  /* ─── SUCCESS CASES ─── */
+  #success { background: var(--dark2); }
+
+  .stats-row {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    padding: 2.5rem;
+    border: 1px solid rgba(201,168,76,0.15);
+    background: rgba(201,168,76,0.02);
+  }
+  .stat-item { flex: 1; min-width: 150px; }
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .stat-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--stone);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+  }
+
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .case-card {
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 2rem;
+    background: var(--deep);
+    transition: border-color 0.3s;
+  }
+  .case-card:hover { border-color: rgba(201,168,76,0.35); }
+  .case-tag {
+    display: inline-block;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .case-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+  .case-inst {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .case-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.86rem;
+    color: var(--stone);
+    line-height: 1.65;
+  }
+
+  /* ─── TECH TRANSFER ─── */
+  #transfer { background: var(--deep); }
+
+  .transfer-note {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--stone);
+    border-left: 2px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .tech-card {
+    border: 1px solid rgba(201,168,76,0.12);
+    padding: 1.8rem;
+    background: var(--dark2);
+  }
+  .tech-status {
+    display: inline-block;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.7rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .status-active { background: rgba(201,168,76,0.15); color: var(--gold); }
+  .status-pending { background: rgba(122,112,96,0.2); color: var(--stone); }
+  .tech-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  .tech-field {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    color: var(--stone);
+    margin-bottom: 0.8rem;
+  }
+  .tech-desc {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.84rem;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  /* ─── FOUNDER ─── */
+  #founder { background: var(--dark2); }
+
+  .founder-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .founder-portrait {
+    position: sticky;
+    top: 8rem;
+  }
+  .portrait-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--mid);
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .portrait-frame::before {
+    content: 'EJC';
+    font-family: 'Cinzel', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(201,168,76,0.08);
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(201,168,76,0.12);
+  }
+  .portrait-name {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    margin-top: 1.2rem;
+  }
+  .portrait-role {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+  }
+
+  .founder-bio h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--gold-light);
+    margin-bottom: 1.5rem;
+  }
+  .founder-bio p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    line-height: 1.85;
+    color: var(--cream);
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+  }
+  .founder-credentials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+  }
+  .credential {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    background: var(--deep);
+    border-left: 2px solid rgba(201,168,76,0.3);
+  }
+  .cred-year {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    color: var(--gold);
+    min-width: 50px;
+    margin-top: 0.1rem;
+  }
+  .cred-text {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.84rem;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--deep); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+  .contact-info p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    color: var(--stone);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  .contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.87rem;
+    color: var(--cream);
+  }
+  .contact-detail span:first-child {
+    color: var(--gold);
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+  }
+  .contact-detail a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .contact-detail a:hover { color: var(--gold); }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form-group label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--stone);
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    background: var(--dark2);
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 0.8rem 1rem;
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: rgba(201,168,76,0.5);
+  }
+  .form-group select option { background: var(--dark2); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(201,168,76,0.3);
+    background: rgba(201,168,76,0.05);
+  }
+  .form-success h4 {
+    font-family: 'Cinzel', serif;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .form-success p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--stone);
+  }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--deep);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+  }
+  .footer-domain {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    color: var(--stone);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+  .footer-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .footer-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    color: var(--stone);
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-copy {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(122,112,96,0.5);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* ─── MOBILE ─── */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .founder-layout, .contact-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .stats-row { gap: 1.5rem; }
+    section { padding: 5rem 1.5rem; }
+    .lang-switcher { top: 0.8rem; right: 1.5rem; }
+    .claims-layout { grid-template-columns: 1fr !important; gap: 2rem !important; }
+  }
+
+  /* ─── VISIBLE CLASS for JS scroll ─── */
+  .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <button class="lang-btn active" onclick="setLang('es')">ES</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">3VIP<span>.pe</span></a>
+  <ul class="nav-links">
+    <li><a href="#services" data-es="Servicios" data-en="Services">Servicios</a></li>
+    <li><a href="#education" data-es="Conocimiento" data-en="Knowledge">Conocimiento</a></li>
+    <li><a href="#success" data-es="Casos de Éxito" data-en="Success Cases">Casos de Éxito</a></li>
+    <li><a href="#founder" data-es="Equipo" data-en="Team">Equipo</a></li>
+    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="roman-ornament">— III —</div>
+  <h1 class="hero-tagline-latin">
+    VENI · VIDI · VICI
+    <em data-es="Vine · Vi · Vencí" data-en="I came · I saw · I conquered">Vine · Vi · Vencí</em>
+  </h1>
+  <p class="hero-domain">3vip.pe</p>
+  <p class="hero-desc" data-es="Convertimos tu invención en un activo estratégico blindado. Consultoría boutique en Propiedad Intelectual, Patentes y Acceso a Recursos Genéticos — donde hablas directamente con el experto que lidera tu estrategia." data-en="We turn your invention into a fortified strategic asset. Boutique consulting in Intellectual Property, Patents and Access to Genetic Resources — where you speak directly with the expert leading your strategy.">
+    Convertimos tu invención en un activo estratégico blindado. Consultoría boutique en Propiedad Intelectual, Patentes y Acceso a Recursos Genéticos — donde hablas directamente con el experto que lidera tu estrategia.
+  </p>
+  <div class="hero-trust" style="display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;margin-top:1.8rem;animation:fadeUp 1s 0.38s ease both;">
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.12em;color:var(--stone);display:flex;align-items:center;gap:0.5rem;">
+      <span style="color:var(--gold)">🔒</span>
+      <span data-es="NDA desde el primer contacto" data-en="NDA from first contact">NDA desde el primer contacto</span>
+    </span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.12em;color:var(--stone);display:flex;align-items:center;gap:0.5rem;">
+      <span style="color:var(--gold)">⚡</span>
+      <span data-es="Respuesta en menos de 48 h" data-en="Response within 48 h">Respuesta en menos de 48 h</span>
+    </span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.78rem;letter-spacing:0.12em;color:var(--stone);display:flex;align-items:center;gap:0.5rem;">
+      <span style="color:var(--gold)">🎓</span>
+      <span data-es="Doctor en formación · 10+ años de experiencia" data-en="Doctoral researcher · 10+ years experience">Doctor en formación · 10+ años de experiencia</span>
+    </span>
+  </div>
+  <div class="hero-ctas">
+    <a href="mailto:erik@3vip.pe" class="btn-gold" data-es="Escribir a erik@3vip.pe" data-en="Write to erik@3vip.pe">Escribir a erik@3vip.pe</a>
+    <a href="#claims" class="btn-outline" data-es="¿Por qué importan los claims?" data-en="Why do claims matter?">¿Por qué importan los claims?</a>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span data-es="Explorar" data-en="Explore">Explorar</span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label" data-es="Lo que ofrecemos" data-en="What we offer">Lo que ofrecemos</p>
+    <h2 class="section-title" data-es="Nuestros <span>Servicios</span>" data-en="Our <span>Services</span>">Nuestros <span>Servicios</span></h2>
+    <div class="divider"></div>
+    <p class="section-body" data-es="Soluciones integrales para la protección y gestión de activos intelectuales, orientadas tanto a instituciones peruanas como a consultoras y personas extranjeras que desean operar en el Perú." data-en="Comprehensive solutions for the protection and management of intellectual assets, oriented to both Peruvian institutions and foreign consultancies and individuals wishing to operate in Peru.">
+      Soluciones integrales para la protección y gestión de activos intelectuales, orientadas tanto a instituciones peruanas como a consultoras y personas extranjeras que desean operar en el Perú.
+    </p>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <div class="service-icon">📋</div>
+        <div class="service-title" data-es="Registro de Patentes" data-en="Patent Registration">Registro de Patentes</div>
+        <p class="service-desc" data-es="Elaboración y presentación de solicitudes de patente nacionales (INDECOPI) e internacionales vía PCT (Tratado de Cooperación en materia de Patentes). Incluye búsquedas de anterioridad, redacción técnica y seguimiento del trámite hasta la concesión." data-en="Preparation and filing of national patent applications (INDECOPI) and international applications via PCT (Patent Cooperation Treaty). Includes prior art searches, technical drafting and follow-up until grant.">
+          Elaboración y presentación de solicitudes de patente nacionales (INDECOPI) e internacionales vía PCT. Incluye búsquedas de anterioridad, redacción técnica y seguimiento del trámite hasta la concesión.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <div class="service-icon">🧬</div>
+        <div class="service-title" data-es="Acceso a Recursos Genéticos" data-en="Access to Genetic Resources">Acceso a Recursos Genéticos</div>
+        <p class="service-desc" data-es="Asesoría en solicitudes de acceso a recursos genéticos bajo el marco del Protocolo de Nagoya. Gestión de contratos de acceso, elaboración de informes técnicos y representación ante autoridades competentes." data-en="Advisory services for access to genetic resources under the Nagoya Protocol framework. Management of access contracts, preparation of technical reports and representation before competent authorities.">
+          Asesoría en solicitudes de acceso a recursos genéticos bajo el marco del Protocolo de Nagoya. Gestión de contratos, elaboración de informes técnicos y representación ante autoridades competentes.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <div class="service-icon">🔄</div>
+        <div class="service-title" data-es="Transferencia Tecnológica" data-en="Technology Transfer">Transferencia Tecnológica</div>
+        <p class="service-desc" data-es="Identificación de oportunidades de transferencia tecnológica, negociación de licencias, elaboración de contratos de confidencialidad y evaluación de viabilidad comercial y técnica de inventos." data-en="Identification of technology transfer opportunities, license negotiation, preparation of confidentiality agreements and evaluation of commercial and technical viability of inventions.">
+          Identificación de oportunidades, negociación de licencias, elaboración de contratos de confidencialidad y evaluación de viabilidad comercial y técnica de inventos.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <div class="service-icon">🏛️</div>
+        <div class="service-title" data-es="Representación ante INDECOPI" data-en="INDECOPI Representation">Representación ante INDECOPI</div>
+        <p class="service-desc" data-es="Representación técnica y legal ante el Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (INDECOPI) en procedimientos de patentes, marcas y derechos de autor." data-en="Technical and legal representation before INDECOPI in patent, trademark and copyright proceedings. Ideal for foreign clients or consultancies with no local presence.">
+          Representación técnica ante INDECOPI en procedimientos de patentes, marcas y derechos de autor. Ideal para clientes extranjeros o consultoras sin presencia local en Perú.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <div class="service-icon">🎓</div>
+        <div class="service-title" data-es="Capacitación Institucional" data-en="Institutional Training">Capacitación Institucional</div>
+        <p class="service-desc" data-es="Diseño e impartición de talleres y programas de capacitación en propiedad intelectual para universidades, institutos y empresas. Desde nivel básico hasta especializado, con metodología práctica." data-en="Design and delivery of workshops and training programs in intellectual property for universities, institutes and companies. From basic to specialized level, with a practical methodology.">
+          Diseño e impartición de talleres en propiedad intelectual para universidades, institutos y empresas. Desde nivel básico hasta especializado, con metodología práctica.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <div class="service-icon">🔍</div>
+        <div class="service-title" data-es="Vigilancia Tecnológica" data-en="Technology Intelligence">Vigilancia Tecnológica</div>
+        <p class="service-desc" data-es="Búsquedas de estado de la técnica en bases de datos internacionales de patentes (Espacenet, Patentscope, Google Patents). Análisis de patentabilidad, informes de libertad de operación y mapas tecnológicos." data-en="Prior art searches in international patent databases (Espacenet, Patentscope, Google Patents). Patentability analysis, freedom to operate reports and technology maps.">
+          Búsquedas en bases de datos internacionales de patentes. Análisis de patentabilidad, informes de libertad de operación y mapas tecnológicos para decisiones estratégicas.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <div class="service-icon">™</div>
+        <div class="service-title" data-es="Registro de Signos Distintivos" data-en="Distinctive Signs Registration">Registro de Signos Distintivos</div>
+        <p class="service-desc" data-es="Registro ante INDECOPI de marcas (nominativas, mixtas, figurativas), nombres comerciales y lemas comerciales. Incluye búsqueda de antecedentes registrales, elaboración de la solicitud, respuesta a observaciones y seguimiento hasta la concesión del título." data-en="Registration before INDECOPI of trademarks (word, mixed, figurative), trade names and commercial slogans. Includes prior registration search, application drafting, response to observations and follow-up until grant.">
+          Registro ante INDECOPI de <strong style="color:var(--gold-light)">marcas</strong>, <strong style="color:var(--gold-light)">nombres comerciales</strong> y <strong style="color:var(--gold-light)">lemas comerciales</strong>. Incluye búsqueda de antecedentes registrales, elaboración de la solicitud, respuesta a observaciones y seguimiento hasta la concesión del título.
+        </p>
+      </div>
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <div class="service-icon">©</div>
+        <div class="service-title" data-es="Registro de Derecho de Autor" data-en="Copyright Registration">Registro de Derecho de Autor</div>
+        <p class="service-desc" data-es="Registro ante INDECOPI de obras protegidas por derecho de autor: obras literarias, programas de software y bases de datos. Asesoría en titularidad, contratos de cesión y licencias de uso para instituciones académicas y empresas tecnológicas." data-en="Registration before INDECOPI of works protected by copyright: literary works, software programs and databases. Advisory on ownership, assignment contracts and use licenses for academic institutions and technology companies.">
+          Registro ante INDECOPI de <strong style="color:var(--gold-light)">obras literarias</strong>, <strong style="color:var(--gold-light)">software</strong> y <strong style="color:var(--gold-light)">bases de datos</strong>. Asesoría en titularidad, contratos de cesión y licencias de uso para instituciones académicas y empresas tecnológicas.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLAIMS / REIVINDICACIONES -->
+<section id="claims" style="background:var(--deep);border-top:1px solid rgba(201,168,76,0.08);">
+  <div class="container">
+    <p class="section-label" data-es="El punto crítico que nadie te cuenta" data-en="The critical point nobody tells you">El punto crítico que nadie te cuenta</p>
+    <h2 class="section-title" data-es="Una mala redacción de <span>claims</span> puede matar tu patente" data-en="Poor <span>claim drafting</span> can kill your patent">Una mala redacción de <span>claims</span> puede matar tu patente</h2>
+    <div class="divider"></div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:3rem;" class="claims-layout">
+      <div>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.85;color:var(--cream);margin-bottom:1.5rem;" data-es="Las reivindicaciones (claims) son el corazón de una patente. Son las únicas que definen legalmente qué está protegido. Un invento brillante con claims mal redactados es como una fortaleza sin puertas: cualquiera puede entrar." data-en="Claims are the heart of a patent. They are the only element that legally defines what is protected. A brilliant invention with poorly drafted claims is like a fortress without doors — anyone can walk in.">
+          Las reivindicaciones (<em>claims</em>) son el corazón de una patente. Son las únicas que definen legalmente qué está protegido. Un invento brillante con claims mal redactados es como una fortaleza sin puertas: cualquiera puede entrar.
+        </p>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;line-height:1.85;color:var(--cream);opacity:0.8;" data-es="El error más frecuente: redactar claims demasiado específicos que dejan la puerta abierta a que un competidor replique tu invento con un pequeño cambio, sin infringir tu patente. La estrategia de protección empieza mucho antes de redactar una sola palabra." data-en="The most common mistake: drafting claims so specific they leave the door open for a competitor to replicate your invention with a minor change, without infringing your patent. The protection strategy starts long before writing a single word.">
+          El error más frecuente: redactar claims demasiado específicos que dejan la puerta abierta a que un competidor replique tu invento con un pequeño cambio sin infringir tu patente. La estrategia de protección empieza mucho antes de redactar una sola palabra.
+        </p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:1rem;">
+        <div style="border:1px solid rgba(201,168,76,0.15);padding:1.5rem;background:var(--dark2);">
+          <div style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.7rem;" data-es="❌ CLAIM DÉBIL" data-en="❌ WEAK CLAIM">❌ CLAIM DÉBIL</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.86rem;color:var(--stone);line-height:1.6;font-style:italic;" data-es="«Dispositivo que detecta dengue usando la técnica ELISA de sandwich indirecto con anticuerpos monoclonales anti-NS1 de la cepa DENV-2 aislada en Lima en 2019...»" data-en="«Device that detects dengue using indirect sandwich ELISA technique with anti-NS1 monoclonal antibodies from the DENV-2 strain isolated in Lima in 2019...»">
+            «Dispositivo que detecta dengue usando la técnica ELISA de sandwich indirecto con anticuerpos monoclonales anti-NS1 de la cepa DENV-2 aislada en Lima en 2019...»
+          </p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:rgba(122,112,96,0.7);margin-top:0.6rem;" data-es="Demasiado específico → fácil de sortear" data-en="Too specific → easy to work around">Demasiado específico → fácil de sortear</p>
+        </div>
+        <div style="border:1px solid rgba(201,168,76,0.35);padding:1.5rem;background:var(--dark2);">
+          <div style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:0.7rem;" data-es="✓ CLAIM ESTRATÉGICO" data-en="✓ STRATEGIC CLAIM">✓ CLAIM ESTRATÉGICO</div>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.86rem;color:var(--cream);line-height:1.6;font-style:italic;" data-es="«Método inmunoenzimático para la detección de antígenos de flavivirus en muestras biológicas, que comprende: (a) una fase sólida funcionalizada con al menos un anticuerpo de captura...»" data-en="«Immunoenzymatic method for the detection of flavivirus antigens in biological samples, comprising: (a) a solid phase functionalized with at least one capture antibody...»">
+            «Método inmunoenzimático para la detección de antígenos de flavivirus en muestras biológicas, que comprende: (a) una fase sólida funcionalizada con al menos un anticuerpo de captura...»
+          </p>
+          <p style="font-family:'DM Sans',sans-serif;font-size:0.78rem;color:var(--gold);margin-top:0.6rem;" data-es="Amplio pero anclado a la novedad real → difícil de evadir" data-en="Broad but anchored to real novelty → hard to work around">Amplio pero anclado a la novedad real → difícil de evadir</p>
+        </div>
+        <a href="mailto:erik@3vip.pe" class="btn-gold" style="text-align:center;display:block;" data-es="Evalúa tus claims con un experto →" data-en="Have your claims reviewed by an expert →">Evalúa tus claims con un experto →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOUTIQUE VALUE PROP -->
+<section id="value" style="background:var(--dark2);">
+  <div class="container">
+    <p class="section-label" data-es="Por qué 3VIP" data-en="Why 3VIP">Por qué 3VIP</p>
+    <h2 class="section-title" data-es="Consultoría boutique: <span>hablas con el experto</span>, no con un asistente" data-en="Boutique consulting: <span>you talk to the expert</span>, not an assistant">Consultoría boutique: <span>hablas con el experto</span>, no con un asistente</h2>
+    <div class="divider"></div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5px;margin-top:3rem;background:rgba(201,168,76,0.1);">
+
+      <div style="background:var(--dark2);padding:2.2rem;border-top:2px solid var(--gold);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🎯</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold-light);letter-spacing:0.05em;margin-bottom:0.8rem;" data-es="Atención directa del especialista" data-en="Direct attention from the specialist">Atención directa del especialista</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:var(--stone);line-height:1.7;" data-es="Cada caso es gestionado personalmente por Erik Chuquispuma, doctorando en Ciencias Biológicas y especialista con más de 10 años de experiencia. No hay intermediarios ni asistentes que filtren tu invento." data-en="Every case is personally handled by Erik Chuquispuma, doctoral researcher in Biological Sciences and specialist with over 10 years of experience. No intermediaries or assistants filtering your invention.">
+          Cada caso es gestionado personalmente por Erik Chuquispuma, doctorando en Ciencias Biológicas y especialista con más de 10 años de experiencia. No hay intermediarios.
+        </p>
+      </div>
+
+      <div style="background:var(--dark2);padding:2.2rem;border-top:2px solid var(--gold);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🔒</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold-light);letter-spacing:0.05em;margin-bottom:0.8rem;" data-es="Confidencialidad desde el primer contacto" data-en="Confidentiality from first contact">Confidencialidad desde el primer contacto</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:var(--stone);line-height:1.7;" data-es="Ofrecemos Acuerdos de Confidencialidad (NDA) antes de que compartas cualquier detalle de tu invención. Tu información sensible, especialmente antes de presentar la solicitud, está protegida. Consulta nuestra Política de Privacidad." data-en="We offer Non-Disclosure Agreements (NDA) before you share any details of your invention. Your sensitive information, especially before filing, is protected. See our Privacy Policy.">
+          Ofrecemos NDA antes de que compartas cualquier detalle de tu invención. Tu información sensible — especialmente antes de presentar la solicitud — está protegida. <a href="#privacy" style="color:var(--gold);text-decoration:none;" data-es="Ver Política de Privacidad" data-en="See Privacy Policy">Ver Política de Privacidad</a>.
+        </p>
+      </div>
+
+      <div style="background:var(--dark2);padding:2.2rem;border-top:2px solid var(--gold);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🧬</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold-light);letter-spacing:0.05em;margin-bottom:0.8rem;" data-es="Formación científica + jurídica" data-en="Scientific + legal background">Formación científica + jurídica</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:var(--stone);line-height:1.7;" data-es="Combinamos la comprensión técnica profunda de la invención (Genética, Biotecnología, Ciencias Biológicas) con la estrategia de protección legal. Entendemos tu invento antes de redactar una sola reivindicación." data-en="We combine deep technical understanding of the invention (Genetics, Biotechnology, Biological Sciences) with legal protection strategy. We understand your invention before drafting a single claim.">
+          Combinamos comprensión técnica profunda (Genética, Biotecnología, Ciencias Biológicas) con estrategia de protección. Entendemos tu invento antes de redactar una sola reivindicación.
+        </p>
+      </div>
+
+      <div style="background:var(--dark2);padding:2.2rem;border-top:2px solid var(--gold);">
+        <div style="font-size:2rem;margin-bottom:1rem;">🌎</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.9rem;color:var(--gold-light);letter-spacing:0.05em;margin-bottom:0.8rem;" data-es="Puerta de entrada al Perú" data-en="Gateway to Peru">Puerta de entrada al Perú</div>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.87rem;color:var(--stone);line-height:1.7;" data-es="Para consultoras y personas extranjeras que necesitan representación local ante INDECOPI, somos el enlace experto. Gestionamos todo el proceso sin que necesites desplazarte al Perú." data-en="For foreign consultancies and individuals needing local representation before INDECOPI, we are the expert link. We manage the entire process without you needing to travel to Peru.">
+          Para consultoras y personas extranjeras que necesitan representación local ante INDECOPI, somos el enlace experto. Gestionamos todo sin que necesites venir al Perú.
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top:3rem;padding:2rem 2.5rem;border:1px solid rgba(201,168,76,0.25);background:rgba(201,168,76,0.03);display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+      <div>
+        <p style="font-family:'Cinzel',serif;font-size:1.1rem;color:var(--white);margin-bottom:0.3rem;" data-es="¿Listo para blindar tu invención?" data-en="Ready to fortify your invention?">¿Listo para blindar tu invención?</p>
+        <p style="font-family:'DM Sans',sans-serif;font-size:0.83rem;color:var(--stone);" data-es="Primera consulta orientativa sin compromiso. NDA disponible." data-en="Initial advisory consultation at no commitment. NDA available.">Primera consulta orientativa sin compromiso. NDA disponible.</p>
+      </div>
+      <a href="mailto:erik@3vip.pe" class="btn-gold" data-es="Contactar a erik@3vip.pe" data-en="Contact erik@3vip.pe">Contactar a erik@3vip.pe</a>
+    </div>
+  </div>
+<section id="education">
+  <div class="container">
+    <p class="section-label" data-es="Aprende con nosotros" data-en="Learn with us">Aprende con nosotros</p>
+    <h2 class="section-title" data-es="¿Qué es la <span>Propiedad Intelectual</span>?" data-en="What is <span>Intellectual Property</span>?">¿Qué es la <span>Propiedad Intelectual</span>?</h2>
+    <div class="divider"></div>
+
+    <div class="edu-tabs">
+      <button class="edu-tab active" onclick="showTab('pi')" data-es="Propiedad Intelectual" data-en="Intellectual Property">Propiedad Intelectual</button>
+      <button class="edu-tab" onclick="showTab('pat')" data-es="Patentes" data-en="Patents">Patentes</button>
+      <button class="edu-tab" onclick="showTab('rg')" data-es="Recursos Genéticos" data-en="Genetic Resources">Recursos Genéticos</button>
+      <button class="edu-tab" onclick="showTab('links')" data-es="Recursos Externos" data-en="External Resources">Recursos Externos</button>
+    </div>
+
+    <div id="tab-pi" class="edu-panel active">
+      <p class="edu-intro" data-es="La propiedad intelectual protege las creaciones de la mente: inventos, obras literarias, diseños, símbolos y nombres usados en el comercio. Es la forma legal de decirle al mundo «esto lo creé yo»." data-en="Intellectual property protects creations of the mind: inventions, literary works, designs, symbols and names used in commerce. It is the legal way of telling the world 'I created this.'">
+        La propiedad intelectual protege las creaciones de la mente: inventos, obras literarias, diseños, símbolos y nombres usados en el comercio. Es la forma legal de decirle al mundo «esto lo creé yo».
+      </p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4 data-es="🔬 Patentes" data-en="🔬 Patents">🔬 Patentes</h4>
+          <p data-es="Protegen inventos técnicos nuevos. Si desarrollaste algo nuevo que resuelve un problema, una patente te da el derecho exclusivo de usarlo y comercializarlo por hasta 20 años." data-en="Protect new technical inventions. If you developed something new that solves a problem, a patent gives you the exclusive right to use and commercialize it for up to 20 years.">
+            Protegen inventos técnicos nuevos. Si desarrollaste algo nuevo que resuelve un problema, una patente te da el derecho exclusivo de usarlo por hasta 20 años.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="™ Signos Distintivos" data-en="™ Distinctive Signs">™ Signos Distintivos</h4>
+          <p data-es="Protegen la identidad comercial. Incluyen marcas (el signo que identifica tus productos o servicios), nombres comerciales (el nombre con que operas en el mercado) y lemas comerciales (frases publicitarias). Se registran ante INDECOPI." data-en="Protect commercial identity. Include trademarks (the sign identifying your products or services), trade names (the name you operate under in the market) and commercial slogans (advertising phrases). Registered before INDECOPI.">
+            Protegen la identidad comercial. Incluyen <strong style="color:var(--gold-light)">marcas</strong> (el signo que identifica tus productos), <strong style="color:var(--gold-light)">nombres comerciales</strong> (el nombre con que operas en el mercado) y <strong style="color:var(--gold-light)">lemas comerciales</strong> (frases publicitarias). Se registran ante INDECOPI.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="©️ Derecho de Autor" data-en="©️ Copyright">©️ Derecho de Autor</h4>
+          <p data-es="Protegen creaciones originales desde el momento de su creación. En 3VIP gestionamos el registro de obras literarias, programas de software y bases de datos ante INDECOPI. El registro facilita demostrar autoría y ejercer derechos frente a terceros." data-en="Protect original creations from the moment of their creation. At 3VIP we manage registration of literary works, software programs and databases before INDECOPI. Registration helps prove authorship and enforce rights against third parties.">
+            Protegen creaciones originales desde su creación. En 3VIP gestionamos el registro de <strong style="color:var(--gold-light)">obras literarias</strong>, <strong style="color:var(--gold-light)">software</strong> y <strong style="color:var(--gold-light)">bases de datos</strong> ante INDECOPI para facilitar la defensa de la autoría.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="🌱 Variedades Vegetales" data-en="🌱 Plant Varieties">🌱 Variedades Vegetales</h4>
+          <p data-es="Si eres fitomejorador y desarrollaste una nueva variedad vegetal, puedes protegerla mediante el sistema UPOV para obtener derechos exclusivos de reproducción y comercialización." data-en="If you are a plant breeder and developed a new plant variety, you can protect it through the UPOV system to obtain exclusive rights of reproduction and commercialization.">
+            Si desarrollaste una nueva variedad vegetal, puedes protegerla mediante el sistema UPOV para obtener derechos exclusivos de reproducción y comercialización.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-pat" class="edu-panel">
+      <p class="edu-intro" data-es="Una patente es como un contrato con el Estado: tú publicas tu invento (lo compartes con la sociedad) y el Estado te da un monopolio temporal para explotarlo. Parece complicado, pero entenderlo puede cambiar el valor de tu investigación." data-en="A patent is like a contract with the State: you publish your invention (share it with society) and the State gives you a temporary monopoly to exploit it. It sounds complicated, but understanding it can transform the value of your research.">
+        Una patente es como un contrato con el Estado: tú publicas tu invento y el Estado te da un monopolio temporal para explotarlo. Entenderlo puede cambiar el valor de tu investigación.
+      </p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4 data-es="¿Qué puede patentarse?" data-en="What can be patented?">¿Qué puede patentarse?</h4>
+          <p data-es="Cualquier invento técnico que sea nuevo (que no exista antes), tenga nivel inventivo (no sea obvio) y sea susceptible de aplicación industrial. Pueden ser productos, procesos o ambos." data-en="Any technical invention that is new (did not exist before), has an inventive step (is not obvious) and is capable of industrial application. Can be products, processes or both.">
+            Cualquier invento técnico que sea nuevo, tenga nivel inventivo y sea susceptible de aplicación industrial. Pueden ser productos, procesos o métodos.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="El error más común" data-en="The most common mistake">El error más común</h4>
+          <p data-es="Publicar el invento antes de solicitar la patente. Una vez publicado, el invento pierde novedad y ya no puede patentarse. Siempre consulta antes de publicar o presentar en congresos." data-en="Publishing the invention before filing the patent. Once published, the invention loses novelty and can no longer be patented. Always consult before publishing or presenting at conferences.">
+            Publicar el invento antes de solicitar la patente. Una vez publicado pierde novedad y ya no puede patentarse. Siempre consulta <strong>antes</strong> de publicar o presentar en congresos.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="Patente PCT" data-en="PCT Patent">Patente PCT</h4>
+          <p data-es="El Tratado de Cooperación en materia de Patentes (PCT) permite solicitar protección en más de 150 países con una sola solicitud inicial. Es el camino para llevar un invento peruano al mundo." data-en="The Patent Cooperation Treaty (PCT) allows you to seek protection in over 150 countries with a single initial filing. It's the pathway to take a Peruvian invention to the world.">
+            El PCT permite solicitar protección en más de 150 países con una sola solicitud inicial. Es el camino para llevar un invento peruano al mundo.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="¿Cuánto demora?" data-en="How long does it take?">¿Cuánto demora?</h4>
+          <p data-es="En Perú (INDECOPI) el proceso puede tomar entre 3 y 5 años. Sin embargo, desde la presentación de la solicitud ya tienes protección provisional y puedes señalar 'Patente Pendiente'." data-en="In Peru (INDECOPI) the process can take 3 to 5 years. However, from the date of filing you already have provisional protection and can mark your product 'Patent Pending'.">
+            En Perú el proceso puede tomar entre 3 y 5 años. Desde la presentación de la solicitud ya tienes protección provisional y puedes indicar «Patente Pendiente».
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-rg" class="edu-panel">
+      <p class="edu-intro" data-es="El Perú es uno de los países con mayor biodiversidad del mundo. Los recursos genéticos de sus plantas, animales y microorganismos tienen un valor científico y económico enorme. Acceder a ellos requiere seguir reglas internacionales." data-en="Peru is one of the most biodiverse countries in the world. The genetic resources of its plants, animals and microorganisms have enormous scientific and economic value. Accessing them requires following international rules.">
+        El Perú es uno de los países con mayor biodiversidad del mundo. Los recursos genéticos de sus plantas, animales y microorganismos tienen valor científico y económico enorme. Acceder a ellos requiere seguir reglas internacionales.
+      </p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4 data-es="¿Qué es el Protocolo de Nagoya?" data-en="What is the Nagoya Protocol?">¿Qué es el Protocolo de Nagoya?</h4>
+          <p data-es="Es un acuerdo internacional que regula el acceso a recursos genéticos y asegura que los beneficios derivados de su uso se compartan equitativamente con los países y comunidades de origen." data-en="An international agreement that regulates access to genetic resources and ensures that the benefits derived from their use are shared equitably with the countries and communities of origin.">
+            Acuerdo internacional que regula el acceso a recursos genéticos y asegura que los beneficios se compartan equitativamente con los países y comunidades de origen.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="¿Quién autoriza el acceso en Perú?" data-en="Who authorizes access in Peru?">¿Quién autoriza el acceso en Perú?</h4>
+          <p data-es="Depende del recurso. En general, intervienen el Ministerio de la Producción, SERNANP, el MINAM o el INIA, según el tipo de recurso genético que se quiera usar o investigar." data-en="It depends on the resource. Generally, the Ministry of Production, SERNANP, MINAM or INIA are involved, depending on the type of genetic resource to be used or researched.">
+            Depende del recurso. Generalmente intervienen el Ministerio de la Producción, SERNANP, MINAM o INIA según el tipo de recurso genético que se desee investigar.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="¿Por qué es importante cumplir?" data-en="Why is compliance important?">¿Por qué es importante cumplir?</h4>
+          <p data-es="El incumplimiento puede resultar en sanciones, pérdida de derechos sobre los resultados de investigación y barreras para publicar o patentar. Además, protege la soberanía del país sobre su biodiversidad." data-en="Non-compliance can result in penalties, loss of rights to research results and barriers to publishing or patenting. It also protects the country's sovereignty over its biodiversity.">
+            El incumplimiento puede resultar en sanciones, pérdida de derechos sobre los resultados de investigación y barreras para publicar o patentar.
+          </p>
+        </div>
+        <div class="info-card">
+          <h4 data-es="Investigadores extranjeros en Perú" data-en="Foreign researchers in Peru">Investigadores extranjeros en Perú</h4>
+          <p data-es="Si quieres realizar investigación utilizando recursos genéticos peruanos desde el exterior, necesitas un contrato de acceso. Podemos representarte y gestionar todo el proceso desde Lima." data-en="If you want to conduct research using Peruvian genetic resources from abroad, you need an access contract. We can represent you and manage the entire process from Lima.">
+            Si deseas investigar usando recursos genéticos peruanos desde el exterior, necesitas un contrato de acceso. Podemos representarte y gestionar todo el proceso desde Lima.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="tab-links" class="edu-panel">
+      <p class="edu-intro" data-es="Recursos gratuitos de organismos internacionales y peruanos para que explores más sobre propiedad intelectual y recursos genéticos." data-en="Free resources from international and Peruvian organizations for you to explore more about intellectual property and genetic resources.">
+        Recursos gratuitos de organismos internacionales y peruanos para que explores más sobre propiedad intelectual y recursos genéticos.
+      </p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>🌍 OMPI / WIPO</h4>
+          <p><a href="https://www.wipo.int/portal/es/" target="_blank" style="color:var(--gold)">wipo.int</a><br><br data-es="Organización Mundial de la Propiedad Intelectual. Cursos gratuitos, bases de datos de patentes (Patentscope) y tratados internacionales." data-en="World Intellectual Property Organization. Free courses, patent databases (Patentscope) and international treaties.">Organización Mundial de la Propiedad Intelectual. Cursos gratuitos, bases de datos de patentes (Patentscope) y tratados internacionales.</p>
+        </div>
+        <div class="info-card">
+          <h4>🇵🇪 INDECOPI</h4>
+          <p><a href="https://www.indecopi.gob.pe" target="_blank" style="color:var(--gold)">indecopi.gob.pe</a><br><br data-es="Institución peruana que gestiona patentes, marcas y derechos de autor. Puedes hacer búsquedas de patentes peruanas en su base de datos." data-en="Peruvian institution that manages patents, trademarks and copyrights. You can search Peruvian patents in their database.">Institución peruana que gestiona patentes, marcas y derechos de autor. Puedes hacer búsquedas de patentes peruanas en su base de datos.</p>
+        </div>
+        <div class="info-card">
+          <h4>🔎 Espacenet</h4>
+          <p><a href="https://worldwide.espacenet.com" target="_blank" style="color:var(--gold)">worldwide.espacenet.com</a><br><br data-es="Base de datos gratuita de la Oficina Europea de Patentes con millones de documentos de patentes de todo el mundo. Ideal para búsquedas de anterioridad." data-en="Free database of the European Patent Office with millions of patent documents from around the world. Ideal for prior art searches.">Base de datos gratuita con millones de documentos de patentes de todo el mundo. Ideal para búsquedas de anterioridad.</p>
+        </div>
+        <div class="info-card">
+          <h4>🧬 CBD / Protocolo de Nagoya</h4>
+          <p><a href="https://www.cbd.int/abs/" target="_blank" style="color:var(--gold)">cbd.int/abs</a><br><br data-es="Sitio oficial del Convenio sobre Diversidad Biológica. Información sobre el Protocolo de Nagoya y el sistema ABSCH para reportar el uso de recursos genéticos." data-en="Official website of the Convention on Biological Diversity. Information on the Nagoya Protocol and the ABSCH system for reporting the use of genetic resources.">Sitio oficial del Convenio sobre Diversidad Biológica. Información sobre el Protocolo de Nagoya y el sistema ABSCH.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SUCCESS CASES -->
+<section id="success">
+  <div class="container">
+    <p class="section-label" data-es="Resultados reales" data-en="Real results">Resultados reales</p>
+    <h2 class="section-title" data-es="Casos de <span>Éxito</span>" data-en="<span>Success</span> Cases">Casos de <span>Éxito</span></h2>
+    <div class="divider"></div>
+
+    <div class="stats-row reveal">
+      <div class="stat-item">
+        <div class="stat-num">57+</div>
+        <p class="stat-label" data-es="Solicitudes gestionadas" data-en="Applications managed">Solicitudes gestionadas</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">20</div>
+        <p class="stat-label" data-es="Solicitudes en 2025 (récord)" data-en="Applications in 2025 (record)">Solicitudes en 2025 (récord)</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5+</div>
+        <p class="stat-label" data-es="Universidades asesoradas" data-en="Universities advised">Universidades asesoradas</p>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">10+</div>
+        <p class="stat-label" data-es="Años de experiencia" data-en="Years of experience">Años de experiencia</p>
+      </div>
+    </div>
+
+    <div class="cases-grid reveal">
+      <div class="case-card">
+        <span class="case-tag" data-es="Portafolio de Patentes" data-en="Patent Portfolio">Portafolio de Patentes</span>
+        <div class="case-title" data-es="Crecimiento del 30% en portafolio de patentes" data-en="30% Growth in patent portfolio">Crecimiento del 30% en portafolio de patentes</div>
+        <div class="case-inst">Universidad Nacional Mayor de San Marcos</div>
+        <p class="case-desc" data-es="Se diseñaron estrategias específicas para identificar y proteger los resultados de investigación, logrando incrementar las solicitudes de patente de 40 a 57 en el período 2018–2020." data-en="Specific strategies were designed to identify and protect research results, successfully increasing patent applications from 40 to 57 in the 2018–2020 period.">
+          Se diseñaron estrategias para identificar y proteger los resultados de investigación, incrementando las solicitudes de 40 a 57 en el período 2018–2020.
+        </p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag" data-es="Récord Institucional" data-en="Institutional Record">Récord Institucional</span>
+        <div class="case-title" data-es="33 solicitudes de patente en una sola institución" data-en="33 patent applications at a single institution">33 solicitudes de patente en una sola institución</div>
+        <div class="case-inst">Universidad Nacional Hermilio Valdizán</div>
+        <p class="case-desc" data-es="En el período septiembre–diciembre 2023, se gestionaron 7 nuevas solicitudes de patente, incrementando el total institucional a 33 solicitudes acumuladas." data-en="In the September–December 2023 period, 7 new patent applications were managed, bringing the institutional total to 33 cumulative applications.">
+          Se gestionaron 7 nuevas solicitudes en el período sep–dic 2023, llevando el total institucional a 33 solicitudes acumuladas.
+        </p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag" data-es="Récord 2025" data-en="2025 Record">Récord 2025</span>
+        <div class="case-title" data-es="20 solicitudes de patente: la mayor cantidad registrada" data-en="20 patent applications: the highest number on record">20 solicitudes: la mayor cantidad registrada</div>
+        <div class="case-inst">Universidad Nacional Mayor de San Marcos</div>
+        <p class="case-desc" data-es="Gracias al diseño de nuevas estrategias y mejora en la calidad de documentos técnicos, se presentaron 20 solicitudes de patente en 2025, la mayor cantidad registrada en la historia de la institución." data-en="Thanks to new strategy design and improved technical document quality, 20 patent applications were submitted in 2025, the highest number in the institution's history.">
+          Gracias al diseño de nuevas estrategias, se presentaron 20 solicitudes en 2025 — la mayor cantidad registrada en la historia de la institución.
+        </p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag" data-es="Transferencia Tecnológica" data-en="Technology Transfer">Transferencia Tecnológica</span>
+        <div class="case-title" data-es="Transferencia de invento a empresa privada" data-en="Invention transfer to private company">Transferencia de invento a empresa privada</div>
+        <div class="case-inst">UNMSM – Empresa privada peruana</div>
+        <p class="case-desc" data-es="Se facilitó el proceso completo de transferencia tecnológica de un invento universitario hacia una empresa, incluyendo negociación, elaboración de contrato de licencia y asesoría post-transferencia." data-en="The complete technology transfer process of a university invention to a company was facilitated, including negotiation, license contract preparation and post-transfer advisory.">
+          Se facilitó el proceso completo de transferencia de un invento universitario a una empresa privada, incluyendo negociación y contrato de licencia.
+        </p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag" data-es="Gestión PCT" data-en="PCT Management">Gestión PCT</span>
+        <div class="case-title" data-es="Solicitudes PCT y nacionales para universidad pública" data-en="PCT and national applications for public university">Solicitudes PCT y nacionales para universidad pública</div>
+        <div class="case-inst">Universidad Nacional de Frontera</div>
+        <p class="case-desc" data-es="Elaboración y presentación de solicitudes de patente a nivel nacional e internacional (PCT), incluyendo representación técnica ante INDECOPI y gestión de exámenes de patentabilidad." data-en="Preparation and filing of national and international (PCT) patent applications, including technical representation before INDECOPI and management of patentability examinations.">
+          Elaboración de solicitudes nacionales e internacionales PCT, incluyendo representación ante INDECOPI y gestión de exámenes de patentabilidad.
+        </p>
+      </div>
+      <div class="case-card">
+        <span class="case-tag" data-es="Capacitación" data-en="Training">Capacitación</span>
+        <div class="case-title" data-es="8 eventos de capacitación en propiedad intelectual" data-en="8 intellectual property training events">8 eventos de capacitación en propiedad intelectual</div>
+        <div class="case-inst">Universidad Nacional de Frontera</div>
+        <p class="case-desc" data-es="Organización de ocho eventos institucionales de capacitación en propiedad intelectual, formando desde cero al personal de la unidad y delegando responsabilidades clave." data-en="Organization of eight institutional training events in intellectual property, training unit staff from scratch and delegating key responsibilities.">
+          Organización de ocho eventos de capacitación institucional, formando desde cero al personal de la unidad y construyendo capacidades internas sostenibles.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY TRANSFER PUBLIC SECTION -->
+<section id="transfer">
+  <div class="container">
+    <p class="section-label" data-es="Tecnologías disponibles" data-en="Available technologies">Tecnologías disponibles</p>
+    <h2 class="section-title" data-es="Tecnologías para <span>Transferencia</span>" data-en="Technologies for <span>Transfer</span>">Tecnologías para <span>Transferencia</span></h2>
+    <div class="divider"></div>
+    <p class="transfer-note" data-es="Las siguientes tecnologías son resultados de investigación peruanos que han obtenido o están en proceso de obtener patentes, con participación directa de 3VIP en su gestión. Si representa a una empresa interesada en licenciar alguna de ellas, contáctenos." data-en="The following technologies are Peruvian research results that have obtained or are in the process of obtaining patents, with direct participation from 3VIP in their management. If you represent a company interested in licensing any of them, please contact us.">
+      Las siguientes tecnologías son resultados de investigación peruanos gestionados con participación de 3VIP. Si representa a una empresa interesada en licenciar alguna, contáctenos.
+    </p>
+
+    <div class="tech-grid reveal">
+      <div class="tech-card">
+        <span class="tech-status status-active" data-es="Patente concedida" data-en="Patent granted">Patente concedida</span>
+        <div class="tech-name" data-es="Sistema de detección temprana de enfermedades en cultivos andinos mediante técnicas moleculares" data-en="Early detection system for diseases in Andean crops using molecular techniques">Sistema de detección temprana de enfermedades en cultivos andinos mediante técnicas moleculares</div>
+        <div class="tech-field" data-es="🌾 Biotecnología agrícola | UNMSM" data-en="🌾 Agricultural Biotechnology | UNMSM">🌾 Biotecnología agrícola | UNMSM</div>
+        <p class="tech-desc" data-es="Método para la identificación rápida de patógenos en plantas de papa y maíz, con aplicación en campo. Disponible para licenciamiento a empresas agroindustriales." data-en="Method for rapid identification of pathogens in potato and maize plants, with field application. Available for licensing to agro-industrial companies.">
+          Método para la identificación rápida de patógenos en cultivos andinos, con aplicación directa en campo. Disponible para licenciamiento.
+        </p>
+      </div>
+      <div class="tech-card">
+        <span class="tech-status status-pending" data-es="En trámite" data-en="In process">En trámite</span>
+        <div class="tech-name" data-es="Formulación bioactiva a partir de recursos hidrobiológicos amazónicos con propiedades antimicrobianas" data-en="Bioactive formulation from Amazonian hydrobiological resources with antimicrobial properties">Formulación bioactiva a partir de recursos hidrobiológicos amazónicos con propiedades antimicrobianas</div>
+        <div class="tech-field" data-es="🐟 Acuicultura / Farmacología | UNHEVAL" data-en="🐟 Aquaculture / Pharmacology | UNHEVAL">🐟 Acuicultura / Farmacología | UNHEVAL</div>
+        <p class="tech-desc" data-es="Extracto con actividad antimicrobiana desarrollado a partir de especies acuáticas de la selva peruana. Solicitud de patente en curso. Potencial para industria farmacéutica y cosmética." data-en="Extract with antimicrobial activity developed from aquatic species of the Peruvian jungle. Patent application in progress. Potential for pharmaceutical and cosmetic industry.">
+          Extracto con actividad antimicrobiana de especies acuáticas amazónicas. Solicitud en curso. Potencial para industria farmacéutica y cosmética.
+        </p>
+      </div>
+      <div class="tech-card">
+        <span class="tech-status status-active" data-es="Patente concedida" data-en="Patent granted">Patente concedida</span>
+        <div class="tech-name" data-es="Proceso de biorremediación de suelos contaminados con metales pesados usando microorganismos nativos" data-en="Bioremediation process for soils contaminated with heavy metals using native microorganisms">Proceso de biorremediación de suelos contaminados con metales pesados usando microorganismos nativos</div>
+        <div class="tech-field" data-es="🌿 Biotecnología ambiental | UNF" data-en="🌿 Environmental Biotechnology | UNF">🌿 Biotecnología ambiental | UNF</div>
+        <p class="tech-desc" data-es="Proceso innovador para la recuperación de suelos mineros degradados, usando consorcios microbianos nativos de Piura. Interés para empresas del sector minero y ambiental." data-en="Innovative process for the recovery of degraded mining soils, using native microbial consortia from Piura. Interest for companies in the mining and environmental sector.">
+          Proceso para recuperación de suelos mineros degradados usando consorcios microbianos nativos de Piura. Interés para sector minero y ambiental.
+        </p>
+      </div>
+    </div>
+    <p style="margin-top:1.5rem; font-family:'DM Sans',sans-serif; font-size:0.8rem; color:var(--stone); font-style:italic;" data-es="* Los nombres y detalles de las tecnologías han sido adaptados para proteger la información confidencial de las instituciones propietarias. Contáctenos para información específica y actualizada." data-en="* Technology names and details have been adapted to protect confidential information from the owning institutions. Contact us for specific and up-to-date information.">
+      * Los nombres han sido adaptados para proteger información confidencial de las instituciones propietarias. Contáctenos para información específica y actualizada.
+    </p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="container">
+    <p class="section-label" data-es="El equipo detrás" data-en="The team behind">El equipo detrás</p>
+    <h2 class="section-title" data-es="Miembro <span>Fundador</span>" data-en="Founding <span>Member</span>">Miembro <span>Fundador</span></h2>
+    <div class="divider"></div>
+    <div class="founder-layout">
+      <div class="founder-portrait">
+        <div class="portrait-frame"></div>
+        <div class="portrait-name">Erik Jonathan Chuquispuma</div>
+        <div class="portrait-role" data-es="Fundador & Director" data-en="Founder & Director">Fundador & Director</div>
+      </div>
+      <div class="founder-bio">
+        <h3 data-es="Especialista en Propiedad Intelectual & Recursos Genéticos" data-en="Specialist in Intellectual Property & Genetic Resources">Especialista en Propiedad Intelectual & Recursos Genéticos</h3>
+        <p data-es="Con más de 10 años de experiencia en el sector público y privado, Erik es un referente en la gestión de propiedad intelectual, transferencia tecnológica y acceso a recursos genéticos en el Perú. Ha asesorado a más de cinco universidades públicas y gestionado decenas de solicitudes de patente nacionales e internacionales." data-en="With more than 10 years of experience in the public and private sectors, Erik is a reference in intellectual property management, technology transfer and access to genetic resources in Peru. He has advised more than five public universities and managed dozens of national and international patent applications.">
+          Con más de 10 años de experiencia en el sector público y privado, Erik es un referente en la gestión de propiedad intelectual, transferencia tecnológica y acceso a recursos genéticos en el Perú. Ha asesorado a más de cinco universidades públicas y gestionado decenas de solicitudes de patente nacionales e internacionales.
+        </p>
+        <p data-es="Actualmente es doctorado en Ciencias Biológicas (ingresante 2026) en la Facultad de Ciencias Biológicas de la Universidad Nacional Mayor de San Marcos, donde también continúa asesorando en temas de Propiedad Intelectual. Su formación combina las ciencias duras con la gestión estratégica de la innovación." data-en="He is currently a doctoral student in Biological Sciences (2026 cohort) at the Faculty of Biological Sciences of Universidad Nacional Mayor de San Marcos, where he also continues advising on Intellectual Property matters. His background combines hard sciences with the strategic management of innovation.">
+          Actualmente cursa el Doctorado en Ciencias Biológicas (ingresante 2026) en la Facultad de Ciencias Biológicas de la Universidad Nacional Mayor de San Marcos, donde también continúa asesorando en temas de Propiedad Intelectual. Su formación combina las ciencias duras con la gestión estratégica de la innovación.
+        </p>
+        <div class="founder-credentials">
+          <div class="credential">
+            <span class="cred-year">2026</span>
+            <span class="cred-text" data-es="Doctorado en Ciencias Biológicas – Universidad Nacional Mayor de San Marcos (en curso)" data-en="Doctorate in Biological Sciences – Universidad Nacional Mayor de San Marcos (in progress)">Doctorado en Ciencias Biológicas – UNMSM (en curso)</span>
+          </div>
+          <div class="credential">
+            <span class="cred-year">2016</span>
+            <span class="cred-text" data-es="Maestría en Políticas y Gestión de la Ciencia, Tecnología e Innovación – UPCH (GPA 3.7)" data-en="Master's in Science, Technology and Innovation Policy – UPCH (GPA 3.7)">Maestría en Políticas y Gestión de la CTI – Universidad Peruana Cayetano Heredia (GPA 3.7)</span>
+          </div>
+          <div class="credential">
+            <span class="cred-year">2013</span>
+            <span class="cred-text" data-es="Bachiller en Genética y Biotecnología – UNMSM (GPA 3.4)" data-en="Bachelor's in Genetics and Biotechnology – UNMSM (GPA 3.4)">Bachiller en Genética y Biotecnología – Universidad Nacional Mayor de San Marcos (GPA 3.4)</span>
+          </div>
+          <div class="credential">
+            <span class="cred-year">WIPO</span>
+            <span class="cred-text" data-es="Certificaciones OMPI/WIPO en Patentes, PCT, Propiedad Intelectual General y Recursos Genéticos" data-en="WIPO/OMPI certifications in Patents, PCT, General Intellectual Property and Genetic Resources">Certificaciones OMPI/WIPO: Patentes, PCT, PI General, Recursos Genéticos</span>
+          </div>
+          <div class="credential">
+            <span class="cred-year">LinkedIn</span>
+            <span class="cred-text"><a href="https://www.linkedin.com/in/erikjonathancm/" target="_blank" style="color:var(--gold)">linkedin.com/in/erikjonathancm</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label" data-es="Hablemos" data-en="Let's talk">Hablemos</p>
+    <h2 class="section-title" data-es="Solicite su <span>Consulta</span>" data-en="Request your <span>Consultation</span>">Solicite su <span>Consulta</span></h2>
+    <div class="divider"></div>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h3 data-es="¿Listo para proteger su innovación?" data-en="Ready to protect your innovation?">¿Listo para proteger su innovación?</h3>
+        <p data-es="Respondemos a todas las consultas en menos de 48 horas. Atendemos a clientes en Perú y en el exterior." data-en="We respond to all inquiries within 48 hours. We serve clients in Peru and abroad.">
+          Respondemos a todas las consultas en menos de 48 horas. Atendemos a clientes en Perú y en el exterior.
+        </p>
+        <div class="contact-detail">
+          <span>✉</span>
+          <a href="mailto:erik@3vip.pe">erik@3vip.pe</a>
+        </div>
+        <div class="contact-detail">
+          <span>📱</span>
+          <a href="tel:+51977314025">(+51) 977-314-025</a>
+        </div>
+        <div class="contact-detail">
+          <span>📍</span>
+          <span data-es="Lima, Perú" data-en="Lima, Peru">Lima, Perú</span>
+        </div>
+        <div class="contact-detail">
+          <span>🌐</span>
+          <span>3vip.pe</span>
+        </div>
+      </div>
+
+      <div>
+        <div id="contactForm" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label data-es="Nombre completo" data-en="Full name">Nombre completo</label>
+              <input type="text" id="fname" placeholder="Erik Chuquispuma">
+            </div>
+            <div class="form-group">
+              <label data-es="Correo electrónico" data-en="Email address">Correo electrónico</label>
+              <input type="email" id="femail" placeholder="correo@ejemplo.com">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-es="Organización / País" data-en="Organization / Country">Organización / País</label>
+              <input type="text" id="forg" placeholder="Universidad / Empresa / País">
+            </div>
+            <div class="form-group">
+              <label data-es="Servicio de interés" data-en="Service of interest">Servicio de interés</label>
+              <select id="fservice">
+                <option value="" data-es="Seleccionar..." data-en="Select...">Seleccionar...</option>
+                <option value="patentes" data-es="Registro de Patentes" data-en="Patent Registration">Registro de Patentes</option>
+                <option value="signos" data-es="Registro de Signos Distintivos (Marcas, Nombres, Lemas)" data-en="Distinctive Signs Registration (Trademarks, Trade Names, Slogans)">Registro de Signos Distintivos (Marcas, Nombres, Lemas)</option>
+                <option value="autor" data-es="Registro de Derecho de Autor (Obras, Software, Bases de Datos)" data-en="Copyright Registration (Works, Software, Databases)">Registro de Derecho de Autor (Obras, Software, Bases de Datos)</option>
+                <option value="rg" data-es="Acceso a Recursos Genéticos" data-en="Access to Genetic Resources">Acceso a Recursos Genéticos</option>
+                <option value="transfer" data-es="Transferencia Tecnológica" data-en="Technology Transfer">Transferencia Tecnológica</option>
+                <option value="indecopi" data-es="Representación ante INDECOPI" data-en="INDECOPI Representation">Representación ante INDECOPI</option>
+                <option value="cap" data-es="Capacitación Institucional" data-en="Institutional Training">Capacitación Institucional</option>
+                <option value="otro" data-es="Otro / Consulta general" data-en="Other / General inquiry">Otro / Consulta general</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-es="Mensaje" data-en="Message">Mensaje</label>
+            <textarea id="fmsg" placeholder="Cuéntenos brevemente sobre su proyecto o consulta..."></textarea>
+          </div>
+          <button class="btn-gold" onclick="sendForm()" data-es="Enviar Consulta →" data-en="Send Inquiry →">Enviar Consulta →</button>
+        </div>
+        <div id="formSuccess" class="form-success">
+          <h4 data-es="¡Mensaje enviado!" data-en="Message sent!">¡Mensaje enviado!</h4>
+          <p data-es="Gracias por contactarnos. Nos pondremos en contacto en menos de 48 horas." data-en="Thank you for contacting us. We will get back to you within 48 hours.">Gracias por contactarnos. Nos pondremos en contacto en menos de 48 horas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">3VIP</div>
+  <div class="footer-domain">3vip.pe · VENI · VIDI · VICI</div>
+  <div class="footer-links">
+    <a href="#services" data-es="Servicios" data-en="Services">Servicios</a>
+    <a href="#claims" data-es="Claims" data-en="Claims">Claims</a>
+    <a href="#education" data-es="Conocimiento" data-en="Knowledge">Conocimiento</a>
+    <a href="#success" data-es="Casos de Éxito" data-en="Success Cases">Casos de Éxito</a>
+    <a href="#transfer" data-es="Transferencia" data-en="Transfer">Transferencia</a>
+    <a href="#founder" data-es="Equipo" data-en="Team">Equipo</a>
+    <a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a>
+    <a href="#" onclick="document.getElementById('privacyModal').style.display='flex';return false;" data-es="Política de Privacidad" data-en="Privacy Policy">Política de Privacidad</a>
+  </div>
+  <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;">
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.12em;color:var(--stone);display:flex;align-items:center;gap:0.4rem;">
+      <span style="color:var(--gold)">🔒</span>
+      <span data-es="Acuerdos de Confidencialidad (NDA) disponibles" data-en="Non-Disclosure Agreements (NDA) available">Acuerdos de Confidencialidad (NDA) disponibles</span>
+    </span>
+    <span style="font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.12em;color:var(--stone);display:flex;align-items:center;gap:0.4rem;">
+      <span style="color:var(--gold)">✉</span>
+      <a href="mailto:erik@3vip.pe" style="color:var(--stone);text-decoration:none;">erik@3vip.pe</a>
+    </span>
+  </div>
+  <p class="footer-copy">© 2026 3VIP Consultoría en Propiedad Intelectual · Lima, Perú · <a href="mailto:erik@3vip.pe" style="color:inherit;text-decoration:none;">erik@3vip.pe</a></p>
+</footer>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="privacyModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.85);align-items:center;justify-content:center;padding:1.5rem;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:var(--dark2);border:1px solid rgba(201,168,76,0.2);max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:3rem;position:relative;">
+    <button onclick="document.getElementById('privacyModal').style.display='none'" style="position:absolute;top:1.2rem;right:1.5rem;background:none;border:none;color:var(--stone);font-size:1.3rem;cursor:pointer;">✕</button>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;" data-es="Documento legal" data-en="Legal document">Documento legal</p>
+    <h2 style="font-family:'Cinzel',serif;font-size:1.5rem;color:var(--white);margin-bottom:1.5rem;" data-es="Política de Privacidad & Confidencialidad" data-en="Privacy Policy & Confidentiality">Política de Privacidad & Confidencialidad</h2>
+    <div style="font-family:'DM Sans',sans-serif;font-size:0.88rem;color:var(--stone);line-height:1.8;display:flex;flex-direction:column;gap:1.2rem;">
+      <p><strong style="color:var(--cream);" data-es="1. Responsable del tratamiento" data-en="1. Data Controller">1. Responsable del tratamiento</strong><br>
+        <span data-es="3VIP Consultoría en Propiedad Intelectual, representada por Erik Jonathan Chuquispuma Martinez. Contacto: erik@3vip.pe" data-en="3VIP Intellectual Property Consulting, represented by Erik Jonathan Chuquispuma Martinez. Contact: erik@3vip.pe">3VIP Consultoría en Propiedad Intelectual, representada por Erik Jonathan Chuquispuma Martinez. Contacto: erik@3vip.pe</span>
+      </p>
+      <p><strong style="color:var(--cream);" data-es="2. Información recopilada" data-en="2. Information collected">2. Información recopilada</strong><br>
+        <span data-es="Recopilamos únicamente la información que usted nos proporciona voluntariamente a través del formulario de contacto (nombre, correo electrónico, organización y descripción de su consulta) y la información técnica relacionada con su invención o proyecto que comparta durante el proceso de asesoría." data-en="We only collect information you voluntarily provide through the contact form (name, email address, organization and query description) and technical information related to your invention or project shared during the advisory process.">Recopilamos únicamente la información que usted nos proporciona voluntariamente a través del formulario de contacto y la información técnica relacionada con su invención o proyecto que comparta durante el proceso de asesoría.</span>
+      </p>
+      <p><strong style="color:var(--cream);" data-es="3. Confidencialidad de la información técnica" data-en="3. Confidentiality of technical information">3. Confidencialidad de la información técnica</strong><br>
+        <span data-es="Toda información técnica relativa a inventos, desarrollos tecnológicos, resultados de investigación u otros activos intelectuales compartida con 3VIP es tratada con estricta confidencialidad. Ofrecemos la suscripción de un Acuerdo de No Divulgación (NDA) previo al intercambio de información sensible, a solicitud del cliente o a iniciativa de 3VIP cuando la naturaleza de la información lo amerite." data-en="All technical information related to inventions, technological developments, research results or other intellectual assets shared with 3VIP is treated with strict confidentiality. We offer the signing of a Non-Disclosure Agreement (NDA) prior to the exchange of sensitive information, at the client's request or at 3VIP's initiative when the nature of the information warrants it.">Toda información técnica relativa a inventos, desarrollos tecnológicos y resultados de investigación compartida con 3VIP es tratada con estricta confidencialidad. Ofrecemos la suscripción de un NDA previo al intercambio de información sensible, a solicitud del cliente o a iniciativa de 3VIP.</span>
+      </p>
+      <p><strong style="color:var(--cream);" data-es="4. Finalidad del uso de datos" data-en="4. Purpose of data use">4. Finalidad del uso de datos</strong><br>
+        <span data-es="Los datos personales se utilizan exclusivamente para: (a) responder a su consulta, (b) prestar los servicios de asesoría contratados, y (c) enviar información relevante sobre el estado de su trámite. No cedemos, vendemos ni compartimos datos personales con terceros sin su consentimiento expreso." data-en="Personal data is used exclusively to: (a) respond to your inquiry, (b) provide contracted advisory services, and (c) send relevant information about the status of your case. We do not transfer, sell or share personal data with third parties without your express consent.">Los datos personales se utilizan exclusivamente para responder a su consulta, prestar los servicios contratados y comunicar el estado de su trámite. No cedemos ni compartimos datos con terceros sin su consentimiento expreso.</span>
+      </p>
+      <p><strong style="color:var(--cream);" data-es="5. Derechos del titular" data-en="5. Data subject rights">5. Derechos del titular</strong><br>
+        <span data-es="Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales en cualquier momento, enviando una solicitud a erik@3vip.pe." data-en="You have the right to access, rectify, cancel or object to the processing of your personal data at any time, by sending a request to erik@3vip.pe.">Usted tiene derecho a acceder, rectificar, cancelar u oponerse al tratamiento de sus datos personales en cualquier momento, enviando una solicitud a erik@3vip.pe.</span>
+      </p>
+      <p><strong style="color:var(--cream);" data-es="6. Ley aplicable" data-en="6. Applicable law">6. Ley aplicable</strong><br>
+        <span data-es="Esta política se rige por la Ley N.° 29733, Ley de Protección de Datos Personales del Perú, y su Reglamento aprobado por D.S. N.° 003-2013-JUS." data-en="This policy is governed by Law No. 29733, Peru's Personal Data Protection Law, and its Regulations approved by D.S. No. 003-2013-JUS.">Esta política se rige por la Ley N.° 29733, Ley de Protección de Datos Personales del Perú, y su Reglamento aprobado por D.S. N.° 003-2013-JUS.</span>
+      </p>
+      <p style="font-size:0.78rem;color:rgba(122,112,96,0.6);" data-es="Última actualización: mayo 2026" data-en="Last updated: May 2026">Última actualización: mayo 2026</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ─── LANGUAGE ───
+  let currentLang = 'es';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.querySelectorAll('[data-es]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text) {
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          // skip
+        } else if (el.tagName === 'OPTION') {
+          el.textContent = text;
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+
+    // placeholders
+    if (lang === 'en') {
+      document.querySelector('#fmsg').placeholder = 'Tell us briefly about your project or inquiry...';
+      document.querySelector('#fname').placeholder = 'Erik Chuquispuma';
+      document.querySelector('#femail').placeholder = 'email@example.com';
+      document.querySelector('#forg').placeholder = 'University / Company / Country';
+    } else {
+      document.querySelector('#fmsg').placeholder = 'Cuéntenos brevemente sobre su proyecto o consulta...';
+      document.querySelector('#femail').placeholder = 'correo@ejemplo.com';
+      document.querySelector('#forg').placeholder = 'Universidad / Empresa / País';
+    }
+
+    // edu tabs
+    document.querySelectorAll('.edu-tab').forEach(tab => {
+      const key = tab.getAttribute('data-' + lang);
+      if (key) tab.textContent = key;
+    });
+  }
+
+  // ─── TABS ───
+  function showTab(id) {
+    document.querySelectorAll('.edu-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.edu-tab').forEach(t => t.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    event.target.classList.add('active');
+  }
+
+  // ─── FORM ───
+  function sendForm() {
+    const name = document.getElementById('fname').value;
+    const email = document.getElementById('femail').value;
+    const org = document.getElementById('forg').value;
+    const service = document.getElementById('fservice').value;
+    const msg = document.getElementById('fmsg').value;
+
+    if (!name || !email || !msg) {
+      alert(currentLang === 'es' ? 'Por favor complete los campos requeridos.' : 'Please fill in the required fields.');
+      return;
+    }
+
+    const subject = encodeURIComponent(currentLang === 'es'
+      ? '3VIP - Consulta: ' + service
+      : '3VIP - Inquiry: ' + service);
+    const body = encodeURIComponent(
+      (currentLang === 'es' ? 'Nombre: ' : 'Name: ') + name + '\n' +
+      'Email: ' + email + '\n' +
+      (currentLang === 'es' ? 'Organización: ' : 'Organization: ') + org + '\n' +
+      (currentLang === 'es' ? 'Servicio: ' : 'Service: ') + service + '\n\n' +
+      (currentLang === 'es' ? 'Mensaje:\n' : 'Message:\n') + msg
+    );
+    window.location.href = 'mailto:erik@3vip.pe?subject=' + subject + '&body=' + body;
+
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // ─── SCROLL REVEAL ───
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // ─── NAV ACTIVE ───
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 200) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  });
+</script>
+</body>
+</html>
