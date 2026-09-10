@@ -1312,6 +1312,44 @@
             transform: none;
         }
 
+
+        /* el menu pasa a 8 items: se comprime antes de ocultarse en 768px */
+        nav ul a {
+            white-space: nowrap;
+        }
+
+        @media(max-width:1250px) {
+            nav {
+                padding: 0 1.3rem;
+            }
+
+            nav ul {
+                gap: 0.95rem;
+                margin-left: 1.1rem;
+            }
+
+            nav ul a {
+                font-size: 0.71rem;
+                letter-spacing: 0.04em;
+            }
+
+            .lang {
+                margin-left: 0.8rem;
+            }
+
+            .nav-brand-text {
+                font-size: 1.05rem;
+            }
+        }
+
+
+        /* con 8 items el menu no cabe por debajo de ~950px: se oculta antes de romperse */
+        @media(max-width:950px) {
+            nav ul {
+                display: none;
+            }
+        }
+
         /* ── RESPONSIVE ── */
         @media(max-width:900px) {
             .claims-layout {
@@ -1534,8 +1572,8 @@
 <li><a href="#services">Servicios</a></li>
 <li><a href="#education">Conocimiento</a></li>
 <li><a href="#success">Casos de Éxito</a></li>
-<li><a href="/costos/">Costos</a>
-<a href="/rescate-de-patentes/">Rescate de patentes</a></li>
+<li><a href="/costos/">Costos</a></li>
+<li><a href="/rescate-de-patentes/">Rescate</a></li>
 <li><a href="#founder">Equipo</a></li>
 <li><a href="#contact">Contacto</a></li>
 </ul>
@@ -2004,6 +2042,7 @@
 <a href="#education">Conocimiento</a>
 <a href="#success">Casos de Éxito</a>
 <a href="/costos/">Costos</a>
+<a href="/rescate-de-patentes/">Rescate de patentes</a>
 <a href="#transfer">Transferencia</a>
 <a href="#founder">Equipo</a>
 <a href="#contact">Contacto</a>
