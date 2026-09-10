@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7LB6EM5GHW"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7LB6EM5GHW');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Responding to a patent examination report in Peru | Application rescue | 3VIP</title>
+<meta content="Your Peruvian patent application received an adverse examination report from INDECOPI. Invention patents: 60 working days, extendable by 30. Utility models: 30, extendable by 15. 12 of 12 rescued files were granted." name="description"/>
+<link href="https://3vip.pe/en/patent-rescue/" rel="canonical"/>
+<meta content="index, follow" name="robots"/>
+<meta content="article" property="og:type"/>
+<meta content="https://3vip.pe/en/patent-rescue/" property="og:url"/>
+<meta content="Responding to a patent examination report in Peru | Application rescue" property="og:title"/>
+<meta content="Terms, requirements and how each objection is overcome. Responding is not enough: if the impediments stand, the patent is refused anyway." property="og:description"/>
+<meta content="https://3vip.pe/logo-seal.png" property="og:image"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Responding to a patent examination report in Peru | Application rescue" name="twitter:title"/>
+<meta content="Terms, requirements and how each objection is overcome. Responding is not enough: if the impediments stand, the patent is refused anyway." name="twitter:description"/>
+<link href="https://3vip.pe/rescate-de-patentes/" hreflang="es" rel="alternate"/>
+<link href="https://3vip.pe/en/patent-rescue/" hreflang="en" rel="alternate"/>
+<link href="https://3vip.pe/rescate-de-patentes/" hreflang="x-default" rel="alternate"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long do I have to respond to a patent examination report in Peru?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For an invention patent, sixty working days from notification, extendable by a further thirty working days on request. For a utility model the terms are halved: thirty working days, extendable by fifteen more, once only. The reduction derives from article 85 of Decision 486."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I do not respond to the patentability examination?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The office will refuse the patent. Article 45 of Decision 486 provides that the patent is refused both where the applicant fails to reply within the term and where, despite having replied, the impediments to grant persist."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What requirements does substantive patent examination assess in Peru?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An invention patent is assessed for novelty, inventive step and industrial application, plus clarity of the claims and sufficiency of the description. A utility model is assessed for novelty and technical advantage, plus clarity and sufficiency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a patent application with an adverse report still be saved?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. An adverse report is not a refusal: it opens a term to rebut the objections. Clarity objections are usually resolved by correcting drafting errors; novelty or inventive step objections require analysing the technical features of the invention and expressing them properly in the claims."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a different professional take over the response if someone else filed the application?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The response to the patentability examination can be taken over by a professional other than the one who drafted and filed the original application, within the term in force for that file."
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Cinzel:wght@400;600;700&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --gold: #9A6F20;
+            --gold-lt: #B8881E;
+            --deep: #FAFAF8;
+            --dark2: #F4F2EE;
+            --dark3: #EDEAE4;
+            --mid: #E4E0D8;
+            --stone: #5C5448;
+            --stone-lt: #3D352A;
+            --cream: #2A231A;
+            --white: #1A1410;
+            --line: rgba(154, 111, 32, 0.18);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            background: var(--deep);
+            color: var(--cream);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ── LANG ── */
+        .lang {
+            position: fixed;
+            top: 14px;
+            right: 2.5rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .lang a {
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1.5;
+                        background: none;
+            border: 1px solid rgba(201, 168, 76, 0.35);
+            color: var(--stone-lt);
+            padding: 0.2rem 0.55rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .lang a.on {
+            background: var(--gold);
+            color: var(--deep);
+            border-color: var(--gold);
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 999;
+            padding: 0 2.5rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            text-decoration: none;
+        }
+
+        .nav-brand span {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.18em;
+        }
+
+        .nav-back {
+            margin-left: auto;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--stone);
+            text-decoration: none;
+            margin-right: 5rem;
+            transition: color 0.25s;
+        }
+
+        .nav-back:hover {
+            color: var(--gold);
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 9rem 0 3.5rem;
+            border-bottom: 1px solid var(--line);
+            background: var(--dark2);
+        }
+
+        .sec-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.9rem;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 3.8vw, 2.9rem);
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.18;
+            max-width: 22ch;
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .rule {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 1.6rem 0 1.8rem;
+        }
+
+        .lede {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+            max-width: 62ch;
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 3.8rem 0;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .sec-sub {
+            color: var(--stone);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            max-width: 66ch;
+            line-height: 1.6;
+        }
+
+        /* ── TABLE ── */
+        .tabla-scroll {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px;
+        }
+
+        thead th {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-align: left;
+            padding: 0 1rem 0.8rem;
+            border-bottom: 1px solid var(--gold);
+            font-weight: 500;
+        }
+
+        thead th.num,
+        td.num {
+            text-align: right;
+        }
+
+        tbody td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+
+        tbody tr:hover {
+            background: var(--dark2);
+        }
+
+        .tramite {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .nota {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--stone);
+            margin-top: 0.25rem;
+            line-height: 1.45;
+        }
+
+        .monto {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--gold);
+            white-space: nowrap;
+        }
+
+        .monto-sec {
+            color: var(--stone);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        /* ── DESTACADOS ── */
+        .destacados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--dark2);
+            border: 1px solid var(--line);
+            border-left: 2px solid var(--gold);
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--white);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--stone-lt);
+        }
+
+        .card strong {
+            color: var(--gold);
+        }
+
+        /* ── HONORARIOS ── */
+        .honorarios {
+            background: var(--dark3);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .honorarios p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--stone-lt);
+            max-width: 66ch;
+            margin-bottom: 1rem;
+        }
+
+        .honorarios strong {
+            color: var(--white);
+        }
+
+        /* ── CTA ── */
+        .cta {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--deep);
+            padding: 0.9rem 2.2rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            display: inline-block;
+            transition: all 0.25s;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        /* ── FUENTE ── */
+        .fuente {
+            background: var(--dark2);
+            padding: 2rem 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .fuente p {
+            font-size: 0.82rem;
+            color: var(--stone);
+            line-height: 1.7;
+            max-width: 78ch;
+        }
+
+        .fuente a {
+            color: var(--gold-lt);
+            text-decoration: none;
+        }
+
+        .fuente a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--line);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .ft-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            margin-bottom: 0.3rem;
+        }
+
+        .ft-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.28em;
+            color: var(--stone);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .ft-links {
+            display: flex;
+            gap: 1.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ft-links a {
+            font-size: 0.8rem;
+            color: var(--stone);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+
+        .ft-links a:hover {
+            color: var(--gold);
+        }
+
+        /* ── WHATSAPP ── */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .wa-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+
+        @media(max-width:700px) {
+            nav {
+                padding: 0 1.2rem;
+            }
+
+            .nav-back {
+                margin-right: 6.5rem;
+                font-size: 0.68rem;
+            }
+
+            .lang {
+                right: 1.2rem;
+            }
+
+            .wrap {
+                padding: 0 1.2rem;
+            }
+
+            header {
+                padding: 7rem 0 2.5rem;
+            }
+
+            /* las tablas se adaptan al ancho en vez de forzar scroll lateral */
+            table {
+                min-width: 0;
+            }
+
+            thead th {
+                font-size: 0.58rem;
+                letter-spacing: 0.06em;
+                padding: 0 0.35rem 0.6rem;
+            }
+
+            tbody td {
+                padding: 0.85rem 0.35rem;
+                font-size: 0.85rem;
+            }
+
+            .monto {
+                font-size: 0.88rem;
+            }
+
+            .monto-sec {
+                font-size: 0.8rem;
+            }
+
+            .nota {
+                font-size: 0.72rem;
+            }
+
+            .lede {
+                font-size: 1.15rem;
+            }
+        }
+    
+        /* ── ALERTA / PLAZO ── */
+        .alerta {
+            background: var(--dark3);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+            padding: 1.8rem 2rem;
+            margin: 2.2rem 0;
+        }
+
+        .alerta .plazo {
+            font-family: 'Cinzel', serif;
+            font-size: 2.4rem;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .alerta p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--stone-lt);
+            max-width: 70ch;
+        }
+
+        blockquote {
+            border-left: 2px solid var(--gold);
+            padding: 0.2rem 0 0.2rem 1.4rem;
+            margin: 1.6rem 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 0.7rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--stone);
+            font-style: normal;
+        }
+
+        .pasos {
+            counter-reset: paso;
+            margin-top: 1.5rem;
+        }
+
+        .paso {
+            display: flex;
+            gap: 1.3rem;
+            padding: 1.3rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .paso::before {
+            counter-increment: paso;
+            content: counter(paso, decimal-leading-zero);
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            flex-shrink: 0;
+            min-width: 2.2rem;
+        }
+
+        .paso h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--white);
+            margin-bottom: 0.35rem;
+        }
+
+        .paso p {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+            max-width: 72ch;
+        }
+
+        .track {
+            background: var(--dark2);
+            border: 1px solid var(--line);
+            padding: 2.2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .track .cifra {
+            font-family: 'Cinzel', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .track .etiqueta {
+            font-size: 0.8rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--stone);
+            margin-top: 0.6rem;
+        }
+
+        .track .aclara {
+            font-size: 0.85rem;
+            color: var(--stone);
+            line-height: 1.65;
+            max-width: 66ch;
+            margin: 1.2rem auto 0;
+        }
+
+        .plazos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+            margin: 2rem 0;
+        }
+
+        .plazo-card {
+            background: var(--dark3);
+            border: 1px solid var(--line);
+            border-left: 3px solid var(--gold);
+            padding: 1.7rem;
+        }
+
+        .plazo-card .tipo {
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--stone);
+            margin-bottom: 0.7rem;
+        }
+
+        .plazo-card .cifra {
+            font-family: 'Cinzel', serif;
+            font-size: 2.1rem;
+            color: var(--gold);
+            line-height: 1.1;
+            margin-bottom: 0.6rem;
+        }
+
+        .plazo-card p {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+        }
+
+        .req {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1.5rem;
+        }
+
+        .req-col {
+            border: 1px solid var(--line);
+            padding: 1.5rem;
+        }
+
+        .req-col h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--white);
+            margin-bottom: 0.9rem;
+        }
+
+        .req-col ul {
+            list-style: none;
+        }
+
+        .req-col li {
+            font-size: 0.92rem;
+            color: var(--stone-lt);
+            padding: 0.42rem 0 0.42rem 1.1rem;
+            position: relative;
+            line-height: 1.55;
+        }
+
+        .req-col li::before {
+            content: '·';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .obj {
+            border-top: 1px solid var(--line);
+            margin-top: 1.5rem;
+        }
+
+        .obj-item {
+            display: grid;
+            grid-template-columns: minmax(150px, 1fr) 2.4fr;
+            gap: 1.6rem;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .obj-item .obj-t {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--white);
+        }
+
+        .obj-item .obj-t small {
+            display: block;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-top: 0.3rem;
+            font-weight: 400;
+        }
+
+        .obj-item p {
+            font-size: 0.92rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+        }
+
+        @media(max-width:700px) {
+            .obj-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+</style>
+</head>
+<body>
+<div class="lang"><a href="/rescate-de-patentes/" hreflang="es">ES</a><a class="on" href="/en/patent-rescue/" hreflang="en">EN</a></div>
+
+<nav>
+<a class="nav-brand" href="/en/">
+<img alt="3VIP" src="/logo-seal.webp" style="width:36px;height:36px;object-fit:cover;border-radius:50%;box-shadow:0 0 10px rgba(201,168,76,0.3);"/>
+<span>3VIP</span>
+</a>
+<a class="nav-back" href="/en/">← Back to home</a>
+</nav>
+
+<header>
+<div class="wrap">
+<p class="sec-label">Response to the patentability examination</p>
+<h1>Your patent application received an <em>adverse examination report</em></h1>
+<div class="rule"></div>
+<p class="lede">It has not been refused yet. You have a statutory term to respond, and the quality of that response decides whether the patent is granted or lost. We have taken over that response in files started by others: <strong>all 12 cases ended in grant</strong>.</p>
+</div>
+</header>
+
+<section>
+<div class="wrap">
+<h2>How much time you have</h2>
+<p class="sec-sub">The term depends on what you applied for, and the difference is significant. With a utility model you have half the time of an invention patent.</p>
+<div class="plazos-grid">
+<div class="plazo-card">
+<div class="tipo">Invention patent</div>
+<div class="cifra">60 + 30 working days</div>
+<p>Sixty working days from notification. On request, extended by a further thirty working days.</p>
+</div>
+<div class="plazo-card">
+<div class="tipo">Utility model</div>
+<div class="cifra">30 + 15 working days</div>
+<p>Thirty working days from notification, extendable by fifteen further working days, once only and on request.</p>
+</div>
+</div>
+<p class="sec-sub">Halving the term is not an administrative practice: article 85 of Decision 486 provides that the rules on invention patents apply to utility models “except as regards the terms of processing, which shall be reduced by half”.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Responding is not enough</h2>
+<p class="sec-sub">The rule does not say the patent is saved by replying within the term: it says that if <strong>despite the reply</strong> the impediments persist, the office refuses it anyway.</p>
+<blockquote>“The applicant shall reply to the notification within a period of sixty days following the date of notification. This period may be extended once only for a further thirty days. […] Where the applicant fails to reply within the specified period, or where despite the reply the impediments to grant persist, the competent national office shall refuse the patent.”
+<cite>Andean Community Decision 486, article 45</cite>
+</blockquote>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>What the examination assesses</h2>
+<p class="sec-sub">Substantive examination does not review the same things in an invention patent as in a utility model. Knowing which requirement was challenged determines how it is rebutted.</p>
+<div class="req">
+<div class="req-col">
+<h3>Invention patent</h3>
+<ul>
+<li>Novelty</li>
+<li>Inventive step</li>
+<li>Industrial application</li>
+<li>Clarity of the claims</li>
+<li>Sufficiency of the description</li>
+</ul>
+</div>
+<div class="req-col">
+<h3>Utility model</h3>
+<ul>
+<li>Novelty</li>
+<li>Technical advantage</li>
+<li>Clarity of the claims</li>
+<li>Sufficiency of the description</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Each objection is overcome differently</h2>
+<p class="sec-sub">Many refusals are resolved with relative ease once you understand precisely what the examiner observed. Others demand substantive technical work. These are the routes by type of objection:</p>
+<div class="obj">
+<div class="obj-item">
+<div class="obj-t">Lack of clarity<small>The simplest</small></div>
+<p>Usually a matter of drafting errors, easy to correct without touching the scope of protection.</p>
+</div>
+<div class="obj-item">
+<div class="obj-t">Insufficiency of disclosure<small>Needs support</small></div>
+<p>May require a prior art search to show that the description enables a person skilled in the art to reproduce the invention.</p>
+</div>
+<div class="obj-item">
+<div class="obj-t">Lack of novelty<small>Work on the claims</small></div>
+<p>Requires a thorough analysis of the technical features of the invention and expressing them correctly in the claim, so the difference from what is already disclosed becomes clear.</p>
+</div>
+<div class="obj-item">
+<div class="obj-t">Lack of inventive step<small>The most demanding argument</small></div>
+<p>You must identify the features that make the invention non-obvious to a person normally skilled in the art, and sustain it with technical argument.</p>
+</div>
+<div class="obj-item">
+<div class="obj-t">Lack of technical advantage<small>Utility models only</small></div>
+<p>Consists of finding and evidencing the technical features that provide an advantage over the closest invention in the prior art.</p>
+</div>
+</div>
+<p class="sec-sub" style="margin-top:1.8rem;">In many of these cases it is necessary to rely on the <strong>Andean Community patent examination guidelines</strong>, which set the criteria the examiner applies. Arguing from that framework, rather than from intuition, is what separates a reply that succeeds from one that does not.</p>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>Our record in these cases</h2>
+<div class="track">
+<div class="cifra">12 of 12</div>
+<div class="etiqueta">Rescued files, all granted</div>
+<p class="aclara">These are twelve applications originally filed by others in which we took over the response to the patentability examination. All twelve ended in grant. These are results obtained, not a guarantee: every file depends on its own technical content and on the prior art cited by the examiner. If, on reviewing your case, we conclude the objections cannot be overcome, we will tell you before you invest in a response.</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="wrap">
+<h2>How we handle your case</h2>
+<div class="pasos">
+<div class="paso">
+<div>
+<h3>We read the report before accepting the engagement</h3>
+<p>We review the notification, the cited prior art and the application as filed. That yields an honest assessment: which objections can be overcome, which cannot, and with what realistic scope a grant might be achieved.</p>
+</div>
+</div>
+<div class="paso">
+<div>
+<h3>We set the strategy and the room for amendment</h3>
+<p>We decide what is rebutted by technical argument and what requires reformulating claims, taking care not to concede scope unnecessarily or introduce matter not originally disclosed.</p>
+</div>
+</div>
+<div class="paso">
+<div>
+<h3>We draft the response</h3>
+<p>Argument directed at each specific objection raised by the examiner, grounded in the original description, the prior art and the Andean examination guidelines, with the claim set adjusted where appropriate.</p>
+</div>
+</div>
+<div class="paso">
+<div>
+<h3>We stay with the file until resolution</h3>
+<p>Article 45 allows the office to issue two or more notifications. If a further requirement arrives, the defence continues along the same line of argument.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="honorarios">
+<div class="wrap">
+<h2>What to do now</h2>
+<p><strong>The first thing is to know how many working days you have left.</strong> Have the date of the examination notification, the file number and whether your application is an invention patent or a utility model at hand. With that we can tell you straight away whether the extension should be requested before anything else.</p>
+<p>We review the report and give you an assessment before you commit to anything. Fees are quoted according to the complexity of the case and the prior art cited, with a closed quote before we start. A Non-Disclosure Agreement (NDA) is available beforehand.</p>
+<p>If the term is close to expiring, message us on WhatsApp: it is the fastest route.</p>
+</div>
+</section>
+
+<div class="cta">
+<a class="btn-primary" href="/en/#contact" onclick="if(typeof gtag==='function')gtag('event','select_content',{content_type:'cta_rescate'});">Send us your case →</a>
+</div>
+
+<div class="fuente">
+<div class="wrap">
+<p><strong>Source:</strong> Decision 486 of the Commission of the Andean Community, Common Industrial Property Regime, articles 45 and 85 — in force in Peru. Official text available from the <a href="https://www.tribunalandino.org.ec/decisiones/normativa/DEC486.pdf" rel="noopener" target="_blank">Court of Justice of the Andean Community</a>. The exact terms applying to your file depend on the notification date and how it is counted before INDECOPI; this page is general information and does not constitute legal advice on a specific case.</p>
+<p style="margin-top:0.8rem;">Last verified: September 10, 2026.</p>
+</div>
+</div>
+
+<footer>
+<div class="ft-brand">3VIP</div>
+<div class="ft-sub">3vip.pe &middot; VENI &middot; VIDI &middot; VICI</div>
+<div class="ft-links">
+<a href="/en/">Home</a>
+<a href="/en/costs/">Costs</a>
+<a href="/en/#services">Services</a>
+<a href="/en/#success">Results</a>
+<a href="/en/#contact">Contact</a>
+</div>
+</footer>
+
+<a aria-label="WhatsApp" class="wa-float" href="https://wa.me/51977314025?text=Hello%2C%20my%20patent%20application%20received%20an%20adverse%20examination%20report%20and%20I%20need%20to%20respond" onclick="if(typeof gtag==='function')gtag('event','generate_lead',{method:'whatsapp_rescate'});" rel="noopener" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.88.52 3.65 1.43 5.18L2 22l5.09-1.53a9.87 9.87 0 0 0 4.95 1.33h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.13-2.9-7-1.88-1.88-4.36-2.9-7.02-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.94.94-3.04-.19-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.23-8.22 2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.1-8.34 8.1zm4.52-6.14c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-1.45-.72-2.4-1.29-3.36-2.92-.25-.44.25-.41.72-1.36.08-.17.04-.31-.03-.44-.08-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.42 1.02 2.59.13.17 1.76 2.69 4.27 3.66 2.1.81 2.53.65 2.99.61.46-.04 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.27z"></path></svg>
+</a>
+</body>
+</html>
