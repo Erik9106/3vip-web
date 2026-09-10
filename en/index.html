@@ -52,6 +52,7 @@
 <style>
         :root {
             --gold: #9A6F20;
+            --gold-txt: #88631D;
             --gold-lt: #B8881E;
             --deep: #FAFAF8;
             --dark2: #F4F2EE;
@@ -306,7 +307,7 @@
 
         .btn-secondary {
             background: none;
-            color: var(--gold);
+            color: var(--gold-txt);
             padding: 0.9rem 2.2rem;
             font-family: 'DM Sans', sans-serif;
             font-size: 0.88rem;
@@ -364,7 +365,7 @@
             font-size: 0.78rem;
             letter-spacing: 0.28em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             margin-bottom: 0.9rem;
         }
 
@@ -465,7 +466,7 @@
             font-family: 'Cinzel', serif;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--gold-lt);
+            color: var(--gold-txt);
             letter-spacing: 0.04em;
             margin-bottom: 0.8rem;
         }
@@ -555,7 +556,7 @@
         .vp-title {
             font-family: 'Cinzel', serif;
             font-size: 0.97rem;
-            color: var(--gold-lt);
+            color: var(--gold-txt);
             letter-spacing: 0.04em;
             margin-bottom: 0.8rem;
         }
@@ -661,7 +662,7 @@
         .card h4 {
             font-family: 'Cinzel', serif;
             font-size: 0.8rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             letter-spacing: 0.05em;
             margin-bottom: 0.65rem;
         }
@@ -756,7 +757,7 @@
             font-size: 0.65rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             border: 1px solid rgba(201, 168, 76, 0.25);
             padding: 0.18rem 0.55rem;
             margin-bottom: 0.9rem;
@@ -774,7 +775,7 @@
         .case-inst {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.75rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             opacity: 0.7;
             margin-bottom: 0.7rem;
             letter-spacing: 0.05em;
@@ -915,7 +916,7 @@
         .f-role {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.7rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             letter-spacing: 0.14em;
             text-transform: uppercase;
             margin-top: 0.3rem;
@@ -956,7 +957,7 @@
         .cred-y {
             font-family: 'Cinzel', serif;
             font-size: 0.7rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             min-width: 46px;
             margin-top: 0.05rem;
             flex-shrink: 0;
@@ -1243,7 +1244,7 @@
             font-size: 0.68rem;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             margin-bottom: 0.7rem;
         }
 
@@ -1318,7 +1319,7 @@
             white-space: nowrap;
         }
 
-        @media(max-width:1250px) {
+        @media(max-width:1450px) {
             nav {
                 padding: 0 1.3rem;
             }
@@ -1602,7 +1603,15 @@
             height: 30px;
             fill: #fff;
         }
-    </style>
+
+        /* en escritorio amplio el texto sube un 9%: el contenido rondaba los 13-15px,
+           pequeño para un lector que evalua documentos tecnicos */
+        @media(min-width:1250px) {
+            html {
+                font-size: 17.5px;
+            }
+        }
+</style>
 <link href="https://3vip.pe/" hreflang="es" rel="alternate"/><link href="https://3vip.pe/en/" hreflang="en" rel="alternate"/><link href="https://3vip.pe/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- LANG -->
@@ -1957,28 +1966,46 @@
 <div class="wrap">
 <h2 class="sec-title">Technologies for <em>Transfer</em></h2>
 <div class="rule"></div>
-<p class="transfer-note">Peruvian technologies with granted or pending patents, managed with 3VIP's participation. If you represent a company interested in licensing any of them, contact us.</p>
+<p class="transfer-note">Inventions owned by Peruvian institutions whose applications we drafted and filed before INDECOPI. Title belongs to each institution; if your company wants to explore a licence, we can put you in touch.</p>
 <div class="tech-grid reveal">
 <div class="tech-card">
 <span class="t-status t-active">Patent granted</span>
-<div class="t-name">Early detection system for diseases in Andean crops using molecular techniques</div>
-<div class="t-field">Agricultural Biotechnology · UNMSM</div>
-<p class="t-desc">Rapid identification of pathogens in potato and maize. Available for licensing to agro-industrial companies.</p>
-</div>
-<div class="tech-card">
-<span class="t-status t-pending">In process</span>
-<div class="t-name">Bioactive formulation from Amazonian hydrobiological resources with antimicrobial properties</div>
-<div class="t-field">Aquaculture / Pharmacology · UNHEVAL</div>
-<p class="t-desc">Extract with antimicrobial activity from Amazonian aquatic species. Potential for pharmaceutical and cosmetic industry.</p>
+<div class="t-name">Automatic cutter for precise vegetable cuts</div>
+<div class="t-field">Utility model · Exp. 000589-2024/DIN<br>U. N. Intercultural de la Selva Central Juan Santos Atahualpa</div>
+<p class="t-desc">Cuts vegetables with a grid of interchangeable blades. A pneumatic cylinder pushes the product and a vibrating hopper aligns it before the cut, so the size stays consistent piece after piece.</p>
 </div>
 <div class="tech-card">
 <span class="t-status t-active">Patent granted</span>
-<div class="t-name">Bioremediation process for soils contaminated with heavy metals using native microorganisms</div>
-<div class="t-field">Environmental Biotechnology · UNF</div>
-<p class="t-desc">Recovery of degraded mining soils with native microbial consortia from Piura. Interest for mining and environmental sector.</p>
+<div class="t-name">Portable counting machine</div>
+<div class="t-field">Utility model · Exp. 000590-2024/DIN<br>U. N. Intercultural de la Selva Central Juan Santos Atahualpa</div>
+<p class="t-desc">Counts objects inside boxes or bags without relying on any fixed structure. A laser and a photodiode register each piece as it passes and the total shows on screen; it runs on its own battery.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-active">Patent granted</span>
+<div class="t-name">Impedance detection in meat to determine its quality</div>
+<div class="t-field">Utility model · Exp. 001280-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">A dielectric glove with electrodes measures impedance in meat to assess its quality. It does not invade the sample, so the cut keeps its commercial value, and it logs readings wirelessly.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">Pending</span>
+<div class="t-name">Powder analysis by spectrometer</div>
+<div class="t-field">Invention patent · Exp. 000593-2025/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">A rotating sample holder and a linearly moving sensor read the powder from several points across the plane. It removes the blind spots left by fixed-position spectrometers.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">Pending</span>
+<div class="t-name">Multifunction device to determine food quality</div>
+<div class="t-field">Utility model · Exp. 001947-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">Brings together in a single handheld unit an array of odour sensors, an RGB camera and a thermal camera, to assess meat and other foods without taking the sample to a laboratory.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">Pending</span>
+<div class="t-name">Odour detector with handle</div>
+<div class="t-field">Utility model · Exp. 001807-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">An array of semiconductor sensors housed in a casing with a handle. It is built for long shifts on the plant floor: the grip reduces hand fatigue during continuous sample analysis.</p>
 </div>
 </div>
-<p style="margin-top:1.2rem;font-family:'DM Sans',sans-serif;font-size:0.74rem;color:var(--stone);font-style:italic;">* Names and details adapted to protect confidential information from owning institutions.</p>
+<p style="margin-top:1.4rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--stone);">Each file can be looked up by its number in the records of INDECOPI's Directorate of Inventions and New Technologies.</p>
 </div>
 </section>
 <!-- FOUNDER -->

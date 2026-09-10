@@ -52,6 +52,7 @@
 <style>
         :root {
             --gold: #9A6F20;
+            --gold-txt: #88631D;
             --gold-lt: #B8881E;
             --deep: #FAFAF8;
             --dark2: #F4F2EE;
@@ -306,7 +307,7 @@
 
         .btn-secondary {
             background: none;
-            color: var(--gold);
+            color: var(--gold-txt);
             padding: 0.9rem 2.2rem;
             font-family: 'DM Sans', sans-serif;
             font-size: 0.88rem;
@@ -364,7 +365,7 @@
             font-size: 0.78rem;
             letter-spacing: 0.28em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             margin-bottom: 0.9rem;
         }
 
@@ -465,7 +466,7 @@
             font-family: 'Cinzel', serif;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--gold-lt);
+            color: var(--gold-txt);
             letter-spacing: 0.04em;
             margin-bottom: 0.8rem;
         }
@@ -555,7 +556,7 @@
         .vp-title {
             font-family: 'Cinzel', serif;
             font-size: 0.97rem;
-            color: var(--gold-lt);
+            color: var(--gold-txt);
             letter-spacing: 0.04em;
             margin-bottom: 0.8rem;
         }
@@ -661,7 +662,7 @@
         .card h4 {
             font-family: 'Cinzel', serif;
             font-size: 0.8rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             letter-spacing: 0.05em;
             margin-bottom: 0.65rem;
         }
@@ -756,7 +757,7 @@
             font-size: 0.65rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             border: 1px solid rgba(201, 168, 76, 0.25);
             padding: 0.18rem 0.55rem;
             margin-bottom: 0.9rem;
@@ -774,7 +775,7 @@
         .case-inst {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.75rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             opacity: 0.7;
             margin-bottom: 0.7rem;
             letter-spacing: 0.05em;
@@ -915,7 +916,7 @@
         .f-role {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.7rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             letter-spacing: 0.14em;
             text-transform: uppercase;
             margin-top: 0.3rem;
@@ -956,7 +957,7 @@
         .cred-y {
             font-family: 'Cinzel', serif;
             font-size: 0.7rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             min-width: 46px;
             margin-top: 0.05rem;
             flex-shrink: 0;
@@ -1243,7 +1244,7 @@
             font-size: 0.68rem;
             letter-spacing: 0.22em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             margin-bottom: 0.7rem;
         }
 
@@ -1318,7 +1319,7 @@
             white-space: nowrap;
         }
 
-        @media(max-width:1250px) {
+        @media(max-width:1450px) {
             nav {
                 padding: 0 1.3rem;
             }
@@ -1602,7 +1603,15 @@
             height: 30px;
             fill: #fff;
         }
-    </style>
+
+        /* en escritorio amplio el texto sube un 9%: el contenido rondaba los 13-15px,
+           pequeño para un lector que evalua documentos tecnicos */
+        @media(min-width:1250px) {
+            html {
+                font-size: 17.5px;
+            }
+        }
+</style>
 <link href="https://3vip.pe/" hreflang="es" rel="alternate"/><link href="https://3vip.pe/en/" hreflang="en" rel="alternate"/><link href="https://3vip.pe/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <!-- LANG -->
@@ -1957,28 +1966,46 @@
 <div class="wrap">
 <h2 class="sec-title">Tecnologías para <em>Transferencia</em></h2>
 <div class="rule"></div>
-<p class="transfer-note">Tecnologías peruanas con patente obtenida o en trámite, gestionadas con participación de 3VIP. Si representa a una empresa interesada en licenciar alguna, contáctenos.</p>
+<p class="transfer-note">Invenciones de instituciones peruanas cuyas solicitudes redactamos y presentamos ante INDECOPI. La titularidad corresponde a cada institución; si su empresa quiere explorar una licencia, podemos ponerlos en contacto.</p>
 <div class="tech-grid reveal">
 <div class="tech-card">
 <span class="t-status t-active">Patente concedida</span>
-<div class="t-name">Sistema de detección temprana de enfermedades en cultivos andinos mediante técnicas moleculares</div>
-<div class="t-field">Biotecnología agrícola · UNMSM</div>
-<p class="t-desc">Identificación rápida de patógenos en papa y maíz. Disponible para licenciamiento a empresas agroindustriales.</p>
-</div>
-<div class="tech-card">
-<span class="t-status t-pending">En trámite</span>
-<div class="t-name">Formulación bioactiva de recursos hidrobiológicos amazónicos con propiedades antimicrobianas</div>
-<div class="t-field">Acuicultura / Farmacología · UNHEVAL</div>
-<p class="t-desc">Extracto con actividad antimicrobiana de especies acuáticas amazónicas. Potencial para industria farmacéutica y cosmética.</p>
+<div class="t-name">Cortadora automática para cortes precisos de productos vegetales</div>
+<div class="t-field">Modelo de utilidad · Exp. 000589-2024/DIN<br>U. N. Intercultural de la Selva Central Juan Santos Atahualpa</div>
+<p class="t-desc">Corta vegetal con una red de cuchillas intercambiables. Un cilindro neumático empuja el producto y una tolva con vibración lo ordena antes del corte, de modo que la medida se mantiene pieza a pieza.</p>
 </div>
 <div class="tech-card">
 <span class="t-status t-active">Patente concedida</span>
-<div class="t-name">Proceso de biorremediación de suelos contaminados con metales pesados usando microorganismos nativos</div>
-<div class="t-field">Biotecnología ambiental · UNF</div>
-<p class="t-desc">Recuperación de suelos mineros degradados con consorcios microbianos nativos de Piura. Interés para sector minero y ambiental.</p>
+<div class="t-name">Máquina contadora portátil</div>
+<div class="t-field">Modelo de utilidad · Exp. 000590-2024/DIN<br>U. N. Intercultural de la Selva Central Juan Santos Atahualpa</div>
+<p class="t-desc">Cuenta objetos dentro de cajas o bolsas sin depender de ninguna estructura fija. Un láser y un fotodiodo registran el paso de cada pieza y el total aparece en pantalla; funciona con batería propia.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-active">Patente concedida</span>
+<div class="t-name">Detección de impedancia en carne para determinar su calidad</div>
+<div class="t-field">Modelo de utilidad · Exp. 001280-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">Guante dieléctrico con electrodos que mide la impedancia de la carne para evaluar su calidad. No invade la muestra, así que la pieza conserva su valor comercial, y registra los datos de forma inalámbrica.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">En trámite</span>
+<div class="t-name">Análisis de sustancias en polvo mediante espectrómetro</div>
+<div class="t-field">Patente de invención · Exp. 000593-2025/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">Un porta muestras giratorio y un sensor que se desplaza en línea permiten leer el polvo desde varios puntos del plano. Elimina los puntos ciegos que dejan los espectrómetros de posición fija.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">En trámite</span>
+<div class="t-name">Dispositivo multifuncional para determinar la calidad de alimentos</div>
+<div class="t-field">Modelo de utilidad · Exp. 001947-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">Reúne en un solo equipo de mano una matriz de sensores de olor, una cámara RGB y una cámara térmica, para evaluar carnes y otros alimentos sin trasladar la muestra a laboratorio.</p>
+</div>
+<div class="tech-card">
+<span class="t-status t-pending">En trámite</span>
+<div class="t-name">Detector de olores con agarradera</div>
+<div class="t-field">Modelo de utilidad · Exp. 001807-2024/DIN<br>Universidad Nacional de Frontera</div>
+<p class="t-desc">Matriz de sensores semiconductores alojada en una carcasa con agarradera. Está pensada para jornadas largas en planta: la empuñadura reduce la fatiga de la mano durante el análisis continuo de muestras.</p>
 </div>
 </div>
-<p style="margin-top:1.2rem;font-family:'DM Sans',sans-serif;font-size:0.74rem;color:var(--stone);font-style:italic;">* Nombres y detalles adaptados para proteger información confidencial de las instituciones propietarias.</p>
+<p style="margin-top:1.4rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;color:var(--stone);">Cada expediente puede consultarse por su número en los registros de la Dirección de Invenciones y Nuevas Tecnologías del INDECOPI.</p>
 </div>
 </section>
 <!-- FOUNDER -->

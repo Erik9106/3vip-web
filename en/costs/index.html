@@ -87,6 +87,7 @@
 <style>
         :root {
             --gold: #9A6F20;
+            --gold-txt: #88631D;
             --gold-lt: #B8881E;
             --deep: #FAFAF8;
             --dark2: #F4F2EE;
@@ -211,7 +212,7 @@
             font-size: 0.78rem;
             letter-spacing: 0.28em;
             text-transform: uppercase;
-            color: var(--gold);
+            color: var(--gold-txt);
             margin-bottom: 0.9rem;
         }
 
@@ -321,7 +322,7 @@
         .monto {
             font-family: 'Cinzel', serif;
             font-size: 1.05rem;
-            color: var(--gold);
+            color: var(--gold-txt);
             white-space: nowrap;
         }
 
@@ -601,7 +602,15 @@
                 font-size: 1.15rem;
             }
         }
-    </style>
+
+        /* en escritorio amplio el texto sube un 9%: el contenido rondaba los 13-15px,
+           pequeño para un lector que evalua documentos tecnicos */
+        @media(min-width:1250px) {
+            html {
+                font-size: 17.5px;
+            }
+        }
+</style>
 <link href="https://3vip.pe/costos/" hreflang="es" rel="alternate"/><link href="https://3vip.pe/en/costs/" hreflang="en" rel="alternate"/><link href="https://3vip.pe/costos/" hreflang="x-default" rel="alternate"/></head>
 <body>
 <div class="lang"><a href="/costos/" hreflang="es">ES</a><a class="on" href="/en/costs/" hreflang="en">EN</a></div>
