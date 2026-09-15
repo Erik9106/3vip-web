@@ -35,13 +35,35 @@
   </url>
   <url>
     <loc>https://3vip.pe/cuanto-cuesta-patentar-un-producto/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/cuanto-cuesta-patentar-un-producto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/patent-cost-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/cuanto-cuesta-patentar-un-producto/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://3vip.pe/en/patent-cost-peru/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/cuanto-cuesta-patentar-un-producto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/patent-cost-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/cuanto-cuesta-patentar-un-producto/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://3vip.pe/cuanto-cuesta-registrar-una-marca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/cuanto-cuesta-registrar-una-marca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/trademark-registration-cost-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/cuanto-cuesta-registrar-una-marca/"/>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/en/trademark-registration-cost-peru/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/cuanto-cuesta-registrar-una-marca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/trademark-registration-cost-peru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/cuanto-cuesta-registrar-una-marca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://3vip.pe/rescate-de-patentes/</loc>
