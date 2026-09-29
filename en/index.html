@@ -894,12 +894,14 @@
             position: relative;
         }
 
-        .f-avatar::before {
-            content: 'EJC';
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: rgba(201, 168, 76, 0.06);
+        .f-avatar img {
+            flex: 1 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 12%;
+            position: relative;
+            z-index: 1;
         }
 
         .f-avatar::after {
@@ -2004,7 +2006,7 @@
 <p class="t-desc">Brings together in a single handheld unit an array of odour sensors, an RGB camera and a thermal camera, to assess meat and other foods without taking the sample to a laboratory.</p>
 </div>
 <div class="tech-card">
-<span class="t-status t-pending">Pending</span>
+<span class="t-status t-active">Patent granted</span>
 <div class="t-name">Odour detector with handle</div>
 <div class="t-field">Utility model · Exp. 001807-2024/DIN<br>Universidad Nacional de Frontera</div>
 <p class="t-desc">An array of semiconductor sensors housed in a casing with a handle. It is built for long shifts on the plant floor: the grip reduces hand fatigue during continuous sample analysis.</p>
@@ -2020,7 +2022,7 @@
 <div class="rule"></div>
 <div class="founder-layout">
 <div class="founder-card">
-<div class="f-avatar"></div>
+<div class="f-avatar"><img alt="Erik Jonathan Chuquispuma, founder of 3VIP, intellectual property consultant in Lima, Peru" src="/erik-chuquispuma.webp" srcset="/erik-chuquispuma.webp 560w, /erik-chuquispuma@2x.webp 840w" sizes="220px" width="560" height="746" loading="lazy"/></div>
 <div class="f-name">Erik Jonathan Chuquispuma</div>
 <div class="f-role">Founder &amp; Director</div>
 </div>

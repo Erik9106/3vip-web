@@ -894,12 +894,14 @@
             position: relative;
         }
 
-        .f-avatar::before {
-            content: 'EJC';
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: rgba(201, 168, 76, 0.06);
+        .f-avatar img {
+            flex: 1 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 12%;
+            position: relative;
+            z-index: 1;
         }
 
         .f-avatar::after {
@@ -2004,7 +2006,7 @@
 <p class="t-desc">Reúne en un solo equipo de mano una matriz de sensores de olor, una cámara RGB y una cámara térmica, para evaluar carnes y otros alimentos sin trasladar la muestra a laboratorio.</p>
 </div>
 <div class="tech-card">
-<span class="t-status t-pending">En trámite</span>
+<span class="t-status t-active">Patente concedida</span>
 <div class="t-name">Detector de olores con agarradera</div>
 <div class="t-field">Modelo de utilidad · Exp. 001807-2024/DIN<br>Universidad Nacional de Frontera</div>
 <p class="t-desc">Matriz de sensores semiconductores alojada en una carcasa con agarradera. Está pensada para jornadas largas en planta: la empuñadura reduce la fatiga de la mano durante el análisis continuo de muestras.</p>
@@ -2020,7 +2022,7 @@
 <div class="rule"></div>
 <div class="founder-layout">
 <div class="founder-card">
-<div class="f-avatar"></div>
+<div class="f-avatar"><img alt="Erik Jonathan Chuquispuma, fundador de 3VIP, consultor en propiedad intelectual en Lima, Perú" src="/erik-chuquispuma.webp" srcset="/erik-chuquispuma.webp 560w, /erik-chuquispuma@2x.webp 840w" sizes="220px" width="560" height="746" loading="lazy"/></div>
 <div class="f-name">Erik Jonathan Chuquispuma</div>
 <div class="f-role">Fundador &amp; Director</div>
 </div>
