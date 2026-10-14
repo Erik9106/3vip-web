@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7LB6EM5GHW"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-7LB6EM5GHW');
+    </script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="/favicon.ico" rel="icon" sizes="48x48"/>
+<link href="/icon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+<title>Libro de Reclamaciones | 3VIP</title>
+<meta content="Libro de Reclamaciones virtual de 3VIP, conforme al Código de Protección y Defensa del Consumidor (Ley N.° 29571)." name="description"/>
+<link href="https://3vip.pe/libro-de-reclamaciones/" rel="canonical"/>
+<meta content="noindex, follow" name="robots"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Cinzel:wght@400;600;700&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --gold: #9A6F20;
+            --gold-txt: #88631D;
+            --gold-lt: #B8881E;
+            --deep: #FAFAF8;
+            --dark2: #F4F2EE;
+            --dark3: #EDEAE4;
+            --mid: #E4E0D8;
+            --stone: #5C5448;
+            --stone-lt: #3D352A;
+            --cream: #2A231A;
+            --white: #1A1410;
+            --line: rgba(154, 111, 32, 0.18);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 17px;
+            background: var(--deep);
+            color: var(--cream);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrap {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ── LANG ── */
+        .lang {
+            position: fixed;
+            top: 14px;
+            right: 2.5rem;
+            z-index: 1000;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .lang a {
+            text-decoration: none;
+            display: inline-block;
+            line-height: 1.5;
+                        background: none;
+            border: 1px solid rgba(201, 168, 76, 0.35);
+            color: var(--stone-lt);
+            padding: 0.2rem 0.55rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            cursor: pointer;
+            transition: all 0.25s;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .lang a.on {
+            background: var(--gold);
+            color: var(--deep);
+            border-color: var(--gold);
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 999;
+            padding: 0 2.5rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            text-decoration: none;
+        }
+
+        .nav-brand span {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.18em;
+        }
+
+        .nav-back {
+            margin-left: auto;
+            font-size: 0.78rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--stone);
+            text-decoration: none;
+            margin-right: 5rem;
+            transition: color 0.25s;
+        }
+
+        .nav-back:hover {
+            color: var(--gold);
+        }
+
+        /* ── HEADER ── */
+        header {
+            padding: 9rem 0 3.5rem;
+            border-bottom: 1px solid var(--line);
+            background: var(--dark2);
+        }
+
+        .sec-label {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gold-txt);
+            margin-bottom: 0.9rem;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 3.8vw, 2.9rem);
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.18;
+            max-width: 22ch;
+        }
+
+        h1 em {
+            font-style: normal;
+            color: var(--gold);
+        }
+
+        .rule {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+            margin: 1.6rem 0 1.8rem;
+        }
+
+        .lede {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+            max-width: 62ch;
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 3.8rem 0;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .sec-sub {
+            color: var(--stone);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            max-width: 66ch;
+            line-height: 1.6;
+        }
+
+        /* ── TABLE ── */
+        .tabla-scroll {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px;
+        }
+
+        thead th {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-align: left;
+            padding: 0 1rem 0.8rem;
+            border-bottom: 1px solid var(--gold);
+            font-weight: 500;
+        }
+
+        thead th.num,
+        td.num {
+            text-align: right;
+        }
+
+        tbody td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.95rem;
+            vertical-align: top;
+        }
+
+        tbody tr:hover {
+            background: var(--dark2);
+        }
+
+        .tramite {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .nota {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--stone);
+            margin-top: 0.25rem;
+            line-height: 1.45;
+        }
+
+        .monto {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: var(--gold-txt);
+            white-space: nowrap;
+        }
+
+        .monto-sec {
+            color: var(--stone);
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+
+        /* ── DESTACADOS ── */
+
+        .norma {
+            max-width: 68ch;
+            border-left: 2px solid var(--gold);
+            padding: 0.2rem 0 0.2rem 1.4rem;
+            margin: 1.5rem 0;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.12rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+        }
+
+        .norma cite {
+            display: block;
+            margin-top: 0.7rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--stone);
+            font-style: normal;
+        }
+
+        .tasa-dato {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.4rem;
+            margin: 1.8rem 0 0.4rem;
+        }
+
+        .tasa-dato div {
+            min-width: 150px;
+        }
+
+        .tasa-dato .n {
+            font-family: 'Cinzel', serif;
+            font-size: 1.9rem;
+            color: var(--gold);
+            line-height: 1.1;
+        }
+
+        .tasa-dato .l {
+            font-size: 0.85rem;
+            color: var(--stone);
+            margin-top: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .destacados {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--dark2);
+            border: 1px solid var(--line);
+            border-left: 2px solid var(--gold);
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            color: var(--white);
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--stone-lt);
+        }
+
+        .card strong {
+            color: var(--gold);
+        }
+
+        /* ── HONORARIOS ── */
+        .honorarios {
+            background: var(--dark3);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .honorarios p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--stone-lt);
+            max-width: 66ch;
+            margin-bottom: 1rem;
+        }
+
+        .honorarios strong {
+            color: var(--white);
+        }
+
+        /* ── CTA ── */
+        .cta {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--deep);
+            padding: 0.9rem 2.2rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 500;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid var(--gold);
+            display: inline-block;
+            transition: all 0.25s;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        /* ── FUENTE ── */
+        .fuente {
+            background: var(--dark2);
+            padding: 2rem 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .fuente p {
+            font-size: 0.82rem;
+            color: var(--stone);
+            line-height: 1.7;
+            max-width: 78ch;
+        }
+
+        .fuente a {
+            color: var(--gold-lt);
+            text-decoration: none;
+        }
+
+        .fuente a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--deep);
+            border-top: 1px solid var(--line);
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .ft-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            margin-bottom: 0.3rem;
+        }
+
+        .ft-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.28em;
+            color: var(--stone);
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .ft-links {
+            display: flex;
+            gap: 1.8rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .ft-links a {
+            font-size: 0.8rem;
+            color: var(--stone);
+            text-decoration: none;
+            transition: color 0.25s;
+        }
+
+        .ft-links a:hover {
+            color: var(--gold);
+        }
+
+        /* ── WHATSAPP ── */
+        .wa-float {
+            position: fixed;
+            bottom: 22px;
+            right: 22px;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+            text-decoration: none;
+        }
+
+        .wa-float svg {
+            width: 30px;
+            height: 30px;
+            fill: #fff;
+        }
+
+        @media(max-width:700px) {
+            nav {
+                padding: 0 1.2rem;
+            }
+
+            .nav-back {
+                margin-right: 6.5rem;
+                font-size: 0.68rem;
+            }
+
+            .lang {
+                right: 1.2rem;
+            }
+
+            .wrap {
+                padding: 0 1.2rem;
+            }
+
+            header {
+                padding: 7rem 0 2.5rem;
+            }
+
+            /* las tablas se adaptan al ancho en vez de forzar scroll lateral */
+            table {
+                min-width: 0;
+            }
+
+            thead th {
+                font-size: 0.58rem;
+                letter-spacing: 0.06em;
+                padding: 0 0.35rem 0.6rem;
+            }
+
+            tbody td {
+                padding: 0.85rem 0.35rem;
+                font-size: 0.85rem;
+            }
+
+            .monto {
+                font-size: 0.88rem;
+            }
+
+            .monto-sec {
+                font-size: 0.8rem;
+            }
+
+            .nota {
+                font-size: 0.72rem;
+            }
+
+            .lede {
+                font-size: 1.15rem;
+            }
+        }
+
+        /* en escritorio amplio el texto sube un 9%: el contenido rondaba los 13-15px,
+           pequeño para un lector que evalua documentos tecnicos */
+        @media(min-width:1250px) {
+            html {
+                font-size: 17.5px;
+            }
+        }
+
+        /* ── PÁGINAS DE TRÁMITE ── */
+        .prose {
+            max-width: 68ch;
+        }
+
+        .prose p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--stone-lt);
+            margin-bottom: 1rem;
+        }
+
+        .prose strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .prose a,
+        .card a,
+        .link-sec {
+            color: var(--gold-txt);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        .link-sec {
+            display: inline-block;
+            margin-top: 1.2rem;
+            font-size: 0.92rem;
+        }
+
+        .etapas {
+            list-style: none;
+            counter-reset: etapa;
+            max-width: 72ch;
+            margin-top: 1.5rem;
+        }
+
+        .etapas > li {
+            counter-increment: etapa;
+            position: relative;
+            padding: 0 0 2.2rem 3.4rem;
+            border-left: 1px solid var(--line);
+            margin-left: 1.1rem;
+        }
+
+        .etapas > li:last-child {
+            border-left-color: transparent;
+            padding-bottom: 0;
+        }
+
+        .etapas > li::before {
+            content: counter(etapa);
+            position: absolute;
+            left: -1.1rem;
+            top: -0.2rem;
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+            background: var(--deep);
+            border: 1px solid var(--gold);
+            color: var(--gold-txt);
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .etapas h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .etapas p,
+        .etapas li li {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--stone-lt);
+        }
+
+        .etapas p + p {
+            margin-top: 0.6rem;
+        }
+
+        .etapas ul {
+            margin: 0.5rem 0 0.6rem 1.2rem;
+        }
+
+        .etapas strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .plazo {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-size: 0.78rem;
+            letter-spacing: 0.06em;
+            color: var(--gold-txt);
+            border: 1px solid var(--line);
+            background: var(--dark2);
+            padding: 0.25rem 0.6rem;
+        }
+
+        .art {
+            color: var(--stone);
+            font-size: 0.85em;
+            white-space: nowrap;
+        }
+
+        @media(max-width:700px) {
+            .etapas > li {
+                padding-left: 2.4rem;
+            }
+        }
+
+        .lista {
+            margin: 0.7rem 0 0 1.1rem;
+        }
+
+        .lista li {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--stone-lt);
+            margin-bottom: 0.45rem;
+        }
+
+        .lista strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        /* deja aire entre "volver al inicio" y el selector de idioma */
+        @media(min-width:701px) {
+            .nav-back {
+                margin-right: 6.5rem;
+            }
+        }
+
+        .card .opcional {
+            margin-top: 0.9rem;
+            font-size: 0.82rem;
+            color: var(--stone);
+        }
+
+        /* ── REGLA DEL TRÁMITE: los tramos miden lo que duran en días hábiles ── */
+        .regla {
+            display: flex;
+            margin: 2.4rem 0 1rem;
+            padding-top: 1.6rem;
+        }
+
+        .tramo {
+            flex: var(--d) 1 0;
+            min-width: 0;
+            position: relative;
+            padding-right: 0.9rem;
+        }
+
+        .tramo.t-sil {
+            flex: 0 0 19%;
+            padding-right: 0;
+        }
+
+        /* 15 días no alcanzan para el rótulo: el tramo se ensancha lo justo */
+        .tramo.t-forma {
+            min-width: 8.5rem;
+        }
+
+        .tick {
+            position: absolute;
+            top: -1.6rem;
+            left: 0;
+            font-size: 0.74rem;
+            color: var(--stone);
+            white-space: nowrap;
+        }
+
+        .barra {
+            display: block;
+            height: 14px;
+            margin-right: -0.9rem;
+            border-left: 2px solid var(--deep);
+        }
+
+        .t-sil .barra {
+            margin-right: 0;
+        }
+
+        .t-forma .barra {
+            background: var(--gold);
+        }
+
+        .t-opos .barra {
+            background: var(--gold-lt);
+            opacity: 0.55;
+        }
+
+        /* la espera por la oficina es el tramo neutro y más largo */
+        .t-exam .barra {
+            background: var(--mid);
+        }
+
+        .t-sil .barra {
+            border: 1px dashed var(--gold);
+            background: transparent;
+        }
+
+        .t-nom {
+            display: block;
+            margin-top: 0.8rem;
+            font-family: 'Cinzel', serif;
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.35;
+        }
+
+        .t-dur {
+            display: block;
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+            line-height: 1.45;
+            color: var(--stone);
+        }
+
+        .regla-nota {
+            font-size: 0.82rem;
+            color: var(--stone);
+            max-width: 72ch;
+            line-height: 1.6;
+        }
+
+        @media(max-width:700px) {
+            .regla {
+                flex-direction: column;
+                padding-top: 0;
+            }
+
+            .tramo,
+            .tramo.t-sil {
+                display: grid;
+                grid-template-columns: 14px 1fr;
+                grid-template-rows: auto auto 1fr;
+                column-gap: 1rem;
+                padding: 0;
+            }
+
+            .tramo.t-sil {
+                --d: 30;
+            }
+
+            .tramo.t-forma {
+                min-width: 0;
+            }
+
+            .barra {
+                grid-column: 1;
+                grid-row: 1 / 4;
+                height: auto;
+                min-height: calc(var(--d) * 1.1px + 48px);
+                margin: 0;
+                border-left: 0;
+                border-top: 2px solid var(--deep);
+            }
+
+            .t-sil .barra {
+                border-top: 1px dashed var(--gold);
+            }
+
+            .tick {
+                position: static;
+                grid-column: 2;
+                padding-top: 0.2rem;
+            }
+
+            .t-nom {
+                grid-column: 2;
+                margin-top: 0.15rem;
+            }
+
+            .t-dur {
+                grid-column: 2;
+                padding-bottom: 1rem;
+            }
+        }
+
+        /* ── LO QUE SE CREE / LO QUE PASA ── */
+        .mitos {
+            max-width: 980px;
+            margin-top: 1.4rem;
+            border-top: 1px solid var(--gold);
+        }
+
+        .mito {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+            gap: 2rem;
+            padding: 1.3rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .mito dt {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            color: var(--white);
+        }
+
+        .mito dd {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--stone-lt);
+        }
+
+        .mito dd strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .mito dd a {
+            color: var(--gold-txt);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        @media(max-width:700px) {
+            .mito {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+
+        /* ── CASOS REALES DE INDECOPI ── */
+        .casos {
+            list-style: none;
+            max-width: 980px;
+            margin-top: 1.4rem;
+            border-top: 1px solid var(--gold);
+        }
+
+        .caso {
+            display: grid;
+            grid-template-columns: minmax(0, 15rem) minmax(0, 1fr);
+            gap: 0.4rem 2rem;
+            padding: 1.3rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .signo {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            color: var(--white);
+            line-height: 1.25;
+            overflow-wrap: anywhere;
+        }
+
+        .signo small {
+            display: block;
+            margin-top: 0.35rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: var(--stone);
+        }
+
+        .caso p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--stone-lt);
+        }
+
+        .caso .causal {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--gold-txt);
+            margin-bottom: 0.25rem;
+        }
+
+        @media(max-width:700px) {
+            .caso {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ── LISTA DE PROHIBICIONES ── */
+        .literales {
+            list-style: none;
+            max-width: 76ch;
+            margin-top: 1.2rem;
+        }
+
+        .literales li {
+            display: grid;
+            grid-template-columns: 2.4rem 1fr;
+            padding: 0.7rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--stone-lt);
+        }
+
+        .literales .lit {
+            font-family: 'Cinzel', serif;
+            color: var(--gold-txt);
+        }
+
+        .literales strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+
+        /* ── CLASES DE NIZA ── */
+        .niza-tit {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--white);
+            margin: 2.2rem 0 0.4rem;
+        }
+
+        .niza {
+            list-style: none;
+            columns: 2;
+            column-gap: 2.6rem;
+            max-width: 1040px;
+            border-top: 1px solid var(--gold);
+        }
+
+        .niza li {
+            display: grid;
+            grid-template-columns: 2.2rem 1fr;
+            break-inside: avoid;
+            padding: 0.55rem 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.88rem;
+            line-height: 1.5;
+            color: var(--stone-lt);
+        }
+
+        .niza .nc {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            color: var(--gold-txt);
+        }
+
+        @media(max-width:700px) {
+            .niza {
+                columns: 1;
+            }
+        }
+
+        /* ── TABLA DE VÍAS: en móvil, cada vía es una ficha ── */
+        @media(max-width:700px) {
+            table.vias thead {
+                display: none;
+            }
+
+            table.vias tbody tr {
+                display: block;
+                padding: 1rem 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            table.vias tbody td {
+                display: block;
+                padding: 0.15rem 0;
+                border-bottom: 0;
+                font-size: 0.9rem;
+            }
+
+            table.vias tbody td[data-label]::before {
+                content: attr(data-label);
+                display: block;
+                margin-top: 0.6rem;
+                font-size: 0.72rem;
+                letter-spacing: 0.06em;
+                color: var(--gold-txt);
+            }
+        }
+</style>
+<style>
+        /* ── LIBRO DE RECLAMACIONES ── */
+        .proveedor {
+            margin-top: 1.4rem;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: var(--stone-lt);
+        }
+
+        .proveedor strong {
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .lr-form {
+            max-width: 820px;
+        }
+
+        .lr-form fieldset {
+            border: 0;
+            border-top: 1px solid var(--gold);
+            padding: 1.4rem 0 0.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .lr-form legend {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--white);
+            padding-right: 0.8rem;
+        }
+
+        .campos {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem 1.4rem;
+            margin-top: 1rem;
+        }
+
+        .campo {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .campo.ancho {
+            grid-column: 1 / -1;
+        }
+
+        .campo label,
+        .opciones-tit {
+            font-size: 0.82rem;
+            color: var(--stone-lt);
+        }
+
+        .campo label .req {
+            color: var(--gold-txt);
+        }
+
+        .lr-form input[type="text"],
+        .lr-form input[type="email"],
+        .lr-form input[type="tel"],
+        .lr-form input[type="number"],
+        .lr-form select,
+        .lr-form textarea {
+            font: inherit;
+            font-size: 0.95rem;
+            color: var(--white);
+            background: #fff;
+            border: 1px solid var(--mid);
+            padding: 0.6rem 0.7rem;
+            width: 100%;
+        }
+
+        .lr-form textarea {
+            min-height: 7rem;
+            resize: vertical;
+        }
+
+        .lr-form input:focus,
+        .lr-form select:focus,
+        .lr-form textarea:focus {
+            outline: 2px solid var(--gold);
+            outline-offset: 1px;
+            border-color: var(--gold);
+        }
+
+        .opciones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.6rem;
+            margin-top: 0.4rem;
+        }
+
+        .opciones label,
+        .check {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.92rem;
+            color: var(--stone-lt);
+            line-height: 1.5;
+        }
+
+        .opciones input,
+        .check input {
+            margin-top: 0.25rem;
+            accent-color: var(--gold);
+        }
+
+        .ayuda {
+            font-size: 0.8rem;
+            color: var(--stone);
+            line-height: 1.55;
+        }
+
+        .lr-error {
+            display: none;
+            margin: 1rem 0;
+            padding: 0.8rem 1rem;
+            border-left: 2px solid #A33A2A;
+            background: #FBEFEC;
+            color: #6E2318;
+            font-size: 0.9rem;
+        }
+
+        .lr-form button {
+            cursor: pointer;
+        }
+
+        .apoderado {
+            display: none;
+        }
+
+        .apoderado.on {
+            display: grid;
+        }
+
+        /* hoja generada tras el registro */
+        .hoja {
+            display: none;
+            max-width: 820px;
+            background: #fff;
+            border: 1px solid var(--mid);
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: var(--white);
+        }
+
+        .hoja.on {
+            display: block;
+        }
+
+        .hoja-cab {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--white);
+            padding-bottom: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .hoja-cab h2 {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .hoja table {
+            min-width: 0;
+            margin-bottom: 1rem;
+        }
+
+        .hoja th {
+            text-align: left;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--dark3);
+            padding: 0.45rem 0.6rem;
+        }
+
+        .hoja td {
+            border: 1px solid var(--mid);
+            padding: 0.45rem 0.6rem;
+            vertical-align: top;
+            font-size: 0.86rem;
+        }
+
+        .hoja td.k {
+            width: 32%;
+            color: var(--stone);
+        }
+
+        .hoja tbody tr:hover {
+            background: none;
+        }
+
+        .hoja .pie {
+            font-size: 0.76rem;
+            color: var(--stone);
+            line-height: 1.55;
+            margin-top: 0.4rem;
+        }
+
+        .hoja-acciones {
+            display: none;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.4rem;
+        }
+
+        .hoja-acciones.on {
+            display: flex;
+        }
+
+        @media(max-width:700px) {
+            .campos {
+                grid-template-columns: 1fr;
+            }
+
+            .hoja {
+                padding: 1.1rem;
+            }
+        }
+
+        @media print {
+            nav, header, footer, .wa-float, .fuente, .no-print, .lr-intro {
+                display: none !important;
+            }
+
+            body {
+                background: #fff;
+            }
+
+            section {
+                padding: 0;
+            }
+
+            .hoja {
+                border: 0;
+                padding: 0;
+                max-width: none;
+            }
+        }
+</style>
+</head>
+<body>
+<nav>
+<a class="nav-brand" href="/">
+<img alt="3VIP" src="/logo-seal.webp" style="width:36px;height:36px;object-fit:cover;border-radius:50%;box-shadow:0 0 10px rgba(201,168,76,0.3);"/>
+<span>3VIP</span>
+</a>
+<a class="nav-back" href="/">← Volver al inicio</a>
+</nav>
+<header>
+<div class="wrap">
+<p class="sec-label">Atención al consumidor</p>
+<h1>Libro de Reclamaciones</h1>
+<div class="rule"></div>
+<p class="lede">Conforme al Código de Protección y Defensa del Consumidor, puedes registrar aquí un reclamo o una queja sobre nuestros servicios. Al terminar podrás imprimir tu Hoja de Reclamación o guardarla en PDF, y te enviaremos a tu correo electrónico una copia con su número correlativo.</p>
+<p class="proveedor"><strong>Erik Jonathan Chuquispuma Martinez</strong> · RUC <strong>10472256276</strong><br/>Establecimiento virtual: https://3vip.pe · Lima, Perú</p>
+</div>
+</header>
+
+<section class="lr-intro">
+<div class="wrap">
+<div class="destacados">
+<div class="card">
+<h3>Reclamo</h3>
+<p>Disconformidad relacionada con los servicios contratados.</p>
+</div>
+<div class="card">
+<h3>Queja</h3>
+<p>Disconformidad no relacionada con los servicios contratados; o malestar o descontento respecto a la atención al público.</p>
+</div>
+<div class="card">
+<h3>Plazo de respuesta</h3>
+<p>Respondemos por escrito, por correo electrónico o por carta según elijas, en un plazo no mayor a <strong>15 días hábiles</strong>, improrrogable.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section style="padding-top:0;">
+<div class="wrap">
+<form class="lr-form no-print" data-netlify="true" id="lrForm" method="POST" name="libro-reclamaciones" netlify-honeypot="bot-field" novalidate>
+<input name="form-name" type="hidden" value="libro-reclamaciones"/>
+<input name="fecha_hora" type="hidden" value=""/>
+<p style="display:none;"><label>No llenar: <input name="bot-field"/></label></p>
+
+<fieldset>
+<legend>1. Identificación del consumidor reclamante</legend>
+<div class="campos">
+<div class="campo ancho"><label for="lr-nombre">Nombre completo <span class="req">*</span></label><input autocomplete="name" id="lr-nombre" name="nombre" required type="text"/></div>
+<div class="campo ancho"><label for="lr-domicilio">Domicilio <span class="req">*</span></label><input autocomplete="street-address" id="lr-domicilio" name="domicilio" required type="text"/></div>
+<div class="campo"><label for="lr-tipodoc">Tipo de documento <span class="req">*</span></label>
+<select id="lr-tipodoc" name="tipo_documento" required>
+<option value="DNI">DNI</option>
+<option value="CE">Carné de extranjería</option>
+</select></div>
+<div class="campo"><label for="lr-doc">Número de documento <span class="req">*</span></label><input id="lr-doc" inputmode="numeric" name="documento" required type="text"/></div>
+<div class="campo"><label for="lr-tel">Teléfono <span class="req">*</span></label><input autocomplete="tel" id="lr-tel" name="telefono" required type="tel"/></div>
+<div class="campo"><label for="lr-email">Correo electrónico <span class="req">*</span></label><input autocomplete="email" id="lr-email" name="email" required type="email"/></div>
+<div class="campo ancho"><label class="check"><input id="lr-menor" name="menor_de_edad" type="checkbox" value="Sí"/> Soy menor de edad: completo los datos de mi padre, madre o representante</label></div>
+</div>
+<div class="campos apoderado" id="lr-apoderado">
+<div class="campo ancho"><label for="lr-ap-nombre">Nombre del padre, madre o representante <span class="req">*</span></label><input id="lr-ap-nombre" name="representante_nombre" type="text"/></div>
+<div class="campo ancho"><label for="lr-ap-domicilio">Domicilio <span class="req">*</span></label><input id="lr-ap-domicilio" name="representante_domicilio" type="text"/></div>
+<div class="campo"><label for="lr-ap-tel">Teléfono <span class="req">*</span></label><input id="lr-ap-tel" name="representante_telefono" type="tel"/></div>
+<div class="campo"><label for="lr-ap-email">Correo electrónico <span class="req">*</span></label><input id="lr-ap-email" name="representante_email" type="email"/></div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>2. Identificación del servicio contratado</legend>
+<div class="campos">
+<input name="bien_tipo" type="hidden" value="Servicio"/>
+<div class="campo"><label for="lr-monto">Monto reclamado (S/)</label><input id="lr-monto" inputmode="decimal" min="0" name="monto_reclamado" step="0.01" type="number"/></div>
+<div class="campo ancho"><label for="lr-desc">Descripción del servicio contratado <span class="req">*</span></label><input id="lr-desc" name="descripcion_bien" placeholder="Por ejemplo: registro de la marca X en la clase 30" required type="text"/></div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>3. Detalle de la reclamación y pedido</legend>
+<div class="campos">
+<div class="campo ancho"><span class="opciones-tit">¿Es un reclamo o una queja? <span class="req" style="color:var(--gold-txt);">*</span></span>
+<div class="opciones">
+<label><input checked name="tipo" type="radio" value="Reclamo"/> Reclamo</label>
+<label><input name="tipo" type="radio" value="Queja"/> Queja</label>
+</div></div>
+<div class="campo ancho"><label for="lr-detalle">Detalle <span class="req">*</span></label><textarea id="lr-detalle" name="detalle" required></textarea></div>
+<div class="campo ancho"><label for="lr-pedido">Pedido concreto <span class="req">*</span></label><textarea id="lr-pedido" name="pedido" required style="min-height:4.5rem;"></textarea><span class="ayuda">Qué solución esperas de nosotros.</span></div>
+<div class="campo ancho"><span class="opciones-tit">¿Cómo quieres recibir la respuesta? <span class="req" style="color:var(--gold-txt);">*</span></span>
+<div class="opciones">
+<label><input checked name="medio_respuesta" type="radio" value="Correo electrónico"/> Por correo electrónico</label>
+<label><input name="medio_respuesta" type="radio" value="Carta al domicilio"/> Por carta a mi domicilio</label>
+</div></div>
+<div class="campo ancho"><label class="check"><input id="lr-conforme" name="conformidad" required type="checkbox" value="Sí"/> Declaro que los datos consignados son correctos y que estoy conforme con los términos de mi reclamo o queja. <span class="req" style="color:var(--gold-txt);">*</span></label></div>
+</div>
+</fieldset>
+
+<p class="ayuda" style="max-width:76ch;">Tus datos se usan solo para atender tu reclamo o queja y se conservan durante dos años, como exige el Reglamento del Libro de Reclamaciones. El titular del banco de datos es Erik Jonathan Chuquispuma Martinez. Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición escribiendo a erik@3vip.pe, conforme a la Ley N.° 29733, Ley de Protección de Datos Personales.</p>
+<p class="ayuda" style="max-width:76ch;margin-top:0.6rem;">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI.</p>
+<div class="lr-error" id="lr-error" role="alert"></div>
+<button class="btn-primary" style="margin-top:1.4rem;" type="submit">Registrar mi Hoja de Reclamación</button>
+</form>
+
+<div aria-live="polite" class="hoja" id="lr-hoja"></div>
+<div class="hoja-acciones no-print" id="lr-acciones">
+<button class="btn-primary" onclick="window.print()" type="button">Imprimir o guardar en PDF</button>
+</div>
+</div>
+</section>
+
+<div class="fuente">
+<div class="wrap">
+<p><strong>Base legal:</strong> Ley N.° 29571, Código de Protección y Defensa del Consumidor, artículos 24, 150 a 152, modificados por las Leyes N.° 31435 y 32495; Reglamento del Libro de Reclamaciones, aprobado por Decreto Supremo N.° 011-2011-PCM y sus modificatorias, incluido el Decreto Supremo N.° 101-2022-PCM.</p>
+</div>
+</div>
+<footer>
+<div class="ft-brand">3VIP</div>
+<div class="ft-sub">3vip.pe · VENI · VIDI · VICI</div>
+<div class="ft-links">
+<a href="/">Inicio</a>
+<a href="/costos/">Costos</a>
+<a href="/cuanto-cuesta-registrar-una-marca/">Registrar una marca</a>
+<a href="/cuanto-cuesta-patentar-un-producto/">Patentar un producto</a>
+<a href="/#contact">Contacto</a>
+</div>
+<div class="lr-aviso" style="margin:1.4rem 0 0.4rem;"><a href="/libro-de-reclamaciones/" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.55rem 1rem;border:1px solid var(--gold);color:var(--white);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.85rem;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5.2 7.9 4.6 4 4.6v13c3.9 0 6.3.6 8 1.9 1.7-1.3 4.1-1.9 8-1.9v-13c-3.9 0-6.3.6-8 1.9z"/><path d="M12 6.5v13"/></svg>Libro de Reclamaciones</a></div>
+<div class="ft-copy" style="margin-top:1.4rem;font-size:0.78rem;color:var(--stone);">© 2026 Erik Chuquispuma. Todos los derechos reservados. · Lima, Perú</div>
+</footer>
+<a aria-label="WhatsApp" class="wa-float" href="https://wa.me/51977314025?text=Hola%2C%20quisiera%20registrar%20mi%20marca%20y%20recibir%20una%20cotizaci%C3%B3n" onclick="if(typeof gtag==='function')gtag('event','generate_lead',{method:'whatsapp_marca'});" rel="noopener" target="_blank">
+<svg viewbox="0 0 24 24">
+<path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.88.52 3.65 1.43 5.18L2 22l5.09-1.53a9.87 9.87 0 0 0 4.95 1.33h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.13-2.9-7-1.88-1.88-4.36-2.9-7.02-2.9zm0 18.13h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.94.94-3.04-.19-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.23-8.22 2.2 0 4.26.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.1-8.34 8.1zm4.52-6.14c-.25-.12-1.47-.72-1.69-.81-.23-.08-.4-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-1.45-.72-2.4-1.29-3.36-2.92-.25-.44.25-.41.72-1.36.08-.17.04-.31-.03-.44-.08-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.42-.14-.01-.31-.01-.48-.01-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.23.9 2.42 1.02 2.59.13.17 1.76 2.69 4.27 3.66 2.1.81 2.53.65 2.99.61.46-.04 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.27z">
+</path>
+</svg>
+</a>
+<script>
+(function () {
+    var PROVEEDOR = {
+        nombre: 'Erik Jonathan Chuquispuma Martinez',
+        ruc: '10472256276',
+        domicilio: 'Establecimiento virtual: https://3vip.pe · Lima, Perú'
+    };
+    var form = document.getElementById('lrForm');
+    var menor = document.getElementById('lr-menor');
+    var apoderado = document.getElementById('lr-apoderado');
+    var err = document.getElementById('lr-error');
+
+    menor.addEventListener('change', function () {
+        apoderado.classList.toggle('on', menor.checked);
+        apoderado.querySelectorAll('input').forEach(function (i) { i.required = menor.checked; });
+    });
+
+    function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+    }
+
+    function fila(k, v) {
+        return '<tr><td class="k">' + esc(k) + '</td><td>' + esc(v) + '</td></tr>';
+    }
+
+    function hoja(d, fecha) {
+        var f = fecha.toLocaleString('es-PE', { timeZone: 'America/Lima', dateStyle: 'long', timeStyle: 'short' });
+        var rep = d.menor_de_edad === 'Sí'
+            ? fila('Padre, madre o representante', d.representante_nombre + ' · ' + d.representante_domicilio + ' · ' + d.representante_telefono + ' · ' + d.representante_email)
+            : '';
+        return '<div class="hoja-cab"><div><h2>Libro de Reclamaciones</h2>' +
+            '<div>' + esc(PROVEEDOR.nombre) + ' · RUC ' + esc(PROVEEDOR.ruc) + '</div>' +
+            '<div>' + esc(PROVEEDOR.domicilio) + '</div></div>' +
+            '<div style="text-align:right;"><strong>Hoja de Reclamación</strong><br/>N.° de hoja: te lo enviamos por correo con la copia<br/>Fecha y hora: ' + esc(f) + '</div></div>' +
+            '<table><thead><tr><th colspan="2">1. Identificación del consumidor reclamante</th></tr></thead><tbody>' +
+            fila('Nombre', d.nombre) + fila('Domicilio', d.domicilio) +
+            fila(d.tipo_documento, d.documento) + fila('Teléfono / correo', d.telefono + ' · ' + d.email) + rep +
+            '</tbody></table>' +
+            '<table><thead><tr><th colspan="2">2. Identificación del bien contratado</th></tr></thead><tbody>' +
+            fila(d.bien_tipo, d.descripcion_bien) + fila('Monto reclamado', d.monto_reclamado ? 'S/ ' + d.monto_reclamado : '—') +
+            '</tbody></table>' +
+            '<table><thead><tr><th colspan="2">3. Detalle de la reclamación y pedido del consumidor</th></tr></thead><tbody>' +
+            fila('Tipo', d.tipo) + fila('Detalle', d.detalle) + fila('Pedido', d.pedido) +
+            fila('Respuesta por', d.medio_respuesta) + fila('Conformidad del consumidor', 'Sí, declarada al registrar') +
+            '</tbody></table>' +
+            '<table><thead><tr><th colspan="2">4. Observaciones y acciones adoptadas por el proveedor</th></tr></thead><tbody>' +
+            fila('Observaciones y acciones', '') + fila('Fecha de comunicación de la respuesta', '') +
+            '</tbody></table>' +
+            '<p class="pie">Reclamo: disconformidad relacionada a los productos o servicios. Queja: disconformidad no relacionada a los productos o servicios; o malestar o descontento respecto a la atención al público.</p>' +
+            '<p class="pie">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. El proveedor debe dar respuesta al reclamo o queja en un plazo no mayor a quince (15) días hábiles, el cual es improrrogable.</p>' +
+            '<p class="pie">Destinatario: consumidor.</p>';
+    }
+
+    form.addEventListener('submit', function (ev) {
+        ev.preventDefault();
+        err.style.display = 'none';
+        if (!form.checkValidity()) {
+            err.textContent = 'Completa los campos marcados con * y acepta la declaración de conformidad. Sin nombre, documento, domicilio o correo y el detalle, el reclamo se considera no presentado.';
+            err.style.display = 'block';
+            form.reportValidity();
+            return;
+        }
+        var ahora = new Date();
+        form.elements.fecha_hora.value = ahora.toISOString();
+        var datos = new FormData(form);
+        var d = {};
+        datos.forEach(function (v, k) { d[k] = v; });
+        var boton = form.querySelector('button[type="submit"]');
+        boton.disabled = true;
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams(datos).toString()
+        }).then(function (res) {
+            if (!res.ok) throw new Error('status ' + res.status);
+            var h = document.getElementById('lr-hoja');
+            h.innerHTML = hoja(d, ahora);
+            h.classList.add('on');
+            document.getElementById('lr-acciones').classList.add('on');
+            form.style.display = 'none';
+            document.querySelector('.lr-intro').style.display = 'none';
+            h.scrollIntoView({ block: 'start' });
+        }).catch(function () {
+            boton.disabled = false;
+            err.textContent = 'No se pudo registrar tu Hoja de Reclamación. Inténtalo de nuevo en unos minutos o escríbenos a erik@3vip.pe.';
+            err.style.display = 'block';
+        });
+    });
+})();
+</script>
+</body>
+</html>
