@@ -160,6 +160,25 @@ h1 em {
     max-width: 62ch;
 }
 
+/* la accion principal se ve en el primer pantallazo de cada guia */
+.cab-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.8rem 1.4rem;
+    margin-top: 2rem;
+}
+
+.cab-alt {
+    color: var(--gold-txt);
+    font-size: 0.95rem;
+    text-underline-offset: 3px;
+}
+
+.cab-alt:hover {
+    color: var(--white);
+}
+
 /* ── SECTIONS ── */
 section {
     padding: 3.8rem 0;
@@ -491,8 +510,8 @@ footer {
     }
 
     thead th {
-        font-size: 0.58rem;
-        letter-spacing: 0.06em;
+        font-size: 0.68rem;
+        letter-spacing: 0.04em;
         padding: 0 0.35rem 0.6rem;
     }
 
@@ -515,6 +534,23 @@ footer {
 
     .lede {
         font-size: 1.15rem;
+    }
+
+    .cab-acciones .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* el boton de WhatsApp flota sobre el contenido: se achica y el pie deja espacio para que no tape el final */
+    .wa-float {
+        width: 50px;
+        height: 50px;
+        bottom: 14px;
+        right: 14px;
+    }
+
+    footer {
+        padding-bottom: 5.5rem;
     }
 }
 

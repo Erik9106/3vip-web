@@ -106,6 +106,7 @@ nav {
 nav ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 2.2rem;
 }
 
@@ -122,106 +123,78 @@ nav ul a:hover {
     color: var(--gold);
 }
 
+nav ul a.nav-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--deep);
+    padding: 0.55rem 1.1rem;
+}
+
+nav ul a.nav-cta:hover {
+    background: var(--gold-txt);
+    color: var(--deep);
+}
+
+.nav-toggle {
+    display: none;
+}
+
 /* ── HERO ── */
+/* el primer pantallazo dice qué hace 3VIP; el lema queda como firma junto a la moneda */
 #hero {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
-    padding: 7rem 2rem 5rem;
-    position: relative;
-    overflow: hidden;
+    padding: 9rem 2rem 4.5rem;
 }
 
-.hero-grid {
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(154, 111, 32, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(154, 111, 32, 0.06) 1px, transparent 1px);
-    background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 80% 80% at 50% 40%, black 30%, transparent 100%);
+.hero-sign {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 2.2rem;
+    animation: fadeUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
-.hero-glow {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 600px;
-    height: 300px;
-    background: radial-gradient(ellipse, rgba(154, 111, 32, 0.10) 0%, transparent 70%);
-    pointer-events: none;
+.hero-sign img {
+    width: 72px;
+    height: 72px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
-/* Mark in hero */
-.hero-mark {
-    margin-bottom: 2.5rem;
-    animation: fadeUp 0.8s ease both;
-}
-
-.hero-eyebrow {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.72rem;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--stone);
-    margin-bottom: 1.2rem;
-    animation: fadeUp 0.8s 0.05s ease both;
+.hero-motto {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--gold-txt);
 }
 
 .hero-title {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(2.8rem, 7vw, 6.5rem);
-    font-weight: 700;
-    line-height: 0.95;
-    letter-spacing: 0.04em;
-    color: var(--white);
-    animation: fadeUp 0.8s 0.1s ease both;
-}
-
-.hero-title .v {
-    color: var(--gold);
-}
-
-.hero-subtitle {
     font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
-    color: var(--stone-lt);
-    letter-spacing: 0.1em;
-    margin-top: 1rem;
-    animation: fadeUp 0.8s 0.15s ease both;
+    font-size: clamp(2.1rem, 5.2vw, 4.6rem);
+    font-weight: 600;
+    line-height: 1.04;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    text-wrap: balance;
+    animation: fadeUp 0.6s 0.06s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.hero-title span {
+    display: block;
 }
 
 .hero-desc {
-    max-width: 600px;
-    margin: 2.2rem auto 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.8;
+    max-width: 34em;
+    margin: 1.6rem auto 0;
+    font-size: 1.15rem;
+    line-height: 1.6;
     color: var(--cream);
-    opacity: 0.9;
-    animation: fadeUp 0.8s 0.2s ease both;
-}
-
-.hero-pills {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1.8rem;
-    animation: fadeUp 0.8s 0.25s ease both;
-}
-
-.pill {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem;
-    letter-spacing: 0.08em;
-    color: var(--stone-lt);
-    border: 1px solid var(--line);
-    padding: 0.35rem 1rem;
+    text-wrap: balance;
+    animation: fadeUp 0.6s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .hero-cta {
@@ -229,8 +202,15 @@ nav ul a:hover {
     gap: 0.8rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 2.5rem;
-    animation: fadeUp 0.8s 0.3s ease both;
+    margin-top: 2.2rem;
+    animation: fadeUp 0.6s 0.18s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.hero-note {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    color: var(--stone);
+    animation: fadeUp 0.6s 0.24s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
 .btn-primary {
@@ -274,29 +254,6 @@ nav ul a:hover {
 .btn-secondary:hover {
     border-color: var(--gold);
     background: rgba(201, 168, 76, 0.04);
-}
-
-.scroll-cue {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--stone);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    animation: fadeUp 1s 0.6s ease both;
-}
-
-.scroll-line {
-    width: 1px;
-    height: 36px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-    animation: pulse 2s ease infinite;
 }
 
 /* ── SHARED SECTION STYLES ── */
@@ -629,41 +586,31 @@ section {
     text-decoration: none;
 }
 
-/* ── STATS ── */
-#success {
-    background: var(--deep);
+/* ── PRUEBA: las cifras van justo después del hero ── */
+#prueba {
+    background: var(--dark2);
+    padding: 3.5rem 2rem;
 }
 
 .stats {
-    display: flex;
-    gap: 0;
-    margin: 3rem 0;
-    border: 1px solid var(--line);
-    flex-wrap: wrap;
-}
-
-.stat {
-    flex: 1;
-    min-width: 140px;
-    padding: 2rem;
-    border-right: 1px solid var(--line);
-}
-
-.stat:last-child {
-    border-right: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
 }
 
 .stat-n {
     font-family: 'Cinzel', serif;
-    font-size: 3.2rem;
+    font-size: clamp(2rem, 3vw, 2.7rem);
     font-weight: 700;
-    color: var(--gold);
+    color: var(--gold-txt);
     line-height: 1;
 }
 
-
-.stat-n.sm {
-    font-size: 2.1rem;
+.stat-l {
+    font-size: 0.92rem;
+    line-height: 1.45;
+    color: var(--stone-lt);
+    margin-top: 0.6rem;
 }
 
 .stats-nota {
@@ -671,16 +618,12 @@ section {
     line-height: 1.7;
     color: var(--stone);
     max-width: 78ch;
-    margin: -1.6rem 0 2.5rem;
+    margin-top: 2rem;
 }
 
-.stat-l {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem;
-    color: var(--stone);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin-top: 0.5rem;
+/* ── CASOS ── */
+#success {
+    background: var(--dark2);
 }
 
 .cases {
@@ -692,7 +635,7 @@ section {
 }
 
 .case {
-    background: var(--dark2);
+    background: var(--deep);
     padding: 1.8rem;
     transition: background 0.3s;
 }
@@ -740,7 +683,7 @@ section {
 
 /* ── TRANSFER ── */
 #transfer {
-    background: var(--dark2);
+    background: var(--deep);
 }
 
 .tech-grid {
@@ -815,12 +758,12 @@ section {
 
 /* ── FOUNDER ── */
 #founder {
-    background: var(--deep);
+    background: var(--dark2);
 }
 
 .founder-layout {
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 4rem;
     align-items: start;
 }
@@ -929,7 +872,7 @@ section {
 
 /* ── CONTACT ── */
 #contact {
-    background: var(--dark2);
+    background: var(--deep);
 }
 
 .contact-layout {
@@ -1078,7 +1021,7 @@ section {
 
 /* ── FOOTER ── */
 footer {
-    background: var(--deep);
+    background: var(--dark2);
     border-top: 1px solid var(--line);
     padding: 2.5rem 2rem;
     text-align: center;
@@ -1242,15 +1185,10 @@ footer {
     }
 }
 
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.25;
+@keyframes menuIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
     }
 }
 
@@ -1266,79 +1204,111 @@ footer {
 }
 
 
-/* el menu pasa a 8 items: se comprime antes de ocultarse en 768px */
 nav ul a {
     white-space: nowrap;
 }
 
-@media(max-width:1450px) {
+@media(max-width:1250px) {
     nav {
         padding: 0 1.3rem;
     }
 
     nav ul {
-        gap: 0.95rem;
-        margin-left: 1.1rem;
+        gap: 1.4rem;
+    }
+}
+
+/* por debajo de 950px el menu se abre desde un boton */
+@media(max-width:950px) {
+    .lang {
+        margin-left: auto;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        min-height: 44px;
+        margin-left: 0.6rem;
+        padding: 0 0.9rem;
+        background: var(--dark3);
+        border: none;
+        color: var(--cream);
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.4rem 1.2rem 1.4rem;
+        background: var(--deep);
+        box-shadow: 0 14px 24px -14px rgba(26, 20, 16, 0.25);
+    }
+
+    nav.open ul {
+        display: flex;
+        animation: menuIn 0.18s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     nav ul a {
-        font-size: 0.71rem;
-        letter-spacing: 0.04em;
+        display: block;
+        padding: 0.85rem 0;
+        font-size: 0.95rem;
+        letter-spacing: 0.06em;
     }
 
-    .lang {
-        margin-left: 0.8rem;
-    }
-
-    .nav-brand-text {
-        font-size: 1.05rem;
-    }
-}
-
-
-/* con 8 items el menu no cabe por debajo de ~950px: se oculta antes de romperse */
-@media(max-width:950px) {
-    nav ul {
-        display: none;
+    nav ul a.nav-cta {
+        display: block;
+        margin-top: 0.6rem;
+        padding: 0.9rem;
+        text-align: center;
     }
 }
 
+@media(prefers-reduced-motion:reduce) {
+    nav.open ul {
+        animation: none;
+    }
+}
 
 /* compactar el hero en moviles: el CTA principal debe verse sin desplazarse */
 @media(max-width:700px) {
     #hero {
-        min-height: auto;
-        padding: 6rem 1.4rem 3rem;
+        padding: 7rem 1.4rem 3rem;
     }
 
-    .hero-mark {
-        margin-bottom: 1.4rem;
+    .hero-sign {
+        margin-bottom: 1.6rem;
     }
 
-    .hero-mark img {
-        width: 118px !important;
-        height: 118px !important;
+    .hero-sign img {
+        width: 56px;
+        height: 56px;
     }
 
-    .hero-eyebrow {
-        letter-spacing: 0.22em;
-        margin-bottom: 0.7rem;
+    .hero-title {
+        font-size: 2.05rem;
+    }
+
+    .hero-title span {
+        display: inline;
     }
 
     .hero-desc {
-        margin-top: 1rem;
+        font-size: 1.05rem;
+        margin-top: 1.1rem;
     }
 
-    .hero-pills {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
-        margin-top: 1.4rem;
-    }
-
-    .hero-pills .pill {
-        text-align: center;
-        justify-content: center;
+    #prueba {
+        padding: 2.8rem 1.4rem;
     }
 
     .hero-cta {
@@ -1379,30 +1349,24 @@ nav ul a {
         padding: 0 1.2rem;
     }
 
-    nav ul {
-        display: none;
-    }
-
-    .lang {
-        top: 0.8rem;
-        right: 1.2rem;
-    }
-
     section {
         padding: 4.5rem 1.4rem;
     }
 
     .stats {
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.8rem 1.2rem;
     }
 
-    .stat {
-        border-right: none;
-        border-bottom: 1px solid var(--line);
+    .wa-float {
+        width: 50px;
+        height: 50px;
+        bottom: 14px;
+        right: 14px;
     }
 
-    .stat:last-child {
-        border-bottom: none;
+    footer {
+        padding-bottom: 5.5rem;
     }
 
     .form-row {
@@ -1417,9 +1381,7 @@ nav ul a {
 
 /* ── FILOSOFIA / ORIGEN DE MARCA ── */
 .seccion-filosofia {
-    background: var(--dark2);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
+    background: var(--deep);
     padding: 6rem 2rem;
 }
 
