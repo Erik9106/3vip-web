@@ -111,8 +111,10 @@ nav {
     transition: color 0.25s;
 }
 
-.nav-back:hover {
-    color: var(--accent);
+@media(hover:hover) and (pointer:fine) {
+    .nav-back:hover {
+        color: var(--accent);
+    }
 }
 
 /* ── HEADER ── */
@@ -160,8 +162,10 @@ h1 em {
     text-underline-offset: 3px;
 }
 
-.cab-alt:hover {
-    color: var(--ink-strong);
+@media(hover:hover) and (pointer:fine) {
+    .cab-alt:hover {
+        color: var(--ink-strong);
+    }
 }
 
 /* ── SECTIONS ── */
@@ -220,8 +224,10 @@ tbody td {
     vertical-align: top;
 }
 
-tbody tr:hover {
-    background: var(--surface);
+@media(hover:hover) and (pointer:fine) {
+    tbody tr:hover {
+        background: var(--surface);
+    }
 }
 
 .tramite {
@@ -367,9 +373,11 @@ tbody tr:hover {
     transition: background-color 0.2s, color 0.2s, transform 0.16s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.btn-primary:hover {
-    background: var(--accent-strong);
-    color: var(--bg);
+@media(hover:hover) and (pointer:fine) {
+    .btn-primary:hover {
+        background: var(--accent-strong);
+        color: var(--bg);
+    }
 }
 
 /* ── FUENTE ── */
@@ -391,8 +399,10 @@ tbody tr:hover {
     text-underline-offset: 3px;
 }
 
-.fuente a:hover {
-    text-decoration: underline;
+@media(hover:hover) and (pointer:fine) {
+    .fuente a:hover {
+        text-decoration: underline;
+    }
 }
 
 /* ── WHATSAPP ── */

@@ -65,9 +65,11 @@ body {
     color: var(--accent);
 }
 
-.lang button:hover {
-    border-color: var(--accent);
-    color: var(--accent);
+@media(hover:hover) and (pointer:fine) {
+    .lang button:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
 }
 
 /* ── NAV ── */
@@ -119,8 +121,10 @@ nav ul a {
     transition: color 0.25s;
 }
 
-nav ul a:hover {
-    color: var(--accent);
+@media(hover:hover) and (pointer:fine) {
+    nav ul a:hover {
+        color: var(--accent);
+    }
 }
 
 nav ul a.nav-cta {
@@ -130,9 +134,11 @@ nav ul a.nav-cta {
     padding: 0.55rem 1.1rem;
 }
 
-nav ul a.nav-cta:hover {
-    background: var(--accent-ink);
-    color: var(--bg);
+@media(hover:hover) and (pointer:fine) {
+    nav ul a.nav-cta:hover {
+        background: var(--accent-ink);
+        color: var(--bg);
+    }
 }
 
 .nav-toggle {
@@ -224,8 +230,10 @@ nav ul a.nav-cta:hover {
     display: inline-block;
 }
 
-.btn-primary:hover {
-    background: var(--accent-strong);
+@media(hover:hover) and (pointer:fine) {
+    .btn-primary:hover {
+        background: var(--accent-strong);
+    }
 }
 
 .btn-secondary {
@@ -243,9 +251,11 @@ nav ul a.nav-cta:hover {
     display: inline-block;
 }
 
-.btn-secondary:hover {
-    border-color: var(--accent);
-    background: rgba(127, 91, 24, 0.04);
+@media(hover:hover) and (pointer:fine) {
+    .btn-secondary:hover {
+        border-color: var(--accent);
+        background: rgba(127, 91, 24, 0.04);
+    }
 }
 
 /* ── SHARED SECTION STYLES ── */
@@ -560,8 +570,10 @@ section {
     transition: color 0.25s;
 }
 
-.c-detail a:hover {
-    color: var(--accent);
+@media(hover:hover) and (pointer:fine) {
+    .c-detail a:hover {
+        color: var(--accent);
+    }
 }
 
 .c-nda {
@@ -662,15 +674,23 @@ section {
     max-width: 680px;
     width: 100%;
     max-height: 88vh;
+    /* en el celular, 88vh contaba la barra del navegador oculta y el final quedaba fuera de vista */
+    max-height: 88dvh;
     overflow-y: auto;
+    overscroll-behavior: contain;
     padding: 2.8rem;
     position: relative;
 }
 
+/* la X sigue en el mismo lugar, pero el area para tocarla mide 44px */
 .modal-close {
     position: absolute;
-    top: 1rem;
-    right: 1.2rem;
+    top: calc(1rem - 13px);
+    right: calc(1.2rem - 13px);
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
     background: none;
     border: none;
     color: var(--ink-3);
@@ -679,8 +699,10 @@ section {
     transition: color 0.2s;
 }
 
-.modal-close:hover {
-    color: var(--accent);
+@media(hover:hover) and (pointer:fine) {
+    .modal-close:hover {
+        color: var(--accent);
+    }
 }
 
 .modal-title {
@@ -765,10 +787,12 @@ section {
     text-underline-offset: 3px;
 }
 
-.svc-enlaces a:hover,
-.f-mas a:hover,
-.casos-mas a:hover {
-    color: var(--ink-strong);
+@media(hover:hover) and (pointer:fine) {
+    .svc-enlaces a:hover,
+    .f-mas a:hover,
+    .casos-mas a:hover {
+        color: var(--ink-strong);
+    }
 }
 
 .f-mas {

@@ -66,6 +66,38 @@ main a {
     inset: -13px -6px;
 }
 
+/* en el celular: sin el destello gris del navegador al tocar, sin la espera de 300ms
+   del doble toque, y sin seleccionar el texto de un boton al mantenerlo presionado */
+html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+a,
+button,
+summary,
+label,
+select {
+    touch-action: manipulation;
+}
+
+button,
+.btn-primary,
+.btn-secondary,
+.nav-cta,
+.lang a,
+.wa-float,
+.pie-libro {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* sin el destello, el enlace tocado necesita su propia respuesta */
+a:active {
+    opacity: 0.7;
+}
+
 /* los botones responden al presionarlos, no al pasar el cursor */
 .btn-primary:active,
 .btn-secondary:active,
@@ -136,10 +168,12 @@ nav ul a.nav-cta:active {
     text-decoration: none;
 }
 
-.pie a:hover {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
+@media(hover:hover) and (pointer:fine) {
+    .pie a:hover {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
 }
 
 .pie-col a {
