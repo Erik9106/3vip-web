@@ -342,8 +342,7 @@ tbody td {
     margin-top: 2rem;
     padding: 1.3rem 1.5rem;
     background: #fff;
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--accent);
+    border: 1px solid var(--accent);
 }
 
 .aviso-tit {
