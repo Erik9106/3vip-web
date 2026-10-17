@@ -80,9 +80,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(250, 250, 248, 0.95);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    box-shadow: 0 8px 20px -16px rgba(26, 20, 16, 0.35);
 }
 
 .nav-brand {
@@ -143,31 +142,27 @@ nav ul a.nav-cta:hover {
 /* ── HERO ── */
 /* el primer pantallazo dice qué hace 3VIP; el lema queda como firma junto a la moneda */
 #hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 9rem 2rem 4.5rem;
+    padding: 64px 0 0;
 }
 
 .hero-sign {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
-    margin-bottom: 2.2rem;
-    animation: fadeUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+    gap: 0.8rem;
+    animation: fadeUp 0.6s 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
+    margin: 2.6rem 0 0;
 }
 
 .hero-sign img {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     object-fit: cover;
     border-radius: 50%;
 }
 
 .hero-motto {
     font-family: var(--font-brand);
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     font-weight: 600;
     letter-spacing: 0.22em;
     color: var(--accent-ink);
@@ -175,9 +170,9 @@ nav ul a.nav-cta:hover {
 
 .hero-title {
     font-family: var(--font-display);
-    font-size: clamp(2.1rem, 5.2vw, 4.6rem);
+    font-size: clamp(2.2rem, 3.3vw, 2.75rem);
     font-weight: 600;
-    line-height: 1.04;
+    line-height: 1.08;
     letter-spacing: -0.01em;
     color: var(--ink-strong);
     text-wrap: balance;
@@ -190,11 +185,11 @@ nav ul a.nav-cta:hover {
 
 .hero-desc {
     max-width: 34em;
-    margin: 1.6rem auto 0;
+    margin: 1.4rem 0 0;
     font-size: 1.15rem;
     line-height: 1.6;
     color: var(--ink);
-    text-wrap: balance;
+    text-wrap: pretty;
     animation: fadeUp 0.6s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
 
@@ -202,7 +197,7 @@ nav ul a.nav-cta:hover {
     display: flex;
     gap: 0.8rem;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 2.2rem;
     animation: fadeUp 0.6s 0.18s cubic-bezier(0.23, 1, 0.32, 1) both;
 }
@@ -361,65 +356,6 @@ section {
     color: var(--accent-ink);
 }
 
-/* ── VALUE PROPS ── */
-#value {
-    background: var(--bg);
-}
-
-.vp-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
-    margin-top: 3rem;
-}
-
-.vp-card {
-    background: var(--surface);
-    padding: 2rem;
-}
-
-.vp-title {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    color: var(--ink-strong);
-    margin-bottom: 0.8rem;
-    font-weight: 600;
-    line-height: 1.25;
-}
-
-.vp-body {
-    font-family: var(--font-text);
-    font-size: 0.97rem;
-    color: var(--ink-2);
-    line-height: 1.75;
-}
-
-.vp-cta-bar {
-    margin-top: 2.5rem;
-    padding: 1.8rem 2.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-    background: var(--surface-2);
-}
-
-.vp-cta-bar p {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    color: var(--ink-strong);
-    font-weight: 600;
-}
-
-.vp-cta-bar span {
-    font-family: var(--font-text);
-    font-size: 0.9rem;
-    color: var(--ink-3);
-    display: block;
-    margin-top: 0.2rem;
-}
-
 /* ── PRUEBA: las cifras van justo después del hero ── */
 #prueba {
     background: var(--surface);
@@ -451,30 +387,23 @@ section {
     font-size: 0.88rem;
     line-height: 1.7;
     color: var(--ink-3);
-    max-width: 78ch;
+    max-width: 58ch;
     margin-top: 2rem;
 }
 
 /* ── CASOS ── */
 #success {
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .cases {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.6rem 4rem;
+    margin-top: 3.5rem;
 }
 
 .case {
-    background: var(--bg);
-    padding: 1.8rem;
-    transition: background 0.3s;
-}
-
-.case:hover {
-    background: var(--surface-2);
 }
 
 .case-tag {
@@ -504,14 +433,14 @@ section {
 
 .case-body {
     font-family: var(--font-text);
-    font-size: 0.96rem;
+    font-size: 1rem;
     color: var(--ink-2);
     line-height: 1.7;
 }
 
 /* ── FOUNDER ── */
 #founder {
-    background: var(--surface);
+    background: var(--bg);
 }
 
 .founder-layout {
@@ -577,6 +506,7 @@ section {
     line-height: 1.75;
     color: var(--ink);
     margin-bottom: 1.2rem;
+    max-width: 60ch;
 }
 
 /* ── CONTACT ── */
@@ -813,7 +743,7 @@ section {
 }
 
 .svc-lista dd {
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.65;
     color: var(--ink-2);
     margin: 0.35rem 0 1.3rem;
@@ -867,6 +797,273 @@ nav ul a.activo {
 
 .modal::backdrop {
     background: rgba(26, 20, 16, 0.72);
+}
+
+/* ── HERO: texto y dibujo de una patente concedida ── */
+.hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 11fr) minmax(0, 9fr);
+    gap: 0;
+    align-items: stretch;
+    min-height: calc(100svh - 64px);
+}
+
+.hero-fig {
+    margin: 0;
+    background: #fff;
+    padding: 1.5rem 2.5rem 3.4rem;
+    animation: fadeUp 0.7s 0.12s cubic-bezier(0.23, 1, 0.32, 1) both;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-fig img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: calc(100svh - 64px - 5rem);
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.hero-fig figcaption,
+.galeria figcaption {
+    margin-top: 0.9rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--ink-3);
+}
+
+.hero-texto {
+    align-self: center;
+    padding: 4rem clamp(2rem, 3vw, 3rem) 4rem max(2rem, calc((100vw - 1160px) / 2));
+}
+
+.hero-fig figcaption {
+    position: absolute;
+    left: 2.5rem;
+    right: 6.5rem;
+    bottom: 1rem;
+    margin: 0;
+}
+
+@media(max-width:900px) {
+    .hero-grid {
+        min-height: 0;
+    }
+
+    .hero-texto {
+        padding: 3rem 2rem 2.5rem;
+    }
+
+    .hero-fig {
+        display: block;
+        padding: 1.4rem 1.4rem 1.2rem;
+        text-align: center;
+    }
+
+    .hero-fig figcaption {
+        position: static;
+        margin-top: 0.8rem;
+        text-align: left;
+    }
+}
+
+@media(max-width:700px) {
+    .hero-texto {
+        padding: 2.4rem 1.4rem 2rem;
+    }
+}
+
+/* ── CALCULADORA ── */
+#tasas {
+    background: var(--surface);
+}
+
+.calc-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    gap: 4rem;
+    align-items: start;
+}
+
+.calc-tabla {
+    margin-top: 1.6rem;
+    font-weight: 500;
+}
+
+.calc-tabla a {
+    color: var(--accent-ink);
+    text-underline-offset: 3px;
+}
+
+.calc {
+    display: none;
+    background: var(--bg);
+    padding: 2.2rem;
+}
+
+.js .calc {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.calc-op {
+    display: none;
+}
+
+.calc-op.on {
+    display: grid;
+    gap: 1rem;
+}
+
+.calc-check {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    cursor: pointer;
+}
+
+.calc-check input {
+    width: 18px;
+    height: 18px;
+    margin-top: 0.15rem;
+    accent-color: var(--accent);
+}
+
+.calc-res {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem 1.5rem;
+    padding: 1.4rem 0 0.4rem;
+}
+
+.calc-l {
+    font-size: 0.9rem;
+    color: var(--ink-2);
+}
+
+.calc-n {
+    font-family: var(--font-brand);
+    font-size: clamp(1.7rem, 2.6vw, 2.3rem);
+    font-weight: 700;
+    color: var(--accent-ink);
+    font-variant-numeric: tabular-nums;
+    line-height: 1.15;
+}
+
+.calc-nota {
+    grid-column: 1 / -1;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+}
+
+.calc .btn-primary {
+    justify-self: start;
+}
+
+.calc-fuente {
+    font-size: 0.85rem;
+    color: var(--ink-3);
+}
+
+/* ── TU SECCIÓN: cómo trabajo ── */
+.f-puntos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem 2.4rem;
+    margin-top: 2rem;
+}
+
+.f-puntos dt {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink-strong);
+    line-height: 1.25;
+}
+
+.f-puntos dd {
+    margin-top: 0.35rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+}
+
+/* ── CASOS: dibujos de patentes concedidas y lista sin cajas ── */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.4rem;
+}
+
+.galeria figure {
+    margin: 0;
+}
+
+.galeria a {
+    display: block;
+    background: #fff;
+    padding: 1rem;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.galeria figcaption strong {
+    display: block;
+    font-weight: 600;
+    color: var(--ink-strong);
+}
+
+.case-tag {
+    margin-bottom: 0.5rem;
+}
+
+@media(hover:hover) and (pointer:fine) {
+    .galeria a:hover {
+        transform: translateY(-3px);
+    }
+}
+
+@media(max-width:900px) {
+    .hero-grid,
+    .calc-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-fig img {
+        max-height: 52vh;
+        margin: 0 auto;
+    }
+
+    .cases,
+    .f-puntos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:700px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    .calc {
+        padding: 1.6rem 1.2rem;
+    }
 }
 
 /* ── ANIMATIONS ── */
@@ -998,24 +1195,20 @@ nav ul a {
 /* compactar el hero en moviles: el CTA principal debe verse sin desplazarse */
 @media(max-width:700px) {
     #hero {
-        padding: 7rem 1.4rem 3rem;
+        padding: 64px 0 0;
     }
 
     .hero-sign {
-        margin-bottom: 1.6rem;
+        margin: 2rem 0 0;
     }
 
     .hero-sign img {
-        width: 56px;
-        height: 56px;
+        width: 48px;
+        height: 48px;
     }
 
     .hero-title {
-        font-size: 2.05rem;
-    }
-
-    .hero-title span {
-        display: inline;
+        font-size: 1.65rem;
     }
 
     .hero-desc {
@@ -1083,11 +1276,6 @@ nav ul a {
 
     .form-row {
         grid-template-columns: 1fr;
-    }
-
-    .vp-cta-bar {
-        flex-direction: column;
-        align-items: flex-start;
     }
 }
 

@@ -229,3 +229,59 @@
 .destacados.cuatro {
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
+
+/* el denario de César acompaña el relato de Zela */
+.origen-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 4rem;
+    align-items: start;
+}
+
+.origen-fig {
+    position: sticky;
+    top: 6rem;
+    margin: 0;
+}
+
+.origen-fig img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.origen-fig figcaption {
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--ink-3);
+}
+
+.origen-fig a {
+    color: var(--accent-ink);
+}
+
+/* cada tecnología muestra su dibujo de patente */
+.tech-fig {
+    margin: -1.8rem -1.8rem 1.4rem;
+    background: #fff;
+    padding: 1rem;
+    aspect-ratio: 4 / 3;
+}
+
+.tech-fig img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media(max-width:900px) {
+    .origen-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .origen-fig {
+        position: static;
+        max-width: 300px;
+    }
+}

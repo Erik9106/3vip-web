@@ -78,10 +78,8 @@
 </nav>
 <!-- HERO -->
 <section id="hero">
-<div class="hero-sign">
-<img alt="3VIP - Veni Vidi Vici - Propiedad Intelectual" height="72" src="/logo-seal.webp" width="72"/>
-<p class="hero-motto">Veni · Vidi · Vici</p>
-</div>
+<div class="hero-grid">
+<div class="hero-texto">
 <h1 class="hero-title"><span>Propiedad intelectual en Perú,</span> <span>de la invención a la concesión</span></h1>
 <p class="hero-desc">Patentes, marcas y recursos genéticos ante INDECOPI. Hablas directamente con el experto.</p>
 <div class="hero-cta">
@@ -89,13 +87,23 @@
 <a class="btn-secondary" href="/costos/">Ver costos oficiales</a>
 </div>
 <p class="hero-note">NDA desde el primer contacto · Respuesta en 48 h</p>
+<div class="hero-sign">
+<img alt="3VIP - Veni Vidi Vici - Propiedad Intelectual" height="56" src="/logo-seal.webp" width="56"/>
+<p class="hero-motto">Veni · Vidi · Vici</p>
+</div>
+</div>
+<figure class="hero-fig">
+<img alt="Dibujo de patente: vista en despiece del dispositivo multifuncional para determinar la calidad de alimentos, con sus números de referencia" decoding="async" height="1351" src="/img/patentes/1947-2024-multifuncional.webp" width="1005" fetchpriority="high"/>
+<figcaption>Fig. 1 del modelo de utilidad 001947-2024/DIN, concedido. Lo redactamos para la Universidad Nacional de Frontera.</figcaption>
+</figure>
+</div>
 </section>
 <!-- PRUEBA -->
 <section aria-label="Trayectoria en cifras" id="prueba">
 <div class="wrap">
 <div class="stats reveal">
 <div class="stat">
-<div class="stat-n">79</div>
+<div class="stat-n">76</div>
 <div class="stat-l">Solicitudes de patente gestionadas</div>
 </div>
 <div class="stat">
@@ -111,7 +119,7 @@
 <div class="stat-l">Universidades asesoradas</div>
 </div>
 </div>
-<p class="stats-nota reveal">He intervenido en 79 solicitudes de patente ante INDECOPI, presentadas entre 2013 y 2026: 48 cuentan ya con resolución y 31 siguen en trámite. De las 34 solicitudes que redacté y ya resueltas, 29 culminaron en concesión (85.29%). En 12 expedientes iniciados por terceros asumí la respuesta al examen de patentabilidad y los 12 fueron otorgados. Los 2 restantes corresponden a solicitudes divisionales. Las cifras comprenden patentes de invención y modelos de utilidad.</p>
+<p class="stats-nota reveal">He intervenido en 76 solicitudes de patente ante INDECOPI, presentadas entre 2013 y 2026: 48 cuentan ya con resolución y 28 siguen en trámite. De las 34 solicitudes que redacté y ya resueltas, 29 culminaron en concesión (85.29%). En 12 expedientes iniciados por terceros asumí la respuesta al examen de patentabilidad y los 12 fueron otorgados. Los 2 restantes corresponden a solicitudes divisionales. Las cifras comprenden patentes de invención y modelos de utilidad.</p>
 </div>
 </section>
 <!-- SERVICES -->
@@ -161,6 +169,50 @@
 </div>
 </div>
 </section>
+<!-- TASAS -->
+<section id="tasas">
+<div class="wrap calc-layout">
+<div class="calc-intro">
+<h2 class="sec-title">Calcula la tasa de INDECOPI</h2>
+<p class="sec-intro">Elige el trámite y verás lo que pagas al Estado según el TUPA. Nuestros honorarios van aparte y se cotizan según la complejidad de cada caso.</p>
+<p class="calc-tabla"><a href="/costos/">Ver la tabla completa de tasas oficiales →</a></p>
+</div>
+<form class="calc" id="calc" onsubmit="return false;">
+<div class="fg"><label for="calc-tramite">Trámite</label>
+<select id="calc-tramite">
+<optgroup label="Patentes y diseños">
+<option value="inv">Patente de invención</option>
+<option value="mu">Modelo de utilidad</option>
+<option value="di">Diseño industrial</option>
+</optgroup>
+<optgroup label="Marcas">
+<option value="marca">Marca, nombre comercial o lema</option>
+</optgroup>
+<optgroup label="Derecho de autor">
+<option value="soft">Software</option>
+<option value="bd">Base de datos, compilación o antología</option>
+<option value="lit">Obra literaria</option>
+<option value="art">Obra artística o de arte aplicado</option>
+<option value="av">Obra audiovisual</option>
+</optgroup>
+</select></div>
+<div class="calc-op" data-para="marca">
+<div class="fg"><label for="calc-clases">Número de clases de Niza</label><input id="calc-clases" inputmode="numeric" max="45" min="1" type="number" value="1"/></div>
+<label class="calc-check"><input id="calc-mype" type="checkbox"/> Mi empresa está inscrita en el REMYPE</label>
+</div>
+<div class="calc-op" data-para="lit art">
+<label class="calc-check"><input checked="" id="calc-sel" type="checkbox"/> Presento por la Plataforma SEL de INDECOPI</label>
+</div>
+<div aria-live="polite" class="calc-res">
+<div><p class="calc-n" id="calc-hoy">S/ 396.00</p><p class="calc-l">Pagas al presentar</p></div>
+<div><p class="calc-n" id="calc-total">S/ 720.00</p><p class="calc-l">Tasa total</p></div>
+<p class="calc-nota" id="calc-nota">55% al presentar; el saldo solo si la solicitud llega a examen de fondo.</p>
+</div>
+<a class="btn-primary" href="#contact">Cotizar honorarios →</a>
+<p class="calc-fuente">Tasas del TUPA de INDECOPI verificadas el 10 de septiembre de 2026.</p>
+</form>
+</div>
+</section>
 <!-- FOUNDER -->
 <section id="founder">
 <div class="wrap">
@@ -174,6 +226,12 @@
 <div class="f-bio">
 <h3>Especialista en propiedad intelectual y recursos genéticos</h3>
 <p>Con más de 10 años de experiencia en el sector público y privado, Erik es un referente en la gestión de propiedad intelectual, transferencia tecnológica y acceso a recursos genéticos en el Perú. Ha asesorado a más de cinco universidades públicas y gestionado decenas de solicitudes de patente nacionales e internacionales.</p>
+<dl class="f-puntos">
+<dt>Atención directa del especialista</dt><dd>Cada caso es gestionado personalmente por Erik Chuquispuma — doctorando en Ciencias Biológicas con más de 10 años de experiencia. Sin intermediarios ni asistentes que filtren tu invento.</dd>
+<dt>Confidencialidad desde el primer contacto</dt><dd>Ofrecemos NDA antes de que compartas cualquier detalle de tu invención. Tu información sensible — especialmente antes de presentar la solicitud — está protegida desde el inicio.</dd>
+<dt>Ciencias duras + estrategia legal</dt><dd>Formación en Genética, Biotecnología y Ciencias Biológicas combinada con gestión estratégica de PI. Entendemos tu invento antes de redactar una sola reivindicación.</dd>
+<dt>Puerta de entrada al Perú</dt><dd>Para consultoras y personas extranjeras que necesitan representación local ante INDECOPI. Gestionamos todo el proceso sin que necesites desplazarte al Perú.</dd>
+</dl>
 <p class="f-mas"><a href="/sobre-erik/">Trayectoria completa y origen del nombre →</a></p>
 </div>
 </div>
@@ -205,41 +263,25 @@
 </div>
 </div>
 </section>
-<!-- VALUE -->
-<section id="value">
-<div class="wrap">
-<h2 class="sec-title">Hablas directamente con el experto</h2>
-<div class="vp-grid reveal">
-<div class="vp-card">
-<div class="vp-title">Atención directa del especialista</div>
-<p class="vp-body">Cada caso es gestionado personalmente por Erik Chuquispuma — doctorando en Ciencias Biológicas con más de 10 años de experiencia. Sin intermediarios ni asistentes que filtren tu invento.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Confidencialidad desde el primer contacto</div>
-<p class="vp-body">Ofrecemos NDA antes de que compartas cualquier detalle de tu invención. Tu información sensible — especialmente antes de presentar la solicitud — está protegida desde el inicio.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Ciencias duras + estrategia legal</div>
-<p class="vp-body">Formación en Genética, Biotecnología y Ciencias Biológicas combinada con gestión estratégica de PI. Entendemos tu invento antes de redactar una sola reivindicación.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Puerta de entrada al Perú</div>
-<p class="vp-body">Para consultoras y personas extranjeras que necesitan representación local ante INDECOPI. Gestionamos todo el proceso sin que necesites desplazarte al Perú.</p>
-</div>
-</div>
-<div class="vp-cta-bar reveal">
-<div>
-<p>¿Listo para blindar tu invención?</p>
-<span>Primera consulta orientativa sin compromiso · NDA disponible</span>
-</div>
-<a class="btn-primary" href="#contact">Solicitar consulta →</a>
-</div>
-</div>
-</section>
 <!-- SUCCESS -->
 <section id="success">
 <div class="wrap">
 <h2 class="sec-title">Casos de éxito</h2>
+<p class="sec-intro">Algunas de las patentes concedidas cuyas solicitudes redactamos:</p>
+<div class="galeria reveal">
+<figure>
+<a href="/tecnologias-para-licenciar/"><img alt="Dibujo de patente: cortadora automática para cortes precisos de productos vegetales" decoding="async" height="1249" src="/img/patentes/0589-2024-cortadora.webp" width="1157" loading="lazy"/></a>
+<figcaption><strong>Cortadora automática para cortes precisos de productos vegetales</strong>Modelo de utilidad concedido · Exp. 000589-2024/DIN</figcaption>
+</figure>
+<figure>
+<a href="/tecnologias-para-licenciar/"><img alt="Dibujo de patente: máquina contadora portátil" decoding="async" height="892" src="/img/patentes/0590-2024-contadora.webp" width="1124" loading="lazy"/></a>
+<figcaption><strong>Máquina contadora portátil</strong>Modelo de utilidad concedido · Exp. 000590-2024/DIN</figcaption>
+</figure>
+<figure>
+<a href="/tecnologias-para-licenciar/"><img alt="Dibujo de patente: detector de olores con agarradera" decoding="async" height="1075" src="/img/patentes/1807-2024-olores.webp" width="1071" loading="lazy"/></a>
+<figcaption><strong>Detector de olores con agarradera</strong>Modelo de utilidad concedido · Exp. 001807-2024/DIN</figcaption>
+</figure>
+</div>
 <div class="cases reveal">
 <div class="case">
 <span class="case-tag">Portafolio de patentes</span>
@@ -249,15 +291,15 @@
 </div>
 <div class="case">
 <span class="case-tag">Récord institucional</span>
-<div class="case-title">23 solicitudes redactadas para una sola universidad</div>
+<div class="case-title">20 solicitudes redactadas para una sola universidad</div>
 <div class="case-inst">Universidad Nacional Hermilio Valdizán</div>
-<p class="case-body">Veintitrés expedientes presentados ante INDECOPI entre 2022 y 2025: 12 ya concedidos, 10 en trámite y 1 denegado.</p>
+<p class="case-body">Veinte expedientes presentados ante INDECOPI entre 2022 y 2025: 11 ya concedidos, 8 en trámite y 1 denegado.</p>
 </div>
 <div class="case">
 <span class="case-tag">Volumen sostenido</span>
-<div class="case-title">18 solicitudes en un año, dos años seguidos</div>
+<div class="case-title">33 solicitudes en 2024 y 2025</div>
 <div class="case-inst">Universidades e industria privada</div>
-<p class="case-body">Dieciocho solicitudes presentadas en 2024 y otras dieciocho en 2025, frente a un promedio de tres anuales en el trienio previo. En lo que va de 2026 ya son ocho.</p>
+<p class="case-body">Quince solicitudes presentadas en 2024 y dieciocho en 2025, frente a un promedio de menos de tres anuales en el trienio previo. En lo que va de 2026 ya son ocho.</p>
 </div>
 <div class="case">
 <span class="case-tag">Transferencia tecnológica</span>
@@ -450,6 +492,72 @@
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); navToggle.focus(); }
         });
+
+        // ── CIFRAS: cuentan una vez al aparecer ──
+        const cifras = document.querySelector('.stats');
+        if (cifras && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const nums = [...cifras.querySelectorAll('.stat-n')].map(el => {
+                const m = el.textContent.match(/[\d.]+/)[0];
+                return { el, txt: el.textContent, m, n: parseFloat(m), dec: (m.split('.')[1] || '').length };
+            });
+            const co = new IntersectionObserver(([e]) => {
+                if (!e.isIntersecting) return;
+                co.disconnect();
+                const t0 = performance.now();
+                const paso = t => {
+                    const k = Math.min(1, (t - t0) / 1100);
+                    const ease = 1 - Math.pow(1 - k, 3);
+                    nums.forEach(x => { x.el.textContent = x.txt.replace(x.m, (x.n * ease).toFixed(x.dec)); });
+                    if (k < 1) requestAnimationFrame(paso);
+                };
+                requestAnimationFrame(paso);
+            }, { threshold: 0.5 });
+            co.observe(cifras);
+        }
+
+        // ── CALCULADORA DE TASAS (TUPA, mismos montos que /costos/) ──
+        const calc = document.getElementById('calc');
+        if (calc) {
+            const sol = n => 'S/ ' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            const TASAS = {
+                inv: { hoy: 396.00, total: 720.00, pct: 55 },
+                mu: { hoy: 226.80, total: 324.00, pct: 70 },
+                di: { hoy: 216.00, total: 360.00, pct: 60 },
+                marca: { general: [534.90, 533.30], mype: [401.20, 399.90] },
+                soft: { hoy: 357.70, nota: "Solo por mesa de partes." },
+                bd: { hoy: 177.90, nota: "Usa el mismo formulario que software, pero es otro trámite." },
+                lit: { mesa: 238.10, sel: 90.10 },
+                art: { mesa: 238.10, sel: 90.10 },
+                av: { hoy: 238.10, nota: "Solo por mesa de partes." }
+            };
+            const $ = id => document.getElementById(id);
+            let usada = false;
+            const calcular = ev => {
+                const t = $('calc-tramite').value; const d = TASAS[t];
+                calc.querySelectorAll('.calc-op').forEach(o => o.classList.toggle('on', o.dataset.para.split(' ').includes(t)));
+                let hoy, total, nota;
+                if (t === 'marca') {
+                    const n = Math.min(45, Math.max(1, parseInt($('calc-clases').value, 10) || 1));
+                    const [a, b] = $('calc-mype').checked ? d.mype : d.general;
+                    hoy = total = a + b * (n - 1);
+                    nota = (n === 1 ? "Se paga completa al presentar. Cada clase adicional suma su propia tasa." : (n => `Primera clase más ${n} adicional${n > 1 ? 'es' : ''}. Se paga completa al presentar.`)(n - 1)) + ($('calc-mype').checked ? " Con tasa MYPE, 25% menos." : '');
+                } else if (d.sel) {
+                    const sel = $('calc-sel').checked;
+                    hoy = total = sel ? d.sel : d.mesa;
+                    nota = sel ? "Por la Plataforma SEL. Por mesa de partes costaría S/ 238.10." : "Por mesa de partes. Por la Plataforma SEL costaría S/ 90.10.";
+                } else {
+                    hoy = d.hoy; total = d.total || d.hoy;
+                    nota = d.pct ? (p => `${p}% al presentar; el saldo solo si la solicitud llega a examen de fondo.`)(d.pct) : d.nota;
+                }
+                $('calc-hoy').textContent = sol(hoy);
+                $('calc-total').textContent = sol(total);
+                $('calc-nota').textContent = nota;
+                if (ev && !usada && typeof gtag === 'function') { usada = true; gtag('event', 'select_content', { content_type: 'calculadora_tasas' }); }
+            };
+            calc.addEventListener('input', calcular);
+            calc.addEventListener('change', calcular);
+            calcular();
+        }
 
         // ── NAV ACTIVE ──
         const navLinks = [...document.querySelectorAll('nav ul a[href^="#"]:not(.nav-cta)')];

@@ -78,10 +78,8 @@
 </nav>
 <!-- HERO -->
 <section id="hero">
-<div class="hero-sign">
-<img alt="3VIP - Veni Vidi Vici - Intellectual Property" height="72" src="/logo-seal.webp" width="72"/>
-<p class="hero-motto">Veni · Vidi · Vici</p>
-</div>
+<div class="hero-grid">
+<div class="hero-texto">
 <h1 class="hero-title"><span>Intellectual property in Peru,</span> <span>from invention to grant</span></h1>
 <p class="hero-desc">Patents, trademarks and genetic resources before INDECOPI. You talk directly to the expert.</p>
 <div class="hero-cta">
@@ -89,13 +87,23 @@
 <a class="btn-secondary" href="/en/costs/">See official fees</a>
 </div>
 <p class="hero-note">NDA from first contact · 48 h response</p>
+<div class="hero-sign">
+<img alt="3VIP - Veni Vidi Vici - Intellectual Property" height="56" src="/logo-seal.webp" width="56"/>
+<p class="hero-motto">Veni · Vidi · Vici</p>
+</div>
+</div>
+<figure class="hero-fig">
+<img alt="Patent drawing: exploded view of the multifunctional device for assessing food quality, with its reference numerals" decoding="async" height="1351" src="/img/patentes/1947-2024-multifuncional.webp" width="1005" fetchpriority="high"/>
+<figcaption>Fig. 1 of utility model 001947-2024/DIN, granted. We drafted it for Universidad Nacional de Frontera.</figcaption>
+</figure>
+</div>
 </section>
 <!-- PRUEBA -->
 <section aria-label="Track record in figures" id="prueba">
 <div class="wrap">
 <div class="stats reveal">
 <div class="stat">
-<div class="stat-n">79</div>
+<div class="stat-n">76</div>
 <div class="stat-l">Patent applications handled</div>
 </div>
 <div class="stat">
@@ -111,7 +119,7 @@
 <div class="stat-l">Universities advised</div>
 </div>
 </div>
-<p class="stats-nota reveal">I have worked on 79 patent applications before INDECOPI, filed between 2013 and 2026: 48 have already been decided and 31 remain pending. Of the 34 applications I drafted that have been decided, 29 were granted (85.29%). In 12 files originally started by others I took over the response to the patentability examination, and all 12 were granted. The remaining 2 are divisional applications. The figures cover both invention patents and utility models.</p>
+<p class="stats-nota reveal">I have worked on 76 patent applications before INDECOPI, filed between 2013 and 2026: 48 have already been decided and 28 remain pending. Of the 34 applications I drafted that have been decided, 29 were granted (85.29%). In 12 files originally started by others I took over the response to the patentability examination, and all 12 were granted. The remaining 2 are divisional applications. The figures cover both invention patents and utility models.</p>
 </div>
 </section>
 <!-- SERVICES -->
@@ -161,6 +169,50 @@
 </div>
 </div>
 </section>
+<!-- TASAS -->
+<section id="tasas">
+<div class="wrap calc-layout">
+<div class="calc-intro">
+<h2 class="sec-title">Calculate the INDECOPI fee</h2>
+<p class="sec-intro">Choose the procedure and see what you pay the State under the TUPA. Our professional fees are separate and quoted according to the complexity of each case.</p>
+<p class="calc-tabla"><a href="/en/costs/">See the full table of official fees →</a></p>
+</div>
+<form class="calc" id="calc" onsubmit="return false;">
+<div class="fg"><label for="calc-tramite">Procedure</label>
+<select id="calc-tramite">
+<optgroup label="Patents and designs">
+<option value="inv">Invention patent</option>
+<option value="mu">Utility model</option>
+<option value="di">Industrial design</option>
+</optgroup>
+<optgroup label="Trademarks">
+<option value="marca">Trademark, trade name or slogan</option>
+</optgroup>
+<optgroup label="Copyright">
+<option value="soft">Software</option>
+<option value="bd">Database, compilation or anthology</option>
+<option value="lit">Literary work</option>
+<option value="art">Artistic work or work of applied art</option>
+<option value="av">Audiovisual work</option>
+</optgroup>
+</select></div>
+<div class="calc-op" data-para="marca">
+<div class="fg"><label for="calc-clases">Number of Nice classes</label><input id="calc-clases" inputmode="numeric" max="45" min="1" type="number" value="1"/></div>
+<label class="calc-check"><input id="calc-mype" type="checkbox"/> My company is registered in the REMYPE (small business registry)</label>
+</div>
+<div class="calc-op" data-para="lit art">
+<label class="calc-check"><input checked="" id="calc-sel" type="checkbox"/> I file through the INDECOPI SEL platform</label>
+</div>
+<div aria-live="polite" class="calc-res">
+<div><p class="calc-n" id="calc-hoy">S/ 396.00</p><p class="calc-l">Due at filing</p></div>
+<div><p class="calc-n" id="calc-total">S/ 720.00</p><p class="calc-l">Total fee</p></div>
+<p class="calc-nota" id="calc-nota">55% at filing; the balance only if the application reaches substantive examination.</p>
+</div>
+<a class="btn-primary" href="#contact">Get a quote for our fees →</a>
+<p class="calc-fuente">INDECOPI TUPA fees, checked on 10 September 2026.</p>
+</form>
+</div>
+</section>
 <!-- FOUNDER -->
 <section id="founder">
 <div class="wrap">
@@ -174,6 +226,12 @@
 <div class="f-bio">
 <h3>Specialist in Intellectual Property &amp; Genetic Resources</h3>
 <p>With over 10 years of experience in the public and private sectors, Erik is a reference in intellectual property management, technology transfer and access to genetic resources in Peru. He has advised more than five public universities and managed dozens of national and international patent applications.</p>
+<dl class="f-puntos">
+<dt>Direct attention from the specialist</dt><dd>Every case is personally handled by Erik Chuquispuma — PhD candidate in Biological Sciences with over 10 years of experience. No intermediaries or assistants filtering your invention.</dd>
+<dt>Confidentiality from first contact</dt><dd>We offer NDA before you share any details of your invention. Your sensitive information — especially before filing — is protected from the start.</dd>
+<dt>Hard sciences + legal strategy</dt><dd>Background in Genetics, Biotechnology and Biological Sciences combined with strategic IP management. We understand your invention before drafting a single claim.</dd>
+<dt>Gateway to Peru</dt><dd>For foreign consultancies and individuals needing local representation before INDECOPI. We manage the entire process without you needing to travel to Peru.</dd>
+</dl>
 <p class="f-mas"><a href="/en/about-erik/">Full background and the story behind the name →</a></p>
 </div>
 </div>
@@ -205,41 +263,25 @@
 </div>
 </div>
 </section>
-<!-- VALUE -->
-<section id="value">
-<div class="wrap">
-<h2 class="sec-title">You talk directly to the expert</h2>
-<div class="vp-grid reveal">
-<div class="vp-card">
-<div class="vp-title">Direct attention from the specialist</div>
-<p class="vp-body">Every case is personally handled by Erik Chuquispuma — PhD candidate in Biological Sciences with over 10 years of experience. No intermediaries or assistants filtering your invention.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Confidentiality from first contact</div>
-<p class="vp-body">We offer NDA before you share any details of your invention. Your sensitive information — especially before filing — is protected from the start.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Hard sciences + legal strategy</div>
-<p class="vp-body">Background in Genetics, Biotechnology and Biological Sciences combined with strategic IP management. We understand your invention before drafting a single claim.</p>
-</div>
-<div class="vp-card">
-<div class="vp-title">Gateway to Peru</div>
-<p class="vp-body">For foreign consultancies and individuals needing local representation before INDECOPI. We manage the entire process without you needing to travel to Peru.</p>
-</div>
-</div>
-<div class="vp-cta-bar reveal">
-<div>
-<p>Ready to fortify your invention?</p>
-<span>Initial advisory consultation at no commitment · NDA available</span>
-</div>
-<a class="btn-primary" href="#contact">Request a consultation →</a>
-</div>
-</div>
-</section>
 <!-- SUCCESS -->
 <section id="success">
 <div class="wrap">
 <h2 class="sec-title">Success Cases</h2>
+<p class="sec-intro">Some of the granted patents whose applications we drafted:</p>
+<div class="galeria reveal">
+<figure>
+<a href="/en/technologies-for-licensing/"><img alt="Patent drawing: automatic cutter for precise cuts of plant products" decoding="async" height="1249" src="/img/patentes/0589-2024-cortadora.webp" width="1157" loading="lazy"/></a>
+<figcaption><strong>Automatic cutter for precise cuts of plant products</strong>Utility model granted · Exp. 000589-2024/DIN</figcaption>
+</figure>
+<figure>
+<a href="/en/technologies-for-licensing/"><img alt="Patent drawing: portable counting machine" decoding="async" height="892" src="/img/patentes/0590-2024-contadora.webp" width="1124" loading="lazy"/></a>
+<figcaption><strong>Portable counting machine</strong>Utility model granted · Exp. 000590-2024/DIN</figcaption>
+</figure>
+<figure>
+<a href="/en/technologies-for-licensing/"><img alt="Patent drawing: odor detector with handle" decoding="async" height="1075" src="/img/patentes/1807-2024-olores.webp" width="1071" loading="lazy"/></a>
+<figcaption><strong>Odor detector with handle</strong>Utility model granted · Exp. 001807-2024/DIN</figcaption>
+</figure>
+</div>
 <div class="cases reveal">
 <div class="case">
 <span class="case-tag">Patent Portfolio</span>
@@ -249,15 +291,15 @@
 </div>
 <div class="case">
 <span class="case-tag">Institutional Record</span>
-<div class="case-title">23 applications drafted for a single university</div>
+<div class="case-title">20 applications drafted for a single university</div>
 <div class="case-inst">Universidad Nacional Hermilio Valdizán</div>
-<p class="case-body">Twenty-three files submitted to INDECOPI between 2022 and 2025: 12 already granted, 10 pending and 1 refused.</p>
+<p class="case-body">Twenty files submitted to INDECOPI between 2022 and 2025: 11 already granted, 8 pending and 1 refused.</p>
 </div>
 <div class="case">
 <span class="case-tag">Sustained volume</span>
-<div class="case-title">18 applications a year, two years running</div>
+<div class="case-title">33 applications in 2024 and 2025</div>
 <div class="case-inst">Universities and private industry</div>
-<p class="case-body">Eighteen applications filed in 2024 and eighteen more in 2025, against an average of three a year in the preceding three years. So far in 2026 there are already eight.</p>
+<p class="case-body">Fifteen applications filed in 2024 and eighteen in 2025, against an average of fewer than three a year in the preceding three years. So far in 2026 there are already eight.</p>
 </div>
 <div class="case">
 <span class="case-tag">Technology Transfer</span>
@@ -450,6 +492,72 @@
         document.addEventListener('keydown', e => {
             if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); navToggle.focus(); }
         });
+
+        // ── CIFRAS: cuentan una vez al aparecer ──
+        const cifras = document.querySelector('.stats');
+        if (cifras && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const nums = [...cifras.querySelectorAll('.stat-n')].map(el => {
+                const m = el.textContent.match(/[\d.]+/)[0];
+                return { el, txt: el.textContent, m, n: parseFloat(m), dec: (m.split('.')[1] || '').length };
+            });
+            const co = new IntersectionObserver(([e]) => {
+                if (!e.isIntersecting) return;
+                co.disconnect();
+                const t0 = performance.now();
+                const paso = t => {
+                    const k = Math.min(1, (t - t0) / 1100);
+                    const ease = 1 - Math.pow(1 - k, 3);
+                    nums.forEach(x => { x.el.textContent = x.txt.replace(x.m, (x.n * ease).toFixed(x.dec)); });
+                    if (k < 1) requestAnimationFrame(paso);
+                };
+                requestAnimationFrame(paso);
+            }, { threshold: 0.5 });
+            co.observe(cifras);
+        }
+
+        // ── CALCULADORA DE TASAS (TUPA, mismos montos que /en/costs/) ──
+        const calc = document.getElementById('calc');
+        if (calc) {
+            const sol = n => 'S/ ' + n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+            const TASAS = {
+                inv: { hoy: 396.00, total: 720.00, pct: 55 },
+                mu: { hoy: 226.80, total: 324.00, pct: 70 },
+                di: { hoy: 216.00, total: 360.00, pct: 60 },
+                marca: { general: [534.90, 533.30], mype: [401.20, 399.90] },
+                soft: { hoy: 357.70, nota: "Filing desk only." },
+                bd: { hoy: 177.90, nota: "Uses the same form as software, but it is a different procedure." },
+                lit: { mesa: 238.10, sel: 90.10 },
+                art: { mesa: 238.10, sel: 90.10 },
+                av: { hoy: 238.10, nota: "Filing desk only." }
+            };
+            const $ = id => document.getElementById(id);
+            let usada = false;
+            const calcular = ev => {
+                const t = $('calc-tramite').value; const d = TASAS[t];
+                calc.querySelectorAll('.calc-op').forEach(o => o.classList.toggle('on', o.dataset.para.split(' ').includes(t)));
+                let hoy, total, nota;
+                if (t === 'marca') {
+                    const n = Math.min(45, Math.max(1, parseInt($('calc-clases').value, 10) || 1));
+                    const [a, b] = $('calc-mype').checked ? d.mype : d.general;
+                    hoy = total = a + b * (n - 1);
+                    nota = (n === 1 ? "Paid in full at filing. Each additional class adds its own fee." : (n => `First class plus ${n} additional class${n > 1 ? 'es' : ''}. Paid in full at filing.`)(n - 1)) + ($('calc-mype').checked ? " With the MYPE fee, 25% less." : '');
+                } else if (d.sel) {
+                    const sel = $('calc-sel').checked;
+                    hoy = total = sel ? d.sel : d.mesa;
+                    nota = sel ? "Through the SEL platform. At the filing desk it would cost S/ 238.10." : "At the filing desk. Through the SEL platform it would cost S/ 90.10.";
+                } else {
+                    hoy = d.hoy; total = d.total || d.hoy;
+                    nota = d.pct ? (p => `${p}% at filing; the balance only if the application reaches substantive examination.`)(d.pct) : d.nota;
+                }
+                $('calc-hoy').textContent = sol(hoy);
+                $('calc-total').textContent = sol(total);
+                $('calc-nota').textContent = nota;
+                if (ev && !usada && typeof gtag === 'function') { usada = true; gtag('event', 'select_content', { content_type: 'calculadora_tasas' }); }
+            };
+            calc.addEventListener('input', calcular);
+            calc.addEventListener('change', calcular);
+            calcular();
+        }
 
         // ── NAV ACTIVE ──
         const navLinks = [...document.querySelectorAll('nav ul a[href^="#"]:not(.nav-cta)')];
