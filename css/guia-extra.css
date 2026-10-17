@@ -386,6 +386,7 @@
     color: var(--ink-strong);
     line-height: 1.3;
     overflow-wrap: anywhere;
+    font-variant-numeric: lining-nums;
 }
 
 .signo small {
@@ -395,6 +396,53 @@
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0;
+    color: var(--ink-3);
+}
+
+/* la imagen del signo, tal como la reproduce el Manual andino; las imágenes
+   son pequeñas, así que nunca se amplían más allá de su tamaño original */
+.signo-img,
+.signo-par figure {
+    margin: 0;
+}
+
+.signo-img {
+    margin-bottom: 0.8rem;
+}
+
+.signo img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 110px;
+    padding: 0.5rem;
+    background: #fff;
+    border: 1px solid var(--line);
+}
+
+.signo-par {
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+}
+
+.signo-par figure {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.signo-par img {
+    max-height: 90px;
+}
+
+.signo-par figcaption {
+    margin-top: 0.35rem;
+    font-family: var(--font-text);
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.35;
     color: var(--ink-3);
 }
 
