@@ -428,21 +428,78 @@
     outline-offset: 3px;
 }
 
-/* ── CLASES DE NIZA ── */
+/* ── CLASES DE NIZA: dos desplegables, bienes y servicios ── */
+.niza-grupos {
+    max-width: 1040px;
+    margin-top: 2.2rem;
+    border-bottom: 1px solid var(--accent);
+}
+
+.niza-grupo {
+    border-top: 1px solid var(--accent);
+}
+
+.niza-grupo summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1.5rem;
+    align-items: center;
+    padding: 1.15rem 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.niza-grupo summary::-webkit-details-marker {
+    display: none;
+}
+
 .niza-tit {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     font-weight: 600;
     color: var(--ink-strong);
-    margin: 2.2rem 0 0.4rem;
+    font-variant-numeric: lining-nums;
+    transition: color 0.2s ease;
+}
+
+.niza-rango {
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--ink-3);
+}
+
+.niza-ej {
+    grid-column: 1;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink-3);
+}
+
+.niza-chev {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    color: var(--accent);
+    transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.niza-grupo[open] .niza-chev {
+    transform: rotate(180deg);
+}
+
+@media(hover:hover) {
+    .niza-grupo summary:hover .niza-tit {
+        color: var(--accent-ink);
+    }
 }
 
 .niza {
     list-style: none;
     columns: 2;
     column-gap: 2.6rem;
-    max-width: 1040px;
-    border-top: 1px solid var(--accent);
+    margin-bottom: 1.4rem;
+    border-top: 1px solid var(--line);
 }
 
 .niza li {
