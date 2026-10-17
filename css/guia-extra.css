@@ -8,19 +8,19 @@
 .prose p {
     font-size: 1rem;
     line-height: 1.75;
-    color: var(--stone-lt);
+    color: var(--ink-2);
     margin-bottom: 1rem;
 }
 
 .prose strong {
-    color: var(--white);
+    color: var(--ink-strong);
     font-weight: 500;
 }
 
 .prose a,
 .card a,
 .link-sec {
-    color: var(--gold-txt);
+    color: var(--accent-ink);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -59,10 +59,10 @@
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 50%;
-    background: var(--deep);
-    border: 1px solid var(--gold);
-    color: var(--gold-txt);
-    font-family: 'Cinzel', serif;
+    background: var(--bg);
+    border: 1px solid var(--accent);
+    color: var(--accent-ink);
+    font-family: var(--font-brand);
     font-size: 0.95rem;
     display: flex;
     align-items: center;
@@ -70,10 +70,10 @@
 }
 
 .etapas h3 {
-    font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--ink-strong);
     margin-bottom: 0.5rem;
 }
 
@@ -81,7 +81,7 @@
 .etapas li li {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--stone-lt);
+    color: var(--ink-2);
 }
 
 .etapas p + p {
@@ -93,24 +93,23 @@
 }
 
 .etapas strong {
-    color: var(--white);
+    color: var(--ink-strong);
     font-weight: 500;
 }
 
 .plazo {
     display: inline-block;
     margin-top: 0.7rem;
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    color: var(--gold-txt);
+    font-size: 0.85rem;
+    color: var(--accent-ink);
     border: 1px solid var(--line);
-    background: var(--dark2);
+    background: var(--surface);
     padding: 0.25rem 0.6rem;
 }
 
 .art {
-    color: var(--stone);
-    font-size: 0.85em;
+    color: var(--ink-3);
+    font-size: 0.95em;
     white-space: nowrap;
 }
 
@@ -127,12 +126,12 @@
 .lista li {
     font-size: 0.9rem;
     line-height: 1.6;
-    color: var(--stone-lt);
+    color: var(--ink-2);
     margin-bottom: 0.45rem;
 }
 
 .lista strong {
-    color: var(--white);
+    color: var(--ink-strong);
     font-weight: 500;
 }
 
@@ -145,8 +144,8 @@
 
 .card .opcional {
     margin-top: 0.9rem;
-    font-size: 0.82rem;
-    color: var(--stone);
+    font-size: 0.875rem;
+    color: var(--ink-3);
 }
 
 /* ── REGLA DEL TRÁMITE: los tramos miden lo que duran en días hábiles ── */
@@ -177,8 +176,8 @@
     position: absolute;
     top: -1.6rem;
     left: 0;
-    font-size: 0.74rem;
-    color: var(--stone);
+    font-size: 0.8rem;
+    color: var(--ink-3);
     white-space: nowrap;
 }
 
@@ -186,7 +185,7 @@
     display: block;
     height: 14px;
     margin-right: -0.9rem;
-    border-left: 2px solid var(--deep);
+    border-left: 2px solid var(--bg);
 }
 
 .t-sil .barra {
@@ -194,45 +193,45 @@
 }
 
 .t-forma .barra {
-    background: var(--gold);
+    background: var(--accent);
 }
 
 .t-opos .barra {
-    background: var(--gold-lt);
+    background: var(--accent-ink);
     opacity: 0.55;
 }
 
 /* la espera por la oficina es el tramo neutro y más largo */
 .t-exam .barra {
-    background: var(--mid);
+    background: var(--surface-3);
 }
 
 .t-sil .barra {
-    border: 1px dashed var(--gold);
+    border: 1px dashed var(--accent);
     background: transparent;
 }
 
 .t-nom {
     display: block;
     margin-top: 0.8rem;
-    font-family: 'Cinzel', serif;
-    font-size: 0.86rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--ink-strong);
     line-height: 1.35;
 }
 
 .t-dur {
     display: block;
     margin-top: 0.3rem;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     line-height: 1.45;
-    color: var(--stone);
+    color: var(--ink-3);
 }
 
 .regla-nota {
-    font-size: 0.82rem;
-    color: var(--stone);
+    font-size: 0.875rem;
+    color: var(--ink-3);
     max-width: 72ch;
     line-height: 1.6;
 }
@@ -267,11 +266,11 @@
         min-height: calc(var(--d) * 1.1px + 48px);
         margin: 0;
         border-left: 0;
-        border-top: 2px solid var(--deep);
+        border-top: 2px solid var(--bg);
     }
 
     .t-sil .barra {
-        border-top: 1px dashed var(--gold);
+        border-top: 1px dashed var(--accent);
     }
 
     .tick {
@@ -295,7 +294,7 @@
 .mitos {
     max-width: 980px;
     margin-top: 1.4rem;
-    border-top: 1px solid var(--gold);
+    border-top: 1px solid var(--accent);
 }
 
 .mito {
@@ -307,26 +306,26 @@
 }
 
 .mito dt {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 1.3rem;
     line-height: 1.4;
-    color: var(--white);
+    color: var(--ink-strong);
 }
 
 .mito dd {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--stone-lt);
+    color: var(--ink-2);
 }
 
 .mito dd strong {
-    color: var(--white);
+    color: var(--ink-strong);
     font-weight: 500;
 }
 
 .mito dd a {
-    color: var(--gold-txt);
+    color: var(--accent-ink);
     text-decoration: underline;
     text-underline-offset: 3px;
 }
@@ -343,7 +342,7 @@
     list-style: none;
     max-width: 980px;
     margin-top: 1.4rem;
-    border-top: 1px solid var(--gold);
+    border-top: 1px solid var(--accent);
 }
 
 .caso {
@@ -355,35 +354,34 @@
 }
 
 .signo {
-    font-family: 'Cinzel', serif;
-    font-size: 1.3rem;
+    font-family: var(--font-display);
+    font-size: 1.45rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
-    color: var(--white);
-    line-height: 1.25;
+    color: var(--ink-strong);
+    line-height: 1.3;
     overflow-wrap: anywhere;
 }
 
 .signo small {
     display: block;
     margin-top: 0.35rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.78rem;
+    font-family: var(--font-text);
+    font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0;
-    color: var(--stone);
+    color: var(--ink-3);
 }
 
 .caso p {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: var(--stone-lt);
+    color: var(--ink-2);
 }
 
 .caso .causal {
     display: block;
-    font-size: 0.8rem;
-    color: var(--gold-txt);
+    font-size: 0.85rem;
+    color: var(--accent-ink);
     margin-bottom: 0.25rem;
 }
 
@@ -407,30 +405,30 @@
     border-bottom: 1px solid var(--line);
     font-size: 0.95rem;
     line-height: 1.65;
-    color: var(--stone-lt);
+    color: var(--ink-2);
 }
 
 .literales .lit {
-    font-family: 'Cinzel', serif;
-    color: var(--gold-txt);
+    font-family: var(--font-brand);
+    color: var(--accent-ink);
 }
 
 .literales strong {
-    color: var(--white);
+    color: var(--ink-strong);
     font-weight: 500;
 }
 
 :focus-visible {
-    outline: 2px solid var(--gold);
+    outline: 2px solid var(--accent);
     outline-offset: 3px;
 }
 
 /* ── CLASES DE NIZA ── */
 .niza-tit {
-    font-family: 'Cinzel', serif;
-    font-size: 1.05rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--ink-strong);
     margin: 2.2rem 0 0.4rem;
 }
 
@@ -439,7 +437,7 @@
     columns: 2;
     column-gap: 2.6rem;
     max-width: 1040px;
-    border-top: 1px solid var(--gold);
+    border-top: 1px solid var(--accent);
 }
 
 .niza li {
@@ -448,15 +446,15 @@
     break-inside: avoid;
     padding: 0.55rem 0;
     border-bottom: 1px solid var(--line);
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     line-height: 1.5;
-    color: var(--stone-lt);
+    color: var(--ink-2);
 }
 
 .niza .nc {
-    font-family: 'Cinzel', serif;
+    font-family: var(--font-brand);
     font-weight: 600;
-    color: var(--gold-txt);
+    color: var(--accent-ink);
 }
 
 @media(max-width:700px) {
@@ -488,8 +486,8 @@
         content: attr(data-label);
         display: block;
         margin-top: 0.6rem;
-        font-size: 0.72rem;
-        letter-spacing: 0.06em;
-        color: var(--gold-txt);
+        font-size: 0.78rem;
+        letter-spacing: 0.02em;
+        color: var(--accent-ink);
     }
 }

@@ -29,11 +29,11 @@
             margin-top: 1.4rem;
             font-size: 0.9rem;
             line-height: 1.7;
-            color: var(--stone-lt);
+            color: var(--ink-2);
         }
 
         .proveedor strong {
-            color: var(--white);
+            color: var(--ink-strong);
             font-weight: 500;
         }
 
@@ -43,16 +43,16 @@
 
         .lr-form fieldset {
             border: 0;
-            border-top: 1px solid var(--gold);
+            border-top: 1px solid var(--accent);
             padding: 1.4rem 0 0.6rem;
             margin-bottom: 1.6rem;
         }
 
         .lr-form legend {
-            font-family: 'Cinzel', serif;
-            font-size: 1.05rem;
+            font-family: var(--font-display);
+            font-size: 1.35rem;
             font-weight: 600;
-            color: var(--white);
+            color: var(--ink-strong);
             padding-right: 0.8rem;
         }
 
@@ -75,12 +75,12 @@
 
         .campo label,
         .opciones-tit {
-            font-size: 0.82rem;
-            color: var(--stone-lt);
+            font-size: 0.875rem;
+            color: var(--ink-2);
         }
 
         .campo label .req {
-            color: var(--gold-txt);
+            color: var(--accent-ink);
         }
 
         .lr-form input[type="text"],
@@ -91,9 +91,9 @@
         .lr-form textarea {
             font: inherit;
             font-size: 0.95rem;
-            color: var(--white);
+            color: var(--ink-strong);
             background: #fff;
-            border: 1px solid var(--mid);
+            border: 1px solid var(--surface-3);
             padding: 0.6rem 0.7rem;
             width: 100%;
         }
@@ -106,9 +106,9 @@
         .lr-form input:focus,
         .lr-form select:focus,
         .lr-form textarea:focus {
-            outline: 2px solid var(--gold);
+            outline: 2px solid var(--accent);
             outline-offset: 1px;
-            border-color: var(--gold);
+            border-color: var(--accent);
         }
 
         .opciones {
@@ -124,19 +124,19 @@
             align-items: flex-start;
             gap: 0.5rem;
             font-size: 0.92rem;
-            color: var(--stone-lt);
+            color: var(--ink-2);
             line-height: 1.5;
         }
 
         .opciones input,
         .check input {
             margin-top: 0.25rem;
-            accent-color: var(--gold);
+            accent-color: var(--accent);
         }
 
         .ayuda {
-            font-size: 0.8rem;
-            color: var(--stone);
+            font-size: 0.85rem;
+            color: var(--ink-3);
             line-height: 1.55;
         }
 
@@ -167,10 +167,10 @@
             display: none;
             max-width: 820px;
             background: #fff;
-            border: 1px solid var(--mid);
+            border: 1px solid var(--surface-3);
             padding: 2rem;
             font-size: 0.9rem;
-            color: var(--white);
+            color: var(--ink-strong);
         }
 
         .hoja.on {
@@ -182,7 +182,7 @@
             justify-content: space-between;
             gap: 1rem;
             flex-wrap: wrap;
-            border-bottom: 1px solid var(--white);
+            border-bottom: 1px solid var(--ink-strong);
             padding-bottom: 0.8rem;
             margin-bottom: 0.8rem;
         }
@@ -199,16 +199,16 @@
 
         .hoja th {
             text-align: left;
-            font-size: 0.72rem;
-            letter-spacing: 0.08em;
+            font-size: 0.78rem;
+            letter-spacing: 0.04em;
             text-transform: uppercase;
-            color: var(--white);
-            background: var(--dark3);
+            color: var(--ink-strong);
+            background: var(--surface-2);
             padding: 0.45rem 0.6rem;
         }
 
         .hoja td {
-            border: 1px solid var(--mid);
+            border: 1px solid var(--surface-3);
             padding: 0.45rem 0.6rem;
             vertical-align: top;
             font-size: 0.86rem;
@@ -216,7 +216,7 @@
 
         .hoja td.k {
             width: 32%;
-            color: var(--stone);
+            color: var(--ink-3);
         }
 
         .hoja tbody tr:hover {
@@ -224,8 +224,8 @@
         }
 
         .hoja .pie {
-            font-size: 0.76rem;
-            color: var(--stone);
+            font-size: 0.8rem;
+            color: var(--ink-3);
             line-height: 1.55;
             margin-top: 0.4rem;
         }
@@ -275,14 +275,13 @@
 <body>
 <nav>
 <a class="nav-brand" href="/">
-<img alt="3VIP" src="/logo-seal.webp" style="width:36px;height:36px;object-fit:cover;border-radius:50%;box-shadow:0 0 10px rgba(201,168,76,0.3);"/>
+<img alt="3VIP" src="/logo-seal.webp" style="width:36px;height:36px;object-fit:cover;border-radius:50%;"/>
 <span>3VIP</span>
 </a>
 <a class="nav-back" href="/">← Volver al inicio</a>
 </nav>
 <header>
 <div class="wrap">
-<p class="sec-label">Atención al consumidor</p>
 <h1>Libro de Reclamaciones</h1>
 <div class="rule"></div>
 <p class="lede">Conforme al Código de Protección y Defensa del Consumidor, puedes registrar aquí un reclamo o una queja sobre nuestros servicios. Al terminar podrás imprimir tu Hoja de Reclamación o guardarla en PDF, y te enviaremos a tu correo electrónico una copia con su número correlativo.</p>
@@ -351,19 +350,19 @@
 <fieldset>
 <legend>3. Detalle de la reclamación y pedido</legend>
 <div class="campos">
-<div class="campo ancho"><span class="opciones-tit">¿Es un reclamo o una queja? <span class="req" style="color:var(--gold-txt);">*</span></span>
+<div class="campo ancho"><span class="opciones-tit">¿Es un reclamo o una queja? <span class="req" style="color:var(--accent-ink);">*</span></span>
 <div class="opciones">
 <label><input checked name="tipo" type="radio" value="Reclamo"/> Reclamo</label>
 <label><input name="tipo" type="radio" value="Queja"/> Queja</label>
 </div></div>
 <div class="campo ancho"><label for="lr-detalle">Detalle <span class="req">*</span></label><textarea id="lr-detalle" name="detalle" required></textarea></div>
 <div class="campo ancho"><label for="lr-pedido">Pedido concreto <span class="req">*</span></label><textarea id="lr-pedido" name="pedido" required style="min-height:4.5rem;"></textarea><span class="ayuda">Qué solución esperas de nosotros.</span></div>
-<div class="campo ancho"><span class="opciones-tit">¿Cómo quieres recibir la respuesta? <span class="req" style="color:var(--gold-txt);">*</span></span>
+<div class="campo ancho"><span class="opciones-tit">¿Cómo quieres recibir la respuesta? <span class="req" style="color:var(--accent-ink);">*</span></span>
 <div class="opciones">
 <label><input checked name="medio_respuesta" type="radio" value="Correo electrónico"/> Por correo electrónico</label>
 <label><input name="medio_respuesta" type="radio" value="Carta al domicilio"/> Por carta a mi domicilio</label>
 </div></div>
-<div class="campo ancho"><label class="check"><input id="lr-conforme" name="conformidad" required type="checkbox" value="Sí"/> Declaro que los datos consignados son correctos y que estoy conforme con los términos de mi reclamo o queja. <span class="req" style="color:var(--gold-txt);">*</span></label></div>
+<div class="campo ancho"><label class="check"><input id="lr-conforme" name="conformidad" required type="checkbox" value="Sí"/> Declaro que los datos consignados son correctos y que estoy conforme con los términos de mi reclamo o queja. <span class="req" style="color:var(--accent-ink);">*</span></label></div>
 </div>
 </fieldset>
 
@@ -395,8 +394,8 @@
 <a href="/cuanto-cuesta-patentar-un-producto/">Patentar un producto</a>
 <a href="/#contact">Contacto</a>
 </div>
-<div class="lr-aviso" style="margin:1.4rem 0 0.4rem;"><a href="/libro-de-reclamaciones/" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.55rem 1rem;border:1px solid var(--gold);color:var(--white);text-decoration:none;font-family:'DM Sans',sans-serif;font-size:0.85rem;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5.2 7.9 4.6 4 4.6v13c3.9 0 6.3.6 8 1.9 1.7-1.3 4.1-1.9 8-1.9v-13c-3.9 0-6.3.6-8 1.9z"/><path d="M12 6.5v13"/></svg>Libro de Reclamaciones</a></div>
-<div class="ft-copy" style="margin-top:1.4rem;font-size:0.78rem;color:var(--stone);">© 2026 Erik Chuquispuma. Todos los derechos reservados. · Lima, Perú</div>
+<div class="lr-aviso" style="margin:1.4rem 0 0.4rem;"><a href="/libro-de-reclamaciones/" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.55rem 1rem;border:1px solid var(--accent);color:var(--ink-strong);text-decoration:none;font-family:var(--font-text);font-size:0.85rem;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5.2 7.9 4.6 4 4.6v13c3.9 0 6.3.6 8 1.9 1.7-1.3 4.1-1.9 8-1.9v-13c-3.9 0-6.3.6-8 1.9z"/><path d="M12 6.5v13"/></svg>Libro de Reclamaciones</a></div>
+<div class="ft-copy" style="margin-top:1.4rem;font-size:0.875rem;color:var(--ink-3);">© 2026 Erik Chuquispuma. Todos los derechos reservados. · Lima, Perú</div>
 </footer>
 <a aria-label="WhatsApp" class="wa-float" href="https://wa.me/51977314025?text=Hola%2C%20quisiera%20registrar%20mi%20marca%20y%20recibir%20una%20cotizaci%C3%B3n" onclick="if(typeof gtag==='function')gtag('event','generate_lead',{method:'whatsapp_marca'});" rel="noopener" target="_blank">
 <svg viewbox="0 0 24 24">
