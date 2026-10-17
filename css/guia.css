@@ -336,6 +336,41 @@ tbody td {
     color: var(--accent-ink);
 }
 
+/* ── AVISO: un dato que el lector no suele conocer ── */
+.aviso {
+    max-width: 76ch;
+    margin-top: 2rem;
+    padding: 1.3rem 1.5rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+}
+
+.aviso-tit {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+    margin-bottom: 0.5rem;
+}
+
+.aviso p:not(.aviso-tit) {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--ink-2);
+}
+
+.aviso strong {
+    color: var(--ink-strong);
+}
+
+.aviso a {
+    color: var(--accent-ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* ── HONORARIOS ── */
 .honorarios {
     background: var(--surface-2);
