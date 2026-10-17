@@ -64,7 +64,7 @@ body {
     font-size: 0.8rem;
     letter-spacing: 0.06em;
     cursor: pointer;
-    transition: all 0.25s;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
     font-family: var(--font-text);
 }
 
@@ -119,7 +119,6 @@ nav {
 /* ── HEADER ── */
 header {
     padding: 9rem 0 3.5rem;
-    border-bottom: 1px solid var(--line);
     background: var(--surface);
 }
 
@@ -131,18 +130,12 @@ h1 {
     line-height: 1.1;
     max-width: 22ch;
     letter-spacing: -0.01em;
+    margin-bottom: 1.4rem;
 }
 
 h1 em {
     font-style: normal;
     color: inherit;
-}
-
-.rule {
-    width: 40px;
-    height: 1px;
-    background: var(--accent);
-    margin: 1.6rem 0 1.8rem;
 }
 
 .lede {
@@ -341,8 +334,6 @@ tbody tr:hover {
 /* ── HONORARIOS ── */
 .honorarios {
     background: var(--surface-2);
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
 }
 
 .honorarios p {
@@ -374,7 +365,7 @@ tbody tr:hover {
     text-decoration: none;
     border: 1px solid var(--accent);
     display: inline-block;
-    transition: all 0.25s;
+    transition: background-color 0.2s, color 0.2s, transform 0.16s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btn-primary:hover {
@@ -386,7 +377,6 @@ tbody tr:hover {
 .fuente {
     background: var(--surface);
     padding: 2rem 0;
-    border-top: 1px solid var(--line);
 }
 
 .fuente p {
@@ -404,49 +394,6 @@ tbody tr:hover {
 
 .fuente a:hover {
     text-decoration: underline;
-}
-
-/* ── FOOTER ── */
-footer {
-    background: var(--bg);
-    border-top: 1px solid var(--line);
-    padding: 2.5rem 2rem;
-    text-align: center;
-}
-
-.ft-brand {
-    font-family: var(--font-brand);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--accent);
-    letter-spacing: 0.2em;
-    margin-bottom: 0.3rem;
-}
-
-.ft-sub {
-    font-family: var(--font-brand);
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    color: var(--ink-3);
-    margin-bottom: 1.5rem;
-}
-
-.ft-links {
-    display: flex;
-    gap: 1.8rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.ft-links a {
-    font-size: 0.9rem;
-    color: var(--ink-3);
-    text-decoration: none;
-    transition: color 0.25s;
-}
-
-.ft-links a:hover {
-    color: var(--accent);
 }
 
 /* ── WHATSAPP ── */
@@ -536,10 +483,6 @@ footer {
         height: 50px;
         bottom: 14px;
         right: 14px;
-    }
-
-    footer {
-        padding-bottom: 5.5rem;
     }
 }
 

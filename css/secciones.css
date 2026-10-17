@@ -1,0 +1,231 @@
+/* Componentes de las subpáginas: trayectoria, origen del nombre, tecnologías y guías relacionadas */
+
+.founder-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.founder-card {
+    position: sticky;
+    top: 5rem;
+}
+
+.f-avatar {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--surface-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.f-avatar img {
+    flex: 1 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+    position: relative;
+    z-index: 1;
+}
+
+.f-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    color: var(--ink-strong);
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+.f-role {
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+    color: var(--accent-ink);
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+
+.f-bio h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    color: var(--ink-strong);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.f-bio p {
+    font-family: var(--font-text);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+}
+
+.creds {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+}
+
+.cred {
+    display: flex;
+    gap: 1rem;
+    padding: 0.7rem 1rem;
+    background: var(--bg);
+}
+
+.cred-y {
+    font-family: var(--font-text);
+    font-size: 0.875rem;
+    color: var(--accent-ink);
+    min-width: 46px;
+    margin-top: 0.05rem;
+    flex-shrink: 0;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+.cred-t {
+    font-family: var(--font-text);
+    font-size: 0.93rem;
+    color: var(--ink-2);
+    line-height: 1.55;
+}
+
+.cred-t a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
+    margin-top: 2.5rem;
+}
+
+.tech-card {
+    padding: 1.8rem;
+    background: var(--surface);
+}
+
+.t-status {
+    display: inline-block;
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    padding: 0.18rem 0.6rem;
+    margin-bottom: 0.9rem;
+    font-weight: 600;
+}
+
+.t-active {
+    background: rgba(127, 91, 24, 0.12);
+    color: var(--accent);
+}
+
+.t-pending {
+    background: rgba(107, 101, 96, 0.15);
+    color: var(--ink-2);
+}
+
+.t-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--ink-strong);
+    margin-bottom: 0.4rem;
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+.t-field {
+    font-family: var(--font-text);
+    font-size: 0.875rem;
+    color: var(--ink-3);
+    margin-bottom: 0.7rem;
+}
+
+.t-desc {
+    font-family: var(--font-text);
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    line-height: 1.65;
+}
+
+.f-bio p a,
+.card a,
+.tech-fuente a {
+    color: var(--accent-ink);
+}
+
+.tech-fuente {
+    margin-top: 1.6rem;
+    font-size: 0.875rem;
+}
+
+.origen {
+    background: var(--surface);
+}
+
+.origen h3 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--accent-ink);
+    margin-bottom: 2rem;
+}
+
+.origen .texto-historico {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: var(--ink-2);
+    max-width: 62ch;
+    margin-bottom: 1.6rem;
+}
+
+.origen .texto-filosofia {
+    font-size: 1.1rem;
+    line-height: 1.75;
+    color: var(--ink);
+    max-width: 66ch;
+}
+
+.enlaces-guia {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.enlaces-guia a {
+    color: var(--accent-ink);
+    font-size: 1.05rem;
+    text-underline-offset: 3px;
+}
+
+@media(max-width:900px) {
+    .founder-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .founder-card {
+        position: static;
+    }
+
+    .founder-card .f-avatar {
+        max-width: 360px;
+    }
+}
+
+/* los grupos de "que es la PI" tienen cuatro tarjetas: una fila en escritorio, sin huerfanas */
+.destacados.cuatro {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}

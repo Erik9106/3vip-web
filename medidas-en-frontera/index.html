@@ -88,6 +88,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Cinzel:wght@400;600;700&amp;family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&amp;display=swap" rel="stylesheet"/>
 <link href="/css/guia.css" rel="stylesheet"/>
+<link href="/css/comun.css" rel="stylesheet"/>
 <link href="/css/guia-extra.css" rel="stylesheet"/>
 </head>
 <body>
@@ -101,7 +102,6 @@
 <header>
 <div class="wrap">
 <h1>Medidas en frontera: cómo detener mercadería falsificada en aduanas</h1>
-<div class="rule"></div>
 <p class="lede">Si alguien importa o exporta productos con tu marca falsificada, SUNAT puede retenerlos antes de que salgan del puerto o del aeropuerto. Los plazos se cuentan en pocos días hábiles, así que conviene tenerlo todo preparado antes de que llegue el contenedor. Aquí explicamos cómo funciona en la práctica y, si eres el importador y crees que la retención es injusta, <a href="#defensa-del-importador" style="color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px;">cómo defenderte</a>.</p>
 <div class="cab-acciones"><a class="btn-primary" href="https://wa.me/51977314025?text=Hola%2C%20quisiera%20proteger%20mi%20marca%20en%20aduanas" onclick="if(typeof gtag==='function')gtag('event','generate_lead',{method:'whatsapp_cabecera'});" rel="noopener" target="_blank">Cotiza tu caso</a><a class="cab-alt" href="/#contact">o escríbenos desde el formulario</a></div>
 </div>
@@ -357,19 +357,42 @@
 <p style="margin-top:0.8rem;">Última verificación: 14 de octubre de 2026.</p>
 </div>
 </div>
-<footer>
-<div class="ft-brand">3VIP</div>
-<div class="ft-sub">3vip.pe · VENI · VIDI · VICI</div>
-<div class="ft-links">
-<a href="/">Inicio</a>
-<a href="/costos/">Costos</a>
-<a href="/cuanto-cuesta-registrar-una-marca/">Registrar una marca</a>
-<a href="/marcas-que-no-se-pueden-registrar/">Marcas que no se pueden registrar</a>
-<a href="/cuanto-cuesta-patentar-un-producto/">Patentar un producto</a>
-<a href="/#contact">Contacto</a>
+<footer class="pie">
+<div class="pie-wrap">
+<div class="pie-marca">
+<a class="pie-logo" href="/">3VIP</a>
+<p class="pie-lema">Veni · Vidi · Vici</p>
+<p class="pie-txt">Propiedad intelectual en Perú, de la invención a la concesión.</p>
+<p class="pie-contacto"><a href="mailto:erik@3vip.pe">erik@3vip.pe</a><br/><a href="tel:+51977314025">(+51) 977-314-025</a><br/>Lima, Perú</p>
 </div>
-<div class="lr-aviso" style="margin:1.4rem 0 0.4rem;"><a href="/libro-de-reclamaciones/" style="display:inline-flex;align-items:center;gap:0.6rem;padding:0.55rem 1rem;border:1px solid var(--accent);color:var(--ink-strong);text-decoration:none;font-family:var(--font-text);font-size:0.85rem;"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5.2 7.9 4.6 4 4.6v13c3.9 0 6.3.6 8 1.9 1.7-1.3 4.1-1.9 8-1.9v-13c-3.9 0-6.3.6-8 1.9z"/><path d="M12 6.5v13"/></svg>Libro de Reclamaciones</a></div>
-<div class="ft-copy" style="margin-top:1.4rem;font-size:0.875rem;color:var(--ink-3);">© 2026 Erik Chuquispuma. Todos los derechos reservados. · Lima, Perú</div>
+<div aria-label="Guías" class="pie-col" role="navigation">
+<p class="pie-tit">Guías</p>
+<ul>
+<li><a href="/costos/">Tasas oficiales de INDECOPI</a></li>
+<li><a href="/cuanto-cuesta-patentar-un-producto/">Cómo registrar una patente</a></li>
+<li><a href="/rescate-de-patentes/">Rescate de patentes</a></li>
+<li><a href="/cuanto-cuesta-registrar-una-marca/">Cómo registrar una marca</a></li>
+<li><a href="/marcas-que-no-se-pueden-registrar/">Marcas que no se pueden registrar</a></li>
+<li><a href="/medidas-en-frontera/">Medidas en frontera</a></li>
+<li><a href="/que-es-la-propiedad-intelectual/">Qué es la propiedad intelectual</a></li>
+</ul>
+</div>
+<div aria-label="3VIP" class="pie-col" role="navigation">
+<p class="pie-tit">3VIP</p>
+<ul>
+<li><a href="/#services">Servicios</a></li>
+<li><a href="/#success">Casos de éxito</a></li>
+<li><a href="/tecnologias-para-licenciar/">Tecnologías para licenciar</a></li>
+<li><a href="/sobre-erik/">Sobre Erik</a></li>
+<li><a href="/#contact">Contacto</a></li>
+<li><a href="/en/" hreflang="en">English</a></li>
+</ul>
+</div>
+</div>
+<div class="pie-legal">
+<a class="pie-libro" href="/libro-de-reclamaciones/"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6.5C10.3 5.2 7.9 4.6 4 4.6v13c3.9 0 6.3.6 8 1.9 1.7-1.3 4.1-1.9 8-1.9v-13c-3.9 0-6.3.6-8 1.9z"/><path d="M12 6.5v13"/></svg>Libro de Reclamaciones</a>
+<p>© 2026 Erik Chuquispuma. Todos los derechos reservados.</p>
+</div>
 </footer>
 <a aria-label="WhatsApp" class="wa-float" href="https://wa.me/51977314025?text=Hola%2C%20quisiera%20registrar%20mi%20marca%20y%20recibir%20una%20cotizaci%C3%B3n" onclick="if(typeof gtag==='function')gtag('event','generate_lead',{method:'whatsapp_marca'});" rel="noopener" target="_blank">
 <svg viewbox="0 0 24 24">

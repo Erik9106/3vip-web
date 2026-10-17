@@ -1,0 +1,156 @@
+/* Piezas comunes a todas las páginas: pie, foco, selección, pulsación y movimiento reducido */
+
+::selection {
+    background: rgba(127, 91, 24, 0.22);
+    color: var(--ink-strong);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+/* los botones responden al presionarlos, no al pasar el cursor */
+.btn-primary:active,
+.btn-secondary:active,
+nav ul a.nav-cta:active {
+    transform: scale(0.97);
+}
+
+/* ── PIE ── */
+.pie {
+    background: var(--surface);
+    padding: 4.5rem 2rem 2.5rem;
+    text-align: left;
+}
+
+.pie-wrap {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+.pie-logo {
+    font-family: var(--font-brand);
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.pie-lema {
+    font-family: var(--font-brand);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-3);
+    margin-top: 0.4rem;
+}
+
+.pie-txt {
+    max-width: 32ch;
+    margin-top: 1.2rem;
+    line-height: 1.6;
+    color: var(--ink-2);
+}
+
+.pie-contacto {
+    margin-top: 1.2rem;
+    line-height: 1.9;
+    color: var(--ink-2);
+}
+
+.pie-tit {
+    font-weight: 600;
+    color: var(--ink-strong);
+    margin-bottom: 0.9rem;
+}
+
+.pie-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.pie a {
+    color: var(--ink-2);
+    text-decoration: none;
+}
+
+.pie a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.pie-col a {
+    font-size: 0.95rem;
+}
+
+.pie-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1160px;
+    margin: 3rem auto 0;
+    font-size: 0.875rem;
+    color: var(--ink-3);
+}
+
+.pie .pie-libro {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--accent);
+    color: var(--ink-strong);
+}
+
+@media(max-width:800px) {
+    .pie-wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pie-marca {
+        grid-column: 1 / -1;
+    }
+}
+
+@media(max-width:768px) {
+    /* deja libre el boton flotante de WhatsApp */
+    .pie {
+        padding: 3.5rem 1.4rem 6rem;
+    }
+}
+
+@media(max-width:520px) {
+    .pie-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        transition-delay: 0s !important;
+    }
+
+    .js .reveal > * {
+        opacity: 1;
+        transform: none;
+    }
+}

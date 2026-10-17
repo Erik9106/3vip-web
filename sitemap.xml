@@ -103,4 +103,58 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://3vip.pe/sobre-erik/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/sobre-erik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/about-erik/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/sobre-erik/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/en/about-erik/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/sobre-erik/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/about-erik/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/sobre-erik/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/que-es-la-propiedad-intelectual/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/que-es-la-propiedad-intelectual/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/what-is-intellectual-property/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/que-es-la-propiedad-intelectual/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/en/what-is-intellectual-property/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/que-es-la-propiedad-intelectual/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/what-is-intellectual-property/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/que-es-la-propiedad-intelectual/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/tecnologias-para-licenciar/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/tecnologias-para-licenciar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/technologies-for-licensing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/tecnologias-para-licenciar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://3vip.pe/en/technologies-for-licensing/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://3vip.pe/tecnologias-para-licenciar/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://3vip.pe/en/technologies-for-licensing/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://3vip.pe/tecnologias-para-licenciar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
