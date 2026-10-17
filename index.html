@@ -84,7 +84,7 @@
 <section id="hero">
 <div class="hero-grid">
 <div class="hero-texto">
-<h1 class="hero-title"><span>Propiedad intelectual en Perú,</span> <span>de la invención a la concesión</span></h1>
+<h1 class="hero-title"><span>Propiedad intelectual en Perú,</span> <span>de la creación al registro</span></h1>
 <p class="hero-desc">Patentes, marcas y recursos genéticos ante INDECOPI. Hablas directamente con el experto.</p>
 <div class="hero-cta">
 <a class="btn-primary" href="#contact">Solicitar consulta →</a>
@@ -393,7 +393,7 @@
 <div class="pie-marca">
 <a class="pie-logo" href="/">3VIP</a>
 <p class="pie-lema">Veni · Vidi · Vici</p>
-<p class="pie-txt">Propiedad intelectual en Perú, de la invención a la concesión.</p>
+<p class="pie-txt">Propiedad intelectual en Perú, de la creación al registro.</p>
 <p class="pie-contacto"><a href="mailto:erik@3vip.pe">erik@3vip.pe</a><br/><a href="tel:+51977314025">(+51) 977-314-025</a><br/>Lima, Perú</p>
 </div>
 <div aria-label="Guías" class="pie-col" role="navigation">
@@ -530,7 +530,7 @@
             const TASAS = {
                 inv: { hoy: 396.00, total: 720.00, pct: 55 },
                 mu: { hoy: 226.80, total: 324.00, pct: 70 },
-                di: { hoy: 216.00, total: 360.00, pct: 60 },
+                di: { hoy: 216.00, total: 360.00, pct: 60, nota: "60% al presentar. El saldo solo se paga si hay una oposición, lo que es poco frecuente: solo entonces se llega al examen de fondo." },
                 marca: { general: [534.90, 533.30], mype: [401.20, 399.90] },
                 soft: { hoy: 357.70, nota: "Solo por mesa de partes." },
                 bd: { hoy: 177.90, nota: "Usa el mismo formulario que software, pero es otro trámite." },
@@ -555,7 +555,7 @@
                     nota = sel ? "Por la Plataforma SEL. Por mesa de partes costaría S/ 238.10." : "Por mesa de partes. Por la Plataforma SEL costaría S/ 90.10.";
                 } else {
                     hoy = d.hoy; total = d.total || d.hoy;
-                    nota = d.pct ? (p => `${p}% al presentar; el saldo solo si la solicitud llega a examen de fondo.`)(d.pct) : d.nota;
+                    nota = d.nota || (p => `${p}% al presentar; el saldo solo si la solicitud llega a examen de fondo.`)(d.pct);
                 }
                 $('calc-hoy').textContent = sol(hoy);
                 $('calc-total').textContent = sol(total);

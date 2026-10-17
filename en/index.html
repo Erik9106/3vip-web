@@ -84,7 +84,7 @@
 <section id="hero">
 <div class="hero-grid">
 <div class="hero-texto">
-<h1 class="hero-title"><span>Intellectual property in Peru,</span> <span>from invention to grant</span></h1>
+<h1 class="hero-title"><span>Intellectual property in Peru,</span> <span>from creation to registration</span></h1>
 <p class="hero-desc">Patents, trademarks and genetic resources before INDECOPI. You talk directly to the expert.</p>
 <div class="hero-cta">
 <a class="btn-primary" href="#contact">Request a consultation →</a>
@@ -393,7 +393,7 @@
 <div class="pie-marca">
 <a class="pie-logo" href="/en/">3VIP</a>
 <p class="pie-lema">Veni · Vidi · Vici</p>
-<p class="pie-txt">Intellectual property in Peru, from invention to grant.</p>
+<p class="pie-txt">Intellectual property in Peru, from creation to registration.</p>
 <p class="pie-contacto"><a href="mailto:erik@3vip.pe">erik@3vip.pe</a><br/><a href="tel:+51977314025">(+51) 977-314-025</a><br/>Lima, Peru</p>
 </div>
 <div aria-label="Guides" class="pie-col" role="navigation">
@@ -530,7 +530,7 @@
             const TASAS = {
                 inv: { hoy: 396.00, total: 720.00, pct: 55 },
                 mu: { hoy: 226.80, total: 324.00, pct: 70 },
-                di: { hoy: 216.00, total: 360.00, pct: 60 },
+                di: { hoy: 216.00, total: 360.00, pct: 60, nota: "60% at filing. The balance is paid only if an opposition is filed, which is uncommon: only then does the application reach substantive examination." },
                 marca: { general: [534.90, 533.30], mype: [401.20, 399.90] },
                 soft: { hoy: 357.70, nota: "Filing desk only." },
                 bd: { hoy: 177.90, nota: "Uses the same form as software, but it is a different procedure." },
@@ -555,7 +555,7 @@
                     nota = sel ? "Through the SEL platform. At the filing desk it would cost S/ 238.10." : "At the filing desk. Through the SEL platform it would cost S/ 90.10.";
                 } else {
                     hoy = d.hoy; total = d.total || d.hoy;
-                    nota = d.pct ? (p => `${p}% at filing; the balance only if the application reaches substantive examination.`)(d.pct) : d.nota;
+                    nota = d.nota || (p => `${p}% at filing; the balance only if the application reaches substantive examination.`)(d.pct);
                 }
                 $('calc-hoy').textContent = sol(hoy);
                 $('calc-total').textContent = sol(total);
