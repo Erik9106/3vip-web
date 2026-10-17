@@ -216,6 +216,13 @@
             padding: 0.45rem 0.6rem;
             vertical-align: top;
             font-size: 0.86rem;
+            /* conserva los parrafos del detalle */
+            white-space: pre-line;
+        }
+
+        /* un correo largo se parte en vez de ensanchar la tabla; las etiquetas no se cortan a media palabra */
+        .hoja td:not(.k) {
+            overflow-wrap: anywhere;
         }
 
         .hoja td.k {
@@ -227,7 +234,8 @@
             background: none;
         }
 
-        .hoja .pie {
+        /* "pie" chocaba con el pie de pagina del sitio y heredaba su fondo y relleno */
+        .hoja .hoja-nota {
             font-size: 0.8rem;
             color: var(--ink-3);
             line-height: 1.55;
@@ -484,9 +492,9 @@
             '<table><thead><tr><th colspan="2">4. Observaciones y acciones adoptadas por el proveedor</th></tr></thead><tbody>' +
             fila('Observaciones y acciones', '') + fila('Fecha de comunicación de la respuesta', '') +
             '</tbody></table>' +
-            '<p class="pie">Reclamo: disconformidad relacionada a los productos o servicios. Queja: disconformidad no relacionada a los productos o servicios; o malestar o descontento respecto a la atención al público.</p>' +
-            '<p class="pie">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. El proveedor debe dar respuesta al reclamo o queja en un plazo no mayor a quince (15) días hábiles, el cual es improrrogable.</p>' +
-            '<p class="pie">Destinatario: consumidor.</p>';
+            '<p class="hoja-nota">Reclamo: disconformidad relacionada a los productos o servicios. Queja: disconformidad no relacionada a los productos o servicios; o malestar o descontento respecto a la atención al público.</p>' +
+            '<p class="hoja-nota">La formulación del reclamo no impide acudir a otras vías de solución de controversias ni es requisito previo para interponer una denuncia ante el INDECOPI. El proveedor debe dar respuesta al reclamo o queja en un plazo no mayor a quince (15) días hábiles, el cual es improrrogable.</p>' +
+            '<p class="hoja-nota">Destinatario: consumidor.</p>';
     }
 
     form.addEventListener('submit', function (ev) {

@@ -462,6 +462,9 @@
             if (!n || !e || !m) { ['fn', 'fe', 'fm'].forEach(id => { const el = document.getElementById(id); el.value = el.value.trim(); }); form.reportValidity(); return false; }
             const errorEl = document.getElementById('formError');
             errorEl.style.display = 'none';
+            // un doble toque en el celular no envia la consulta dos veces
+            const boton = form.querySelector('button[type="submit"]');
+            boton.disabled = true;
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -471,7 +474,7 @@
                 if (typeof gtag === 'function') gtag('event', 'generate_lead', { method: 'contact_form' });
                 form.style.display = 'none';
                 document.getElementById('formOk').style.display = 'block';
-            }).catch(() => { errorEl.style.display = 'block'; });
+            }).catch(() => { boton.disabled = false; errorEl.style.display = 'block'; });
             return false;
         }
 
@@ -561,6 +564,8 @@
             };
             calc.addEventListener('input', calcular);
             calc.addEventListener('change', calcular);
+            // si escriben 100, 0 o 2.5, el campo muestra el numero que realmente se calcula
+            $('calc-clases').addEventListener('change', e => { e.target.value = Math.min(45, Math.max(1, parseInt(e.target.value, 10) || 1)); });
             calcular();
         }
 

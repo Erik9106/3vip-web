@@ -98,6 +98,12 @@ a:active {
     opacity: 0.7;
 }
 
+/* mientras se envia un formulario el boton queda apagado: que se note */
+button:disabled {
+    opacity: 0.6;
+    cursor: progress;
+}
+
 /* los botones responden al presionarlos, no al pasar el cursor */
 .btn-primary:active,
 .btn-secondary:active,

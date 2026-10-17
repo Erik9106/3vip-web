@@ -21,7 +21,7 @@ function esc(s) {
 
 function fila(k, v) {
   return `<tr><td style="border:1px solid #ccc;padding:6px;width:32%;color:#555;">${esc(k)}</td>`
-    + `<td style="border:1px solid #ccc;padding:6px;">${esc(v)}</td></tr>`;
+    + `<td style="border:1px solid #ccc;padding:6px;white-space:pre-line;overflow-wrap:anywhere;">${esc(v)}</td></tr>`;
 }
 
 function tabla(titulo, filas) {

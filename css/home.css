@@ -961,7 +961,7 @@ nav ul a.activo {
 
 .calc-res {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 0.4rem 1.5rem;
     padding: 1.4rem 0 0.4rem;
 }
@@ -1065,7 +1065,7 @@ nav ul a.activo {
 @media(max-width:900px) {
     .hero-grid,
     .calc-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2.5rem;
     }
 
@@ -1087,6 +1087,19 @@ nav ul a.activo {
 
     .calc {
         padding: 1.6rem 1.2rem;
+    }
+}
+
+/* la columna del formulario no crece con su contenido: un select o un monto largo
+   se acomodan al ancho en vez de salirse de la tarjeta */
+.js .calc {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+/* con 45 clases el monto llega a S/ 24,000.10 y en dos columnas no cabe en 320-420px */
+@media(max-width:420px) {
+    .calc-res {
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
