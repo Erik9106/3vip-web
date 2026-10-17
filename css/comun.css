@@ -10,6 +10,62 @@
     outline-offset: 3px;
 }
 
+/* el foco que llega por el enlace de salto no dibuja un marco alrededor de todo el contenido */
+main:focus {
+    outline: none;
+}
+
+/* enlace para saltar el menu con teclado: solo aparece al recibir el foco */
+.saltar {
+    position: fixed;
+    top: 0.6rem;
+    left: 0.6rem;
+    z-index: 2000;
+    padding: 0.7rem 1.1rem;
+    background: var(--accent);
+    color: var(--bg);
+    font-family: var(--font-text);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transform: translateY(-160%);
+}
+
+.saltar:focus {
+    transform: none;
+}
+
+/* enlaces largos (correo, LinkedIn) se parten antes que desbordar en celulares de 320px */
+main a {
+    overflow-wrap: break-word;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* area tactil de 44px en el selector de idioma y en "volver" sin cambiar como se ven */
+.lang a,
+.nav-back {
+    position: relative;
+}
+
+.lang a::after,
+.nav-back::after {
+    content: '';
+    position: absolute;
+    inset: -8px -3px;
+}
+
+.nav-back::after {
+    inset: -13px -6px;
+}
+
 /* los botones responden al presionarlos, no al pasar el cursor */
 .btn-primary:active,
 .btn-secondary:active,

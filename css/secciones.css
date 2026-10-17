@@ -95,6 +95,7 @@
     font-size: 0.93rem;
     color: var(--ink-2);
     line-height: 1.55;
+    min-width: 0;
 }
 
 .cred-t a {
@@ -212,7 +213,7 @@
 
 @media(max-width:900px) {
     .founder-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
         gap: 2.5rem;
     }
 
